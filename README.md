@@ -1,4 +1,4 @@
-## Sex Front End
+## Sex Adapt Front End
 > Sex Adapt is a project conceived by the UFPA occupational therapy course to help the disabled find motels with accessibility features, such as: ramps, elevators, tactile flooring, etc.
 
 
