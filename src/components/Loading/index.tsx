@@ -3,6 +3,7 @@ import { ActivityIndicator, ActivityIndicatorProps } from 'react-native';
 import { SpinnerLoading, SplashScreen } from './styles';
 
 import splashImg from '../../../assets/splash.png';
+import { theme } from '../../styles/theme';
 
 interface LoadingProps extends ActivityIndicatorProps {
   isTransparent?: boolean;
@@ -13,7 +14,7 @@ interface LoadingProps extends ActivityIndicatorProps {
 export function Loading({
   isTransparent = true,
   size = 'small',
-  color = 'white',
+  color = theme.colors.white,
   ...rest
 }: LoadingProps) {
   return (
