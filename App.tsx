@@ -10,7 +10,7 @@ import {
 
 import { theme } from './src/styles/theme';
 import { Routes } from './src/routes';
-import { Text } from 'react-native';
+import { Loading } from './src/components/Loading';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -22,7 +22,11 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <SafeAreaProvider>
-        {fontsLoaded ? <Routes /> : <Text>Loading...</Text>}
+        {fontsLoaded ? (
+          <Routes />
+        ) : (
+          <Loading isTransparent={false} size="large" />
+        )}
         <StatusBar />
       </SafeAreaProvider>
     </ThemeProvider>
