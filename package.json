@@ -9,11 +9,11 @@
     "web": "expo start --web",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
-    "prepare": "husky install .husky && chmod ug+x .husky/* && chmod ug+x .git/hooks/* && npm install eslint --location=global"
+    "postinstall": "npx husky install .husky && chmod ug+x .husky/* && chmod ug+x .git/hooks/* && npm install eslint --location=global"
   },
   "dependencies": {
     "@expo-google-fonts/montserrat": "^0.2.2",
-    "@react-navigation/bottom-tabs": "^6.0.5",
+    "@react-navigation/bottom-tabs": "^6.4.0",
     "@react-navigation/native": "^6.0.2",
     "@react-navigation/native-stack": "^6.1.0",
     "axios": "^0.27.2",
