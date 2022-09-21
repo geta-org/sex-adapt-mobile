@@ -1,6 +1,4 @@
 import { StatusBar } from 'expo-status-bar';
-import { ThemeProvider } from 'styled-components';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
 import {
   useFonts,
   Montserrat_400Regular,
@@ -8,9 +6,9 @@ import {
   Montserrat_700Bold
 } from '@expo-google-fonts/montserrat';
 
-import { theme } from './src/styles/theme';
 import { Routes } from './src/routes';
-import { Text } from 'react-native';
+import { Loading } from './src/components/Loading';
+import { GlobalContext } from './src/contexts/GlobalContext';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -20,11 +18,13 @@ export default function App() {
   });
 
   return (
-    <ThemeProvider theme={theme}>
-      <SafeAreaProvider>
-        {fontsLoaded ? <Routes /> : <Text>Loading...</Text>}
-        <StatusBar />
-      </SafeAreaProvider>
-    </ThemeProvider>
+    <GlobalContext>
+      {fontsLoaded ? (
+        <Routes />
+      ) : (
+        <Loading isTransparent={false} size="large" />
+      )}
+      <StatusBar />
+    </GlobalContext>
   );
 }

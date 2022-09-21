@@ -1,13 +1,14 @@
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import { Home } from '../screens/Home';
+import { Home, Map } from '../screens/App/index';
 
-const { Navigator, Screen } = createNativeStackNavigator();
+const { Navigator, Screen } = createBottomTabNavigator();
 
 export function AppRoutes() {
   return (
     <Navigator screenOptions={{ headerShown: false }}>
-      <Screen name="home" component={Home} />
+      <Screen name="Home" component={Home} />
+      <Screen name="Map" component={Map} />
     </Navigator>
   );
 }
