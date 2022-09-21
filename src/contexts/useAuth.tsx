@@ -1,4 +1,4 @@
-import React, {
+import {
   createContext,
   ReactNode,
   useContext,
@@ -21,7 +21,7 @@ interface UserContextData {
   user: User | null;
   signIn: (email: string, password: string) => Promise<void>;
   logoff: () => Promise<void>;
-  recoverPassword: (email: string) => Promise<void>;
+  recoverPassword?: (email: string) => Promise<void>;
 }
 
 const UserContext = createContext<UserContextData>({} as UserContextData);
@@ -56,18 +56,17 @@ export function UserProvider({ children }: UserProviderProps) {
     setUser(null);
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  async function recoverPassword(email: string) {
-    //
-  }
+  // TODO
+  // async function recoverPassword(email: string) {
+  // }
+
   return (
     <UserContext.Provider
       value={{
         isLoggedIn: false,
         user: user || null,
         signIn,
-        logoff,
-        recoverPassword
+        logoff
       }}>
       {children}
     </UserContext.Provider>
