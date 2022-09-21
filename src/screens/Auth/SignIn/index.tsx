@@ -1,13 +1,16 @@
-import { NumberOne } from 'phosphor-react-native';
-import { Text, StyleSheet, TextInput, StatusBar } from 'react-native';
+import { Lock, NumberOne, User } from 'phosphor-react-native';
+import { Text, StyleSheet, TextInput,Image, View, ImageBackground} from 'react-native';
 import React, { useState } from 'react';
-
+import { StatusBar } from 'expo-status-bar';
+import logoImg from '../../../assets/logotipo.png';
+import background from '../../../assets/background-login.png';
 import {
   LoginContainer,
   Button,
   TextButton,
   LoginWrapper,
-  Input,
+  InputUser,
+  InputPassword,
   PasswordButton,
   PasswordText,
   TextSubmit,
@@ -16,31 +19,45 @@ import {
   ButtonSingUp,
   TextAnother,
   Header,
+  AnotherButton,
+  Input,
+  Background
+  
 } from './styles';
 
 
 export function SignIn() {
   return (
+    
     <LoginContainer>
-      <StatusBar  barStyle={'light-content'} />
+      <StatusBar style="light" />
+     <Background source={background} resizeMode='cover'>
       <Header>
-      <Title>SexAdapt</Title>
+
+      
+      <Image source={logoImg}  />
+       
+      
       <TextSubmit>
         Ache o melhor motel para experimentar sua independência
       </TextSubmit>
       </Header>
+      </Background>
       <LoginWrapper>
-        <Input>
-          <TextInput placeholder="Usuário" placeholderTextColor="#fff" />
-        </Input>
+        <InputPassword>
+         
+          <TextInput placeholder="Usuário" placeholderTextColor="#bababa" />
+        </InputPassword>
 
-        <Input>
+        <InputPassword>
+          
           <TextInput
             placeholder="Senha"
-            placeholderTextColor="#fff"
-            underlineColorAndroid={'#fff'}
-          />
-        </Input>
+            placeholderTextColor="#bababa"
+        
+            secureTextEntry
+          ></TextInput>
+        </InputPassword>
 
         
         <PasswordButton activeOpacity={0.3}>
@@ -51,33 +68,18 @@ export function SignIn() {
           <TextButton>Login </TextButton>
         </Button>
 
-        <ButtonSingUp>
-        <TextSingUp>Não possui conta? Faça o
-          <TextAnother> cadastro</TextAnother>
-          </TextSingUp>
-        </ButtonSingUp>
-        
+       <AnotherButton>
+        <TextSingUp>Não possui conta? Faça o      
+        <TextAnother> cadastro</TextAnother>
+        </TextSingUp>
+        </AnotherButton>
+               
       </LoginWrapper>
     </LoginContainer>
   );
 }
 
-/*
-const styles = StyleSheet.create({
-  input:{
-    backgroundColor: '#fff',
-    color:'#FFF',
-    fontSize:18,
-    
-    marginTop: 100,
-    
-    
-    
-   
-   
-   },
 
-}) */
 
 
 
