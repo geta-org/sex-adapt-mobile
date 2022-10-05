@@ -1,10 +1,13 @@
+//Logo
+import Logo from './Logo/logo.svg';
+
 //Avatar
-import man from './avatar/man.svg';
-import manBlind from './avatar/manBlind.svg';
-import manWheelchair from './avatar/manWheelchair.svg';
-import womenA from './avatar/womenA.svg';
-import womanB from './avatar/womenB.svg';
-import womenDeaf from './avatar/womenDeaf.svg';
+import Man from './avatar/man.svg';
+import ManBlind from './avatar/manBlind.svg';
+import ManWheelchair from './avatar/manWheelchair.svg';
+import WomenA from './avatar/womenA.svg';
+import WomanB from './avatar/womenB.svg';
+import WomenDeaf from './avatar/womenDeaf.svg';
 
 //Accessibility
 //bars
@@ -39,12 +42,13 @@ import RampWith from './accessibility/ramp/rampWith.svg';
 import RampOff from './accessibility/rampOff.svg';
 
 export {
-  man,
-  manBlind,
-  manWheelchair,
-  womenA,
-  womanB,
-  womenDeaf,
+  Logo,
+  Man,
+  ManBlind,
+  ManWheelchair,
+  WomenA,
+  WomanB,
+  WomenDeaf,
   BarsWithSupport,
   BarsWithoutSupport,
   BarsOff,
