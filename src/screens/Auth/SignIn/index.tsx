@@ -1,8 +1,12 @@
-import { Lock, NumberOne, User } from 'phosphor-react-native';
-import { Text, StyleSheet, TextInput,Image, View, ImageBackground} from 'react-native';
-import React, { useState } from 'react';
+
+import { Lock, NumberOne, User } from 'phosphor-react-native';import { Text, StyleSheet, TextInput,Image, View, ImageBackground} from 'react-native';
+//import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import logoImg from '../../../assets/logotipo.png';
+
+import { useNavigation } from '@react-navigation/native';
+
+
 import background from '../../../assets/background-login.png';
 import {
   LoginContainer,
@@ -24,9 +28,19 @@ import {
   Background
   
 } from './styles';
+import { SignUp } from '../SignUp';
 
 
 export function SignIn() {
+  const navigation = useNavigation();
+  
+  //function handleSignIn() {
+    //navigation.navigate('SignUp')
+  //}
+
+  function handlePasswordReset() {
+    navigation.navigate('RecoverPassword')
+  }
   return (
     
     <LoginContainer>
@@ -35,7 +49,7 @@ export function SignIn() {
       <Header>
 
       
-      <Image source={logoImg}  />
+      <Image source={logoImg}/>
        
       
       <TextSubmit>
@@ -44,31 +58,29 @@ export function SignIn() {
       </Header>
       </Background>
       <LoginWrapper>
-        <InputPassword>
+        <InputUser>
          
           <TextInput placeholder="Usuário" placeholderTextColor="#bababa" />
-        </InputPassword>
+        </InputUser>
 
         <InputPassword>
-          
           <TextInput
             placeholder="Senha"
             placeholderTextColor="#bababa"
-        
             secureTextEntry
           ></TextInput>
         </InputPassword>
 
         
-        <PasswordButton activeOpacity={0.3}>
+        <PasswordButton activeOpacity={0.3}  onPress={handlePasswordReset}>
         <PasswordText>Esqueci a senha</PasswordText>
         </PasswordButton>
 
-        <Button activeOpacity={0.3}>
+        <Button activeOpacity={0.3} >
           <TextButton>Login </TextButton>
         </Button>
 
-       <AnotherButton>
+       <AnotherButton onPress={SignUp}>
         <TextSingUp>Não possui conta? Faça o      
         <TextAnother> cadastro</TextAnother>
         </TextSingUp>
@@ -78,7 +90,6 @@ export function SignIn() {
     </LoginContainer>
   );
 }
-
 
 
 

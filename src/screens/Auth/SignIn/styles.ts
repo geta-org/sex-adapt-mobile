@@ -80,6 +80,8 @@ display: flex;
 align-items: center;
 justify-content: center;
 margin-top: 20%;
+box-shadow: 1px 1px 1px;
+
 `
 export const PasswordText = styled.Text`
 
@@ -117,7 +119,7 @@ export const TextAnother = styled.Text`
 color: #fff;
 font-weight:bold;
 height: 86%;
-border-bottom-width: 1px;
+
 `
 
 export const AnotherButton = styled.TouchableOpacity`
@@ -137,3 +139,4 @@ width:90%;
 border-bottom-width: 1px;
 border-color: rgb(186,186,186);
 `
+
