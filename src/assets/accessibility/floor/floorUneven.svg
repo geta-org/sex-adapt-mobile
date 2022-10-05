@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 90 90">
+  <g id="Grupo_981" data-name="Grupo 981" transform="translate(-9.023 -54.514)">
+    <path id="Caminho_263" data-name="Caminho 263" d="M99.023,99.514a45.017,45.017,0,0,1-45,45h-.179a45.005,45.005,0,0,1-43.4-33.749L9.023,99.514A44.993,44.993,0,0,1,85.838,67.7a44.415,44.415,0,0,1,7.141,9.316c.029,0,.029.015.029.044A44.664,44.664,0,0,1,99.023,99.514Z" transform="translate(0 0)" fill="#de3c3c"/>
+    <path id="Caminho_264" data-name="Caminho 264" d="M43.952,74.224" transform="translate(50.611 28.559)" fill="none" stroke="#662483" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="Caminho_265" data-name="Caminho 265" d="M43.952,75.286" transform="translate(50.611 30.098)" fill="none" stroke="#662483" stroke-miterlimit="10" stroke-width="1"/>
+    <g id="Grupo_980" data-name="Grupo 980" transform="translate(14.683 78.914)">
+      <path id="Caminho_266" data-name="Caminho 266" d="M11.621,72.859a.848.848,0,0,1,0-1.271l3.287-2.914L17.5,66.379a.849.849,0,0,1,1.413.637V77.431a.85.85,0,0,1-1.413.637l-2.591-2.3Z" transform="translate(-11.334 -62.036)" fill="#fff"/>
+      <rect id="Retângulo_675" data-name="Retângulo 675" width="2.75" height="9.457" rx="0.561" transform="translate(75.486 5.688) rotate(90)" fill="#fff"/>
+      <rect id="Retângulo_676" data-name="Retângulo 676" width="2.75" height="8.342" rx="0.561" transform="translate(14.529 8.813) rotate(90)" fill="#fff"/>
+      <rect id="Retângulo_677" data-name="Retângulo 677" width="2.75" height="8.438" rx="0.561" transform="translate(68.779 8.438) rotate(180)" fill="#fff"/>
+      <rect id="Retângulo_678" data-name="Retângulo 678" width="2.75" height="11.563" rx="0.561" transform="translate(14.529 11.563) rotate(180)" fill="#fff"/>
+      <rect id="Retângulo_679" data-name="Retângulo 679" width="2.75" height="57" rx="0.561" transform="translate(11.779 2.75) rotate(-90)" fill="#fff"/>
+    </g>
+    <path id="Caminho_267" data-name="Caminho 267" d="M75.681,79.544V71.421A3.124,3.124,0,0,0,72.556,68.3H34.181a3.5,3.5,0,0,0-3.5,3.5v19H9.6A45.005,45.005,0,0,0,53,124.544h.179a44.97,44.97,0,0,0,45-45Z" transform="translate(0.843 19.97)" fill="#3b3231"/>
+  </g>
+</svg>
