@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 90 90">
+  <g id="Grupo_992" data-name="Grupo 992" transform="translate(-207.977 -171.317)">
+    <g id="Grupo_983" data-name="Grupo 983" transform="translate(207.977 171.317)">
+      <rect id="Retângulo_680" data-name="Retângulo 680" width="90" height="90" rx="45" transform="translate(0 0)" fill="#de3c3c"/>
+      <g id="Grupo_982" data-name="Grupo 982" transform="translate(27.603 9.73)">
+        <rect id="Retângulo_681" data-name="Retângulo 681" width="34.284" height="65.178" rx="1.744" fill="#3b3231"/>
+        <path id="Caminho_268" data-name="Caminho 268" d="M73.969,21.224l16.2-9.466c.795-.464,1.732.212,1.732,1.251V73.662c0,1.041-.938,1.717-1.732,1.251l-16.2-9.463a1.443,1.443,0,0,1-.661-1.251V22.475A1.44,1.44,0,0,1,73.969,21.224Z" transform="translate(-58.43 -10.747)" fill="#00a6c4"/>
+        <ellipse id="Elipse_113" data-name="Elipse 113" cx="0.616" cy="1.539" rx="0.616" ry="1.539" transform="translate(16.176 30.899)" fill="#fff"/>
+      </g>
+      <line id="Linha_22" data-name="Linha 22" y2="4.912" transform="translate(25.125 76.398)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Linha_23" data-name="Linha 23" y2="4.912" transform="translate(64.875 76.398)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Linha_24" data-name="Linha 24" x2="40.003" transform="translate(24.999 78.854)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

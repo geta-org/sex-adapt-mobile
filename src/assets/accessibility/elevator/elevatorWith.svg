@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <g id="Grupo_1001" data-name="Grupo 1001" transform="translate(-103 -244)">
+    <rect id="Retângulo_649" data-name="Retângulo 649" width="50" height="50" rx="25" transform="translate(103 244)" fill="#00a6c4"/>
+    <path id="Caminho_230" data-name="Caminho 230" d="M182.512,23.495a.31.31,0,0,1,.536,0l1.068,1.85,1.069,1.852a.31.31,0,0,1-.268.464h-4.275a.31.31,0,0,1-.268-.464l1.069-1.852Z" transform="translate(-73.448 242.46)" fill="#fff"/>
+    <path id="Caminho_231" data-name="Caminho 231" d="M183.049,31.338a.31.31,0,0,1-.536,0l-1.068-1.852-1.069-1.85a.31.31,0,0,1,.268-.464h4.275a.309.309,0,0,1,.268.464l-1.069,1.85Z" transform="translate(-73.448 243.842)" fill="#fff"/>
+    <g id="Grupo_974" data-name="Grupo 974" transform="translate(113.771 255.942)">
+      <g id="Grupo_972" data-name="Grupo 972" transform="translate(14.579 4.737)">
+        <rect id="Retângulo_662" data-name="Retângulo 662" width="11.658" height="21.379" rx="0.51" fill="#3b3231"/>
+      </g>
+      <g id="Grupo_973" data-name="Grupo 973" transform="translate(2.264 4.737)">
+        <rect id="Retângulo_663" data-name="Retângulo 663" width="11.658" height="21.379" rx="0.486" fill="#3b3231"/>
+      </g>
+      <rect id="Retângulo_664" data-name="Retângulo 664" width="1.813" height="24.33" transform="translate(0 1.786)" fill="#3b3231"/>
+      <rect id="Retângulo_665" data-name="Retângulo 665" width="1.813" height="24.33" transform="translate(26.645 1.786)" fill="#3b3231"/>
+      <rect id="Retângulo_666" data-name="Retângulo 666" width="28.458" height="3.827" rx="1.115" fill="#3b3231"/>
+      <rect id="Retângulo_667" data-name="Retângulo 667" width="12.315" height="1.625" rx="0.597" transform="translate(8.093 0.963)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
