@@ -1,18 +1,22 @@
 import { } from 'react-native';
 import { InputUser } from '../SignIn/styles';
+import { useNavigation } from '@react-navigation/native';
 
 import { SignInContainer,
    SignInWrapper,
     Title, 
     Text,
    Input, 
-  
   Button,
   TextButton, 
   Header
 } from './styles';
 
 export function RecoverPassword() {
+  const navigation = useNavigation();
+  function handleAcessibility(){
+    navigation.navigate('Accessibility')
+  }
   return (
     <SignInContainer>
       <Header>
@@ -24,7 +28,7 @@ export function RecoverPassword() {
         
        </Input>
        
-         <Button activeOpacity={0.3} >
+         <Button activeOpacity={0.3} Onpress={handleAcessibility}>
           <TextButton>Recuperar senha</TextButton>
         </Button>
           

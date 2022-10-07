@@ -34,13 +34,17 @@ import { SignUp } from '../SignUp';
 export function SignIn() {
   const navigation = useNavigation();
   
-  //function handleSignIn() {
-    //navigation.navigate('SignUp')
-  //}
-
+  
   function handlePasswordReset() {
     navigation.navigate('RecoverPassword')
   }
+
+  function handleSingUp(){
+    navigation.navigate('SignUp')
+  }
+
+  
+
   return (
     
     <LoginContainer>
@@ -80,7 +84,7 @@ export function SignIn() {
           <TextButton>Login </TextButton>
         </Button>
 
-       <AnotherButton onPress={SignUp}>
+       <AnotherButton onPress={handleSingUp}>
         <TextSingUp>Não possui conta? Faça o      
         <TextAnother> cadastro</TextAnother>
         </TextSingUp>

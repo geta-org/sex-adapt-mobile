@@ -18,7 +18,6 @@ export const Title = styled.Text`
  margin-top:95px;
  font-size: 30px;
   font-weight: bold;
-  
   flex:1;
   flex-direction: center;
   align-items: center;
@@ -44,13 +43,6 @@ border-color: #bababa;
 height: 20%;
 width:300px; 
 margin-bottom: 15px;
-
-
-
-
-
-
-
 font-size: 16px;
 `
 

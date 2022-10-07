@@ -1,20 +1,37 @@
 import { } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import { Text,
-OtherText, Header, TextDados, SingInContainer, Input, Title,Button, SignInWrapper, TextButton} from './styles'
+OtherText, Header, SingUpText, SingInContainer, Input, Title,Button, SignInWrapper, TextButton,ButtonText,TextInput } from './styles'
 export function SignUp() {
+  const navigation = useNavigation();
+
+  function handleAccessibility() {
+    navigation.navigate('Accessibility')
+  }
+
     return (
       <SingInContainer>
         <Header>
-          <Title>Esqueceu sua Senha?</Title>
-          <Text >Seu e-mail pode ajudar a recuperar</Text>
+          <Title>Cadastro</Title>
+          <SingUpText>Conte-nos um pouco mais sobre você para realizarmos o seu cadastro</SingUpText>
+          <Text >Usuário</Text>
+          <Input placeholder="     Usuário" placeholderTextColor="#bababa"></Input>
+          <Text >E-mail</Text>
+          <Input placeholder="     Insira seu e-mail" placeholderTextColor="#bababa"></Input>
+          <Text >Senha </Text>
+          <Input placeholder="     Senha" placeholderTextColor="#bababa"></Input>
+          <Text >Confirmação da senha </Text>
+          <Input >
+            <TextInput>Senha</TextInput>
+
+          </Input>
           </Header>
           <SignInWrapper>
-          <Input placeholder="     Insira seu e-mail" placeholderTextColor="#bababa">
           
-         </Input>
          
-           <Button activeOpacity={0.3} >
-            <TextButton>Recuperar senha</TextButton>
+           <Button activeOpacity={0.3}  onPress={handleAccessibility}>
+            <TextButton>Próximo  </TextButton>
+            
           </Button>
             
   
