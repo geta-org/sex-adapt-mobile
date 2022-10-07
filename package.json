@@ -54,5 +54,6 @@
     "react-test-renderer": "18.0.0",
     "typescript": "~4.3.5"
   },
+  "rootDir": "src",
   "private": true
 }

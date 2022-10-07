@@ -1,94 +1,99 @@
-import { } from 'react-native';
+import {} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import escadas from '../../../assets/escadas.png'
-import semPisoTatil from '../../../assets/sem-piso-tatil (1).png'
-import desnivel from '../../../assets/desnivel (1).png'
-import semBarra from '../../../assets/sem-barra (1).png'
-import semBraile from '../../../assets/sem-braile (1).png'
-import dimensoes from '../../../assets/dimensoes-incompativeis (1).png'
-import semLibras from '../../../assets/sem-libras (1).png'
-import { AccessibilityContainer,
+import {
+  StairsWith,
+  TactileFloorWithout,
+  FloorUneven,
+  BarsWithSupport,
+  PoundWithSupport,
+  TactileFloorWith,
+  BrailleWithSupport,
+  ElevatorWith,
+  DoorWide
+} from '@assets';
+
+import {
+  AccessibilityContainer,
   AccessibilityWrapper,
-  Subtitle, 
+  Subtitle,
   Title,
   Container,
-  PicContainer,
-  Image,
   Button,
   BackButton,
   TextButtons,
   Box,
   BoxContainer,
-  BoxText } from './styles';
+  BoxText
+} from './styles';
+import { StatusBar } from 'expo-status-bar';
+import { CaretLeft } from 'phosphor-react-native';
 
 export function Accessibility() {
+  const navigation = useNavigation();
+  function handleGoBack() {
+    navigation.goBack();
+  }
   return (
     <AccessibilityContainer>
+      <StatusBar style="dark" />
       <Container>
-      <Title>Qual sua dificuldade quanto ao acesso?</Title>
-      <Subtitle>Conte-nos um pouco sobre as estruturas que dificultam a sua autonomia em um motel </Subtitle>
+        <BackButton onPress={handleGoBack}>
+          <CaretLeft size={32} font-weight="bold" />
+          <Title>Qual sua necessidade   quanto ao acesso?</Title>
+        </BackButton>
 
-      </Container>
+        
+        </Container>
+        <Subtitle>
+          Conte-nos um pouco sobre as estruturas que dificultam a sua autonomia
+          em um motel
+        </Subtitle>
       
+
       <AccessibilityWrapper>
         <BoxContainer>
-      <Box>
-        <BoxText>
-          Escadas
-        </BoxText>
-        </Box>
-      <Box>
-        <BoxText>
-        Sem piso tátil 
-        </BoxText>
-      </Box>
-      </BoxContainer>
+          <Box>
+            <ElevatorWith width={80} height={80} />
+            <BoxText>Elevador</BoxText>
+          </Box>
+          <Box>
+            <TactileFloorWith width={80} height={80} />
+            <BoxText>Piso tátil</BoxText>
+          </Box>
+        </BoxContainer>
 
-      <BoxContainer>
-      <Box>
-      <BoxText>
-          Desníveis
-          </BoxText>
-      </Box>
-      <Box>
-      <BoxText>
-          Sem barras
-          </BoxText>
-      </Box>
-      </BoxContainer>
+        <BoxContainer>
+          <Box>
+            <FloorUneven width={80} height={80} />
+            <BoxText>Sem desníveis</BoxText>
+          </Box>
+          <Box>
+            <BarsWithSupport width={80} height={80} />
+            <BoxText> Barras de suporte</BoxText>
+          </Box>
+        </BoxContainer>
 
-      <BoxContainer>
-      <Box>
-      <BoxText>
-          
-          </BoxText>
-      </Box>
-      <Box>
-      <BoxText>
-          
-          </BoxText>
-      </Box>
-      </BoxContainer>
+        <BoxContainer>
+          <Box>
+            <BrailleWithSupport width={80} height={80} />
+            <BoxText> Sinalização em braile</BoxText>
+          </Box>
+          <Box>
+            <DoorWide />
+            <BoxText>Dimensões diversas</BoxText>
+          </Box>
+        </BoxContainer>
 
-      <BoxContainer>
-      <Box>
-      <BoxText>
-          
-          </BoxText>
-      </Box>
-      <Button>
-        <TextButtons>Continuar</TextButtons>
-      </Button>
-      </BoxContainer>
-
-      
+        <BoxContainer>
+          <Box>
+            <PoundWithSupport width={80} height={80} />
+            <BoxText> Atendimento em Libras</BoxText>
+          </Box>
+          <Button>
+            <TextButtons>Continuar</TextButtons>
+          </Button>
+        </BoxContainer>
       </AccessibilityWrapper>
-<Container>
-
-
-</Container>
-    
-    
     </AccessibilityContainer>
   );
 }
