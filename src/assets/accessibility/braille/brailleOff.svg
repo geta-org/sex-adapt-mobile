@@ -1,0 +1,31 @@
+<svg id="Braile_off" data-name="Braile off" xmlns="http://www.w3.org/2000/svg" width="35.999" height="36" viewBox="0 0 35.999 36">
+  <path id="Caminho_213" data-name="Caminho 213" d="M166.639,119.453a17.955,17.955,0,1,1-2.412-9A17.865,17.865,0,0,1,166.639,119.453Z" transform="translate(-130.64 -101.453)" fill="#d4d4d4"/>
+  <rect id="Retângulo_655" data-name="Retângulo 655" width="26.978" height="17.96" rx="2.683" transform="translate(4.475 9.006)" fill="#7d7d7d"/>
+  <g id="Grupo_970" data-name="Grupo 970" transform="translate(6.762 18.017)">
+    <circle id="Elipse_98" data-name="Elipse 98" cx="0.724" cy="0.724" r="0.724" transform="translate(7.975)" fill="#fff"/>
+    <g id="Grupo_965" data-name="Grupo 965" transform="translate(10.875)">
+      <circle id="Elipse_99" data-name="Elipse 99" cx="0.724" cy="0.724" r="0.724" transform="translate(0 2.179)" fill="#fff"/>
+      <circle id="Elipse_100" data-name="Elipse 100" cx="0.724" cy="0.724" r="0.724" transform="translate(2.173)" fill="#fff"/>
+    </g>
+    <g id="Grupo_966" data-name="Grupo 966" transform="translate(18.854)">
+      <circle id="Elipse_101" data-name="Elipse 101" cx="0.724" cy="0.724" r="0.724" transform="translate(2.173 2.179)" fill="#fff"/>
+      <circle id="Elipse_102" data-name="Elipse 102" cx="0.724" cy="0.724" r="0.724" fill="#fff"/>
+    </g>
+    <g id="Grupo_967" data-name="Grupo 967">
+      <circle id="Elipse_103" data-name="Elipse 103" cx="0.724" cy="0.724" r="0.724" fill="#fff"/>
+      <circle id="Elipse_104" data-name="Elipse 104" cx="0.724" cy="0.724" r="0.724" transform="translate(0 2.173)" fill="#fff"/>
+    </g>
+    <g id="Grupo_968" data-name="Grupo 968" transform="translate(2.894)">
+      <circle id="Elipse_105" data-name="Elipse 105" cx="0.724" cy="0.724" r="0.724" fill="#fff"/>
+      <circle id="Elipse_106" data-name="Elipse 106" cx="0.724" cy="0.724" r="0.724" transform="translate(0.006 2.179)" fill="#fff"/>
+      <circle id="Elipse_107" data-name="Elipse 107" cx="0.724" cy="0.724" r="0.724" transform="translate(2.176 2.179)" fill="#fff"/>
+      <circle id="Elipse_108" data-name="Elipse 108" cx="0.724" cy="0.724" r="0.724" transform="translate(0 4.357)" fill="#fff"/>
+    </g>
+    <g id="Grupo_969" data-name="Grupo 969" transform="translate(15.948)">
+      <circle id="Elipse_109" data-name="Elipse 109" cx="0.724" cy="0.724" r="0.724" fill="#fff"/>
+      <circle id="Elipse_110" data-name="Elipse 110" cx="0.724" cy="0.724" r="0.724" transform="translate(0.006 2.179)" fill="#fff"/>
+      <circle id="Elipse_111" data-name="Elipse 111" cx="0.724" cy="0.724" r="0.724" transform="translate(0 4.357)" fill="#fff"/>
+    </g>
+  </g>
+  <text id="Braile" transform="translate(4.859 10.949)" fill="#fff" font-size="6.106" font-family="BebasNeue-Regular, Bebas Neue" letter-spacing="0.324em"><tspan x="1.794" y="5">Braile</tspan></text>
+</svg>
