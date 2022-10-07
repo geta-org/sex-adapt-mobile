@@ -1,0 +1,14 @@
+<svg id="Rampa_off" data-name="Rampa off" xmlns="http://www.w3.org/2000/svg" width="36.001" height="36.001" viewBox="0 0 36.001 36.001">
+  <path id="Caminho_218" data-name="Caminho 218" d="M166.528,25.322a18.023,18.023,0,1,1-2.42-9A17.857,17.857,0,0,1,166.528,25.322Z" transform="translate(-130.527 -7.317)" fill="#d4d4d4"/>
+  <path id="Caminho_219" data-name="Caminho 219" d="M151.292,27.542" transform="translate(-130.95 -7.729)" fill="#de3c3c"/>
+  <path id="Caminho_221" data-name="Caminho 221" d="M167.028,24.172q.062.739.062,1.494a17.857,17.857,0,0,1-2.4,8.973H158.1V24.167" transform="translate(-131.089 -7.66)" fill="#7d7d7d"/>
+  <path id="Caminho_222" data-name="Caminho 222" d="M157.585,34.639V24.167L136.469,34.639h-3.492a18,18,0,0,0,31.2,0Z" transform="translate(-130.577 -7.66)" fill="#7d7d7d"/>
+  <line id="Linha_17" data-name="Linha 17" x1="16.246" y2="7.905" transform="translate(5.754 14.735)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+  <path id="Caminho_223" data-name="Caminho 223" d="M151.339,17.422" transform="translate(-130.951 -7.523)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+  <path id="Caminho_224" data-name="Caminho 224" d="M151.339,21.672" transform="translate(-130.951 -7.61)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+  <path id="Caminho_225" data-name="Caminho 225" d="M150.833,21.333" transform="translate(-130.941 -7.603)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+  <path id="Caminho_226" data-name="Caminho 226" d="M150.833,16.917" transform="translate(-130.941 -7.513)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+  <path id="Caminho_227" data-name="Caminho 227" d="M150.833,16.917" transform="translate(-130.941 -7.513)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+  <path id="Caminho_228" data-name="Caminho 228" d="M150.833,21.333" transform="translate(-130.941 -7.603)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+  <path id="Caminho_229" data-name="Caminho 229" d="M154.56,21.239a.277.277,0,0,1,.21.431L153.7,23.256l-1.072,1.586a.277.277,0,0,1-.478-.033l-.839-1.722-.838-1.721a.276.276,0,0,1,.268-.4l1.91.135Z" transform="translate(-130.933 -7.595)" fill="#fff"/>
+</svg>

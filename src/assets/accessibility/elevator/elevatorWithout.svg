@@ -1,0 +1,17 @@
+<svg id="Elevador_on" data-name="Elevador on" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <rect id="Retângulo_649" data-name="Retângulo 649" width="36" height="36" rx="18" fill="#d4d4d4"/>
+  <path id="Caminho_230" data-name="Caminho 230" d="M181.9,23.452a.223.223,0,0,1,.386,0l.769,1.332.77,1.333a.223.223,0,0,1-.193.334h-3.078a.223.223,0,0,1-.193-.334l.77-1.333Z" transform="translate(-177.536 -7.644)" fill="#fff"/>
+  <path id="Caminho_231" data-name="Caminho 231" d="M182.288,30.172a.223.223,0,0,1-.386,0l-.769-1.333-.77-1.332a.223.223,0,0,1,.193-.334h3.078a.223.223,0,0,1,.193.334l-.77,1.332Z" transform="translate(-177.536 -7.722)" fill="#fff"/>
+  <g id="Grupo_974" data-name="Grupo 974" transform="translate(7.755 8.598)">
+    <g id="Grupo_972" data-name="Grupo 972" transform="translate(10.497 3.41)">
+      <rect id="Retângulo_662" data-name="Retângulo 662" width="8.394" height="15.393" rx="0.51" fill="#3b3231"/>
+    </g>
+    <g id="Grupo_973" data-name="Grupo 973" transform="translate(1.63 3.41)">
+      <rect id="Retângulo_663" data-name="Retângulo 663" width="8.394" height="15.393" rx="0.486" fill="#3b3231"/>
+    </g>
+    <rect id="Retângulo_664" data-name="Retângulo 664" width="1.306" height="17.518" transform="translate(0 1.286)" fill="#3b3231"/>
+    <rect id="Retângulo_665" data-name="Retângulo 665" width="1.306" height="17.518" transform="translate(19.184 1.286)" fill="#3b3231"/>
+    <rect id="Retângulo_666" data-name="Retângulo 666" width="20.49" height="2.755" rx="1.115" fill="#3b3231"/>
+    <rect id="Retângulo_667" data-name="Retângulo 667" width="8.867" height="1.17" rx="0.585" transform="translate(5.827 0.693)" fill="#fff"/>
+  </g>
+</svg>
