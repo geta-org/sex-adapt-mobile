@@ -25,7 +25,7 @@ import ElevatorWithout from './accessibility/elevator/elevatorWithout.svg';
 import StairsWith from './accessibility/stairs/stairsWith.svg';
 //tactileFloor
 import TactileFloorWith from './accessibility/tactileFloor/tactileFloorWith.svg';
-import TactileFloorWithout from './accessibility/tactileFloor/TactileFloorWithout.svg';
+import TactileFloorWithout from './accessibility/tactileFloor/tactileFloorWithout.svg';
 import TactileFloorOff from './accessibility/tactileFloor/tactileFloorOff.svg';
 //pound
 import PoundWithSupport from './accessibility/pound/poundWithSupport.svg';
@@ -39,7 +39,7 @@ import DoorWide from './accessibility/door/doorWide.svg';
 import DoorWideOff from './accessibility/door/doorWideOff.svg';
 //ramp
 import RampWith from './accessibility/ramp/rampWith.svg';
-import RampOff from './accessibility/rampOff.svg';
+import RampOff from './accessibility/ramp/rampOff.svg';
 
 export {
   Logo,

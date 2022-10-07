@@ -1,4 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
+
 import {
   useFonts,
   Montserrat_400Regular,
