@@ -24,7 +24,7 @@ export const AccessibilityWrapper = styled.View`
 
 export const Title = styled.Text`
   font-weight: bold;
-  font-size: 25px;
+  font-size: 22px;
   width: 300px;
  // height: 85px;
  // margin-left: 80px;
@@ -33,6 +33,7 @@ export const Title = styled.Text`
 export const Subtitle = styled.Text`
   width: 350px;
  margin-left: 80px;
+ font-size: 12px;
 `;
 export const Container = styled.View`
  
@@ -54,7 +55,7 @@ export const TextButtons = styled.Text`
 
 export const Box = styled.TouchableOpacity`
   width: 115px;
-  height: 140px;
+  height: 130px;
   border: 1px;
   border-color: #bebebe;
   border-radius: 30px;
@@ -83,6 +84,7 @@ export const ButtonText = styled.Text`
 `;
 
 export const BoxContainer = styled.View`
+  margin-top: 10px;
   flex-direction: row;
   width: 100%;
   justify-content: space-between;

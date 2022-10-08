@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
 
-export const SignInContainer = styled.View`
+export const RecoverPasswordContainer = styled.View`
   justify-content: flex-start;
   background-color: #fff;
   flex: 1;
@@ -11,7 +11,7 @@ export const Header = styled.View`
   width: 100%;
   height: 200px;
   background-color: #fff;
-  margin-bottom: 80px;
+ 
 `;
 export const Title = styled.Text`
   margin-top: 95px;
@@ -22,21 +22,19 @@ export const Title = styled.Text`
   align-items: center;
   margin-left: 70px;
 `;
-export const SignInWrapper = styled.View`
+export const RecoverPasswordWrapper = styled.View`
   //margin-bottom: 100%;
+  margin-top: 50px;
 `;
 
 export const Text = styled.Text`
   font-size: 13px;
   // margin-bottom:300px;
-  margin-left: 70px;
+  margin-left: 30px;
 `;
 export const Input = styled.TextInput`
-  //border-bottom-width: 1px;
-
   border-bottom-width: 1px;
   border-color: #bababa;
-  //color: #fff;
   height: 20%;
   width: 300px;
   margin-bottom: 15px;
@@ -60,4 +58,11 @@ export const TextButton = styled.Text`
 `;
 export const Container = styled.View`
   
+`
+
+export const BackButton = styled.TouchableOpacity`
+flex-direction: row;
+display: flex;
+  align-items: center;
+  justify-content: space-between;
 `

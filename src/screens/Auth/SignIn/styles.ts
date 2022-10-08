@@ -51,7 +51,6 @@ export const InputUser = styled.View`
   color: #fff;
   height: 8%;
   width: 100%;
-
   border-color: #fff;
 `;
 
@@ -96,15 +95,14 @@ export const TextButton = styled.Text`
   color: #cc3333;
   font-weight: bold;
 `;
-export const TextSingUp = styled.Text`
+export const SingUpText = styled.Text`
   color: #fff;
   margin-top: 25px;
 `;
 
-export const ButtonSingUp = styled.TouchableOpacity`
+export const SingUpButton = styled.TouchableOpacity`
   color: white;
   margin-top: 60px;
-  //border-bottom-width: 1px;
 `;
 
 export const TextAnother = styled.Text`
@@ -115,7 +113,6 @@ export const TextAnother = styled.Text`
 
 export const AnotherButton = styled.TouchableOpacity`
   border-color: #bababa;
-  //height: 6%;
 `;
 
 export const Input = styled.View`
@@ -123,7 +120,6 @@ export const Input = styled.View`
   padding: 10px;
   color: #fff;
   font-size: 20px;
-  //border-radius: 9px;
   width: 90%;
   border-bottom-width: 1px;
   border-color: rgb(186, 186, 186);

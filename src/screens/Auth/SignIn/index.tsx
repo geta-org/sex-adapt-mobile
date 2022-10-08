@@ -1,13 +1,8 @@
 import { Lock, NumberOne, User } from 'phosphor-react-native';
-import {
-  Text,
-  StyleSheet,
+import { 
   TextInput,
   Image,
-  View,
-  ImageBackground
 } from 'react-native';
-//import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import logoImg from '../../../assets/logotipo.png';
 
@@ -24,13 +19,10 @@ import {
   PasswordButton,
   PasswordText,
   TextSubmit,
-  Title,
-  TextSingUp,
-  ButtonSingUp,
+  SingUpText,
   TextAnother,
   Header,
   AnotherButton,
-  Input,
   Background
 } from './styles';
 import { SignUp } from '../SignUp';
@@ -79,9 +71,9 @@ export function SignIn() {
         </Button>
 
         <AnotherButton onPress={handleSingUp}>
-          <TextSingUp>
+          <SingUpText>
             Não possui conta? Faça o<TextAnother> cadastro</TextAnother>
-          </TextSingUp>
+          </SingUpText>
         </AnotherButton>
       </LoginWrapper>
     </LoginContainer>

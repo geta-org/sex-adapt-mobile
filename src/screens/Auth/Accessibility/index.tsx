@@ -53,29 +53,29 @@ export function Accessibility() {
       <AccessibilityWrapper>
         <BoxContainer>
           <Box>
-            <ElevatorWith width={80} height={80} />
+            <ElevatorWith width={70} height={70} />
             <BoxText>Elevador</BoxText>
           </Box>
           <Box>
-            <TactileFloorWith width={80} height={80} />
+            <TactileFloorWith width={70} height={70} />
             <BoxText>Piso tátil</BoxText>
           </Box>
         </BoxContainer>
 
         <BoxContainer>
           <Box>
-            <FloorUneven width={80} height={80} />
+            <FloorUneven width={70} height={70} />
             <BoxText>Sem desníveis</BoxText>
           </Box>
           <Box>
-            <BarsWithSupport width={80} height={80} />
+            <BarsWithSupport width={70} height={70} />
             <BoxText> Barras de suporte</BoxText>
           </Box>
         </BoxContainer>
 
         <BoxContainer>
           <Box>
-            <BrailleWithSupport width={80} height={80} />
+            <BrailleWithSupport width={70} height={70} />
             <BoxText> Sinalização em braile</BoxText>
           </Box>
           <Box>
@@ -86,7 +86,7 @@ export function Accessibility() {
 
         <BoxContainer>
           <Box>
-            <PoundWithSupport width={80} height={80} />
+            <PoundWithSupport width={70} height={70} />
             <BoxText> Atendimento em Libras</BoxText>
           </Box>
           <Button>
