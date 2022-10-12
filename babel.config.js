@@ -21,8 +21,7 @@ module.exports = function (api) {
             '@assets': './src/assets/index.ts'
           }
         }
-      ],
-      'react-native-reanimated/plugin'
+      ]
     ]
   };
 };
