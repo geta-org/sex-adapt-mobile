@@ -1,4 +1,10 @@
 import { TouchableWithoutFeedback, View } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { Rating } from 'react-native-ratings';
+
+import { CardAccessibility } from '../CardAccessibility';
+import { PriceRating } from '../../PriceRating';
+import logo from '../../../../assets/icon.png';
 
 import {
   CardMotelContainer,
@@ -11,20 +17,23 @@ import {
   MotelInfo,
   ModelTextRed
 } from './styles';
-
-import logo from '../../../../assets/icon.png';
-import { PriceRating } from '../../PriceRating';
-import { Rating } from 'react-native-ratings';
-import { CardAccessibility } from '../CardAccessibility';
 import { theme } from 'src/styles/theme';
 
 export function CardMotel(props: any) {
+  const navigation = useNavigation();
+
+  function handleOpenMotel() {
+    navigation.navigate('MotelDetails');
+    //TODO
+    // navigation.navigate('game', { id, title, bannerUrl });
+  }
+
   return (
     <TouchableWithoutFeedback
       accessibilityLabel={'Card de ' + props.nome}
       accessibilityHint={'Navega para página de ' + props.nome}
       accessibilityRole={'button'}
-      onPress={props.press}>
+      onPress={handleOpenMotel}>
       <CardMotelContainer>
         <MotelWrapper>
           <MotelLogo accessibilityLabel={'Logo do motel x '} source={logo} />

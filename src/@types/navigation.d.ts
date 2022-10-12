@@ -6,6 +6,7 @@ export declare global {
       SignUp: undefined;
       RecoverPassword: undefined;
       Home: undefined;
+      MotelDetails: undefined;
     }
   }
 }
