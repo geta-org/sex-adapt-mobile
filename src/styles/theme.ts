@@ -36,5 +36,12 @@ export const theme = {
     lg: '21px',
     xl: '28px',
     xl_2: '37px'
+  },
+
+  margins: {
+    sm: '8px',
+    md: '16px',
+    lg: '24px',
+    xl: '36px'
   }
 };
