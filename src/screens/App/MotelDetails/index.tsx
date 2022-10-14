@@ -2,8 +2,7 @@ import { Heart } from 'phosphor-react-native';
 import { useState } from 'react';
 import { ScrollView, TouchableWithoutFeedback, View } from 'react-native';
 import { Rating } from 'react-native-ratings';
-import { CardAccessibilityText } from 'src/components/Card/CardAccessibilityText';
-import { ModelTextRed } from 'src/components/Card/CardMotel/styles';
+import { CardAccessibility } from 'src/components/Card/CardAccessibility';
 import { PriceRating } from 'src/components/PriceRating';
 import { theme } from 'src/styles/theme';
 
@@ -23,8 +22,12 @@ import {
   ReviewWrapper,
   TelephoneText,
   Title,
-  ReviewContent
+  ReviewContent,
+  ModelTextRed
 } from './styles';
+
+// TODO: configure route parameters
+// TODO: create a section comment
 
 export function MotelDetails() {
   const [favoriteMotel, setFavoriteMotel] = useState(false);
@@ -43,7 +46,7 @@ export function MotelDetails() {
         <ButtonHeart style={{ shadowOpacity: 0.29, elevation: 3 }}>
           <Heart
             weight="duotone"
-            color={favoriteMotel ? '#CC3333' : '#D4D4D4'}
+            color={favoriteMotel ? theme.colors.red_900 : theme.colors.gray_500}
           />
         </ButtonHeart>
       </TouchableWithoutFeedback>
@@ -70,7 +73,7 @@ export function MotelDetails() {
           </MotelInfo>
         </MotelInfoWrapper>
 
-        <CardAccessibilityText groundfloor={true} />
+        <CardAccessibility uneeveness />
 
         <ReviewContainer>
           <Title>Avaliações</Title>
