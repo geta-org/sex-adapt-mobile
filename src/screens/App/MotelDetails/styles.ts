@@ -2,7 +2,8 @@ import styled from 'styled-components/native';
 
 export const MotelDetailsContainer = styled.View`
   flex: 1;
-  background-color: ${({ theme }) => theme.colors.gray_500};
+  /*  looks better totally white */
+  background-color: ${({ theme }) => theme.colors.white};
   align-items: center;
 `;
 

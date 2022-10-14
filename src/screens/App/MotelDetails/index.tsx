@@ -88,9 +88,8 @@ export function MotelDetails() {
               readonly
               startingValue={3.0}
               ratingColor={theme.colors.red_900}
-              tintColor="#d6d6d6"
               ratingBackgroundColor={theme.colors.gray_700}
-              style={{ marginLeft: 12, borderColor: '#d6d6d6' }}
+              style={{ marginLeft: 12, borderColor: '#000000' }}
             />
           </ReviewWrapper>
           <CommentText>Comente</CommentText>
