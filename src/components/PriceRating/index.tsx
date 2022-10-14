@@ -1,6 +1,4 @@
-import { Text } from 'react-native';
-
-import { theme } from '../../styles/theme';
+import { PriceContent, PriceText } from './styles';
 
 interface PriceProps {
   cost: number;
@@ -8,25 +6,10 @@ interface PriceProps {
 
 export function PriceRating({ cost }: PriceProps) {
   return (
-    <Text accessible={true} style={{ fontWeight: 'bold' }}>
-      <Text
-        style={{
-          color: cost > 0 ? theme.colors.red_900 : theme.colors.gray_500
-        }}>
-        $
-      </Text>
-      <Text
-        style={{
-          color: cost > 1 ? theme.colors.red_900 : theme.colors.gray_500
-        }}>
-        $
-      </Text>
-      <Text
-        style={{
-          color: cost > 2 ? theme.colors.red_900 : theme.colors.gray_500
-        }}>
-        $
-      </Text>
-    </Text>
+    <PriceContent>
+      <PriceText isActive={cost > 0}>$</PriceText>
+      <PriceText isActive={cost > 1}>$</PriceText>
+      <PriceText isActive={cost > 2}>$</PriceText>
+    </PriceContent>
   );
 }
