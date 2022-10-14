@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
 
-export const CardAccessibilityConteiner = styled.View`
+export const CardAccessibilityContainer = styled.View`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
