@@ -43,18 +43,18 @@ export const MotelTextField = styled.View`
 
 export const MotelTitle = styled.Text`
   color: ${({ theme }) => theme.colors.red_900};
-  font-size: ${({ theme }) => theme.font_size.md};
+  font-size: ${({ theme }) => theme.font_size.lg};
   font-family: ${({ theme }) => theme.font_family.bold};
 `;
 
 export const MotelText = styled.Text`
   color: ${({ theme }) => theme.colors.gray_700};
-  font-size: ${({ theme }) => theme.font_size.xs};
+  font-size: ${({ theme }) => theme.font_size.md};
 `;
 
 export const ModelTextRed = styled.Text`
   color: ${({ theme }) => theme.colors.red_900};
-  font-size: ${({ theme }) => theme.font_size.xs};
+  font-size: ${({ theme }) => theme.font_size.md};
 `;
 
 export const MotelInfo = styled.View`
