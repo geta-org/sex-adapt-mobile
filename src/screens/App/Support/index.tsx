@@ -1,16 +1,15 @@
-import { WomenA } from '@assets';
+import { TouchableWithoutFeedback, View } from 'react-native';
 import {
   Buildings,
   Headset,
   IconContext,
   PencilSimpleLine,
-  Power,
+  SignOut,
   Sliders
 } from 'phosphor-react-native';
-import { TouchableWithoutFeedback, View } from 'react-native';
+
 import {
   CardContent,
-  CardImage,
   CardSupport,
   CardText,
   DisconnectButton,
@@ -23,10 +22,14 @@ import {
   UserText
 } from './styles';
 
+import { WomenA } from '@assets';
+import { StatusBar } from 'expo-status-bar';
+import { theme } from 'src/styles/theme';
+
 export function Support() {
   return (
     <SupportContainer>
-      {/* <SupportWrapper> */}
+      <StatusBar style="light" />
       <ProfileContainer>
         <WomenA width={90} />
 
@@ -44,16 +47,15 @@ export function Support() {
           <TouchableWithoutFeedback onPress={() => console.log('abri modal')}>
             <DisconnectButton>
               <DisconnectText>Desconectar</DisconnectText>
-              <Power color="white" weight="bold" size={16} />
+              <SignOut color="white" weight="bold" size={16} />
             </DisconnectButton>
           </TouchableWithoutFeedback>
         </View>
       </ProfileContainer>
-      {/* </SupportWrapper> */}
 
       <IconContext.Provider
         value={{
-          color: '#CC3333',
+          color: theme.colors.red_900,
           size: 57
         }}>
         <CardContent>
