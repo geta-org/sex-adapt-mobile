@@ -19,13 +19,15 @@ import { CardAccessibilityConteiner } from './styles';
 
 interface AccessibilityProps {
   uneeveness: boolean;
-  elevator?: boolean;
-  tactileFloor?: boolean;
-  signLanguage?: boolean;
-  braille?: boolean;
-  bar?: boolean;
+  elevator: boolean;
+  tactileFloor: boolean;
+  signLanguage: boolean;
+  braille: boolean;
+  bar: boolean;
   incompatibleDimensions?: boolean;
 }
+
+// TODO: CREATE COMPONENT
 
 export function CardAccessibility({
   uneeveness,

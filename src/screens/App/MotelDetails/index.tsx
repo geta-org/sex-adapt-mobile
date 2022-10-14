@@ -73,7 +73,15 @@ export function MotelDetails() {
           </MotelInfo>
         </MotelInfoWrapper>
 
-        <CardAccessibility uneeveness />
+        <CardAccessibility
+          uneeveness={true}
+          bar={false}
+          braille={true}
+          elevator={true}
+          signLanguage={false}
+          tactileFloor={true}
+          incompatibleDimensions={false}
+        />
 
         <ReviewContainer>
           <Title>Avaliações</Title>

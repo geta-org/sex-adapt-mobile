@@ -66,7 +66,15 @@ export function CardMotel() {
           </MotelTextField>
         </MotelWrapper>
         <MotelAccessibility>
-          <CardAccessibility uneeveness />
+          <CardAccessibility
+            uneeveness={true}
+            bar={false}
+            braille={true}
+            elevator={true}
+            signLanguage={false}
+            tactileFloor={true}
+            incompatibleDimensions={false}
+          />
         </MotelAccessibility>
       </CardMotelContainer>
     </TouchableWithoutFeedback>
