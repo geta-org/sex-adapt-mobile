@@ -15,17 +15,19 @@ import {
   TactileFloorWith
 } from '@assets';
 
-import { CardAccessibilityConteiner } from './styles';
+import { CardAccessibilityContainer } from './styles';
 
 interface AccessibilityProps {
   uneeveness: boolean;
-  elevator?: boolean;
-  tactileFloor?: boolean;
-  signLanguage?: boolean;
-  braille?: boolean;
-  bar?: boolean;
+  elevator: boolean;
+  tactileFloor: boolean;
+  signLanguage: boolean;
+  braille: boolean;
+  bar: boolean;
   incompatibleDimensions?: boolean;
 }
+
+// TODO: CREATE COMPONENT
 
 export function CardAccessibility({
   uneeveness,
@@ -37,7 +39,7 @@ export function CardAccessibility({
   incompatibleDimensions
 }: AccessibilityProps) {
   return (
-    <CardAccessibilityConteiner>
+    <CardAccessibilityContainer>
       {uneeveness == true ? (
         <RampWith width={36} height={36} accessibilityRole={'image'} />
       ) : (
@@ -83,6 +85,6 @@ export function CardAccessibility({
       ) : (
         <DoorWideOff width={36} height={36} accessibilityRole={'image'} />
       )}
-    </CardAccessibilityConteiner>
+    </CardAccessibilityContainer>
   );
 }

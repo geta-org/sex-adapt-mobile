@@ -10,7 +10,7 @@ export const SearchContainer = styled.View`
   height: 40px;
   background-color: ${({ theme }) => theme.colors.white};
 
-  padding-right: 10px;
+  padding-right: ${({ theme }) => theme.margins.sm};
 
   border-color: ${({ theme }) => theme.colors.gray_800};
   border-radius: 26px;
@@ -20,9 +20,9 @@ export const SearchContainer = styled.View`
 
 export const SearchInput = styled.TextInput`
   width: 213px;
-  padding-left: 16px;
+  padding-left: ${({ theme }) => theme.margins.md};
 
-  font-size: 12px;
+  font-size: ${({ theme }) => theme.font_size.xs};
   font-family: ${({ theme }) => theme.font_family.bold};
   color: ${({ theme }) => theme.colors.gray_900};
 `;

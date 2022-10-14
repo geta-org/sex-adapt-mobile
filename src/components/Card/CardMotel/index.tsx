@@ -2,10 +2,6 @@ import { TouchableWithoutFeedback, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Rating } from 'react-native-ratings';
 
-import { CardAccessibility } from '../CardAccessibility';
-import { PriceRating } from '../../PriceRating';
-import logo from '../../../../assets/icon.png';
-
 import {
   CardMotelContainer,
   MotelAccessibility,
@@ -17,21 +13,26 @@ import {
   MotelInfo,
   ModelTextRed
 } from './styles';
+
+import { CardAccessibility } from '../CardAccessibility';
+import { PriceRating } from '../../PriceRating';
+import logo from '../../../../assets/icon.png';
+
 import { theme } from 'src/styles/theme';
 
-export function CardMotel(props: any) {
+// TODO: TYPE MOTEL DATA
+
+export function CardMotel() {
   const navigation = useNavigation();
 
   function handleOpenMotel() {
     navigation.navigate('MotelDetails');
-    //TODO
-    // navigation.navigate('game', { id, title, bannerUrl });
   }
 
   return (
     <TouchableWithoutFeedback
-      accessibilityLabel={'Card de ' + props.nome}
-      accessibilityHint={'Navega para página de ' + props.nome}
+      accessibilityLabel={'Card de nome do motel'}
+      accessibilityHint={'Navega para página do motel'}
       accessibilityRole={'button'}
       onPress={handleOpenMotel}>
       <CardMotelContainer>
@@ -65,7 +66,15 @@ export function CardMotel(props: any) {
           </MotelTextField>
         </MotelWrapper>
         <MotelAccessibility>
-          <CardAccessibility uneeveness />
+          <CardAccessibility
+            uneeveness={true}
+            bar={false}
+            braille={true}
+            elevator={true}
+            signLanguage={false}
+            tactileFloor={true}
+            incompatibleDimensions={false}
+          />
         </MotelAccessibility>
       </CardMotelContainer>
     </TouchableWithoutFeedback>

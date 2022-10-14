@@ -9,8 +9,8 @@ export function HeaderMotel() {
     <HeaderContainer>
       <InputSearch />
       <ButtonRound
-        label="Filtro"
-        subtitle="Navega para página de filtro"
+        accessibilityLabel="Filtro"
+        accessibilityHint="Navega para página de filtro"
         icon={
           <FunnelSimple size={20} weight="bold" color={theme.colors.gray_500} />
         }
