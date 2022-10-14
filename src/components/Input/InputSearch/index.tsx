@@ -1,10 +1,11 @@
-import { MagnifyingGlass } from 'phosphor-react-native';
 import { useState } from 'react';
+import { TouchableOpacity } from 'react-native';
+
+import { MagnifyingGlass } from 'phosphor-react-native';
 
 import { SearchContainer, SearchInput } from './styles';
 
 import { theme } from '../../../styles/theme';
-import { TouchableOpacity } from 'react-native';
 
 export function InputSearch() {
   const [searchText, setSearchText] = useState('');
