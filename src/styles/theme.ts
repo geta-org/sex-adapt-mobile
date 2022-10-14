@@ -30,8 +30,11 @@ export const theme = {
   },
 
   font_size: {
-    SM: '14px',
-    MD: '16px',
-    LG: '24px'
+    xs: '12px',
+    sm: '14px',
+    md: '16px',
+    lg: '21px',
+    xl: '28px',
+    xl_2: '37px'
   }
 };
