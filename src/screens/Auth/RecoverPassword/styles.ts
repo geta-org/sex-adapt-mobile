@@ -1,44 +1,30 @@
 import styled from 'styled-components/native';
 
-export const RecoverPasswordContainer = styled.View`
-  justify-content: flex-start;
-  background-color: #fff;
-  flex: 1;
-  align-items: center;
-`;
-
-export const Header = styled.View`
-  width: 100%;
-  height: 200px;
-  background-color: #fff;
- 
-`;
 export const Title = styled.Text`
-  margin-top: 95px;
   font-size: 30px;
   font-weight: bold;
-  flex: 1;
-  flex-direction: center;
+  width: 220px;
   align-items: center;
-  margin-left: 70px;
 `;
-export const RecoverPasswordWrapper = styled.View`
-  //margin-bottom: 100%;
+export const RecoverPasswordWrapper = styled.SafeAreaView`
   margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
-export const Text = styled.Text`
+export const Subtitle = styled.Text`
   font-size: 13px;
-  // margin-bottom:300px;
-  margin-left: 30px;
+  margin-bottom: 50px;
 `;
 export const Input = styled.TextInput`
   border-bottom-width: 1px;
   border-color: #bababa;
-  height: 20%;
+  height: 40px;
   width: 300px;
   margin-bottom: 15px;
   font-size: 16px;
+  padding-left: 15px;
 `;
 
 export const Button = styled.TouchableOpacity`
@@ -50,19 +36,8 @@ export const Button = styled.TouchableOpacity`
   align-items: center;
   justify-content: center;
   box-shadow: 1px 1px 1px;
-  margin-left: 65px;
 `;
 export const TextButton = styled.Text`
   color: #fff;
   font-weight: bold;
 `;
-export const Container = styled.View`
-  
-`
-
-export const BackButton = styled.TouchableOpacity`
-flex-direction: row;
-display: flex;
-  align-items: center;
-  justify-content: space-between;
-`

@@ -7,14 +7,16 @@ export const Text = styled.Text`
   font-size: 15px;
 `;
 export const OtherText = styled.Text``;
-export const SingInContainer = styled.View``;
+export const SingUpContainer = styled.SafeAreaView`
+  margin-top: 60px;
+`;
 export const Header = styled.View`
   align-items: initial;
   margin-left: 70px;
   margin-bottom: 100px;
 `;
-export const SingUpText = styled.Text`
-  margin-bottom: 30px;
+export const Subtitle = styled.Text`
+
 `;
 export const Input = styled.TextInput`
   border-bottom-width: 1px;
@@ -24,15 +26,11 @@ export const Input = styled.TextInput`
   font-size: 16px;
 `;
 export const Title = styled.Text`
-  margin-top: 80px;
-  //margin-bottom: 30px;
   font-weight: bold;
   font-size: 30px;
-  align-items: initial;
+  margin-right: 50%;
 `;
-export const SignInWrapper = styled.View`
-margin-bottom: 50px;
-`;
+
 export const Button = styled.TouchableOpacity`
   background-color: #cc3333;
   border-radius: 90px;
@@ -45,40 +43,24 @@ export const Button = styled.TouchableOpacity`
   margin-left: 45px;
   margin-top: 20px;
   flex-direction: row;
-
+  justify-content: space-between;
 `;
 export const TextButton = styled.Text`
- flex-direction: row;
-align-items: center;
-justify-content: space-evenly;
- 
+  flex-direction: row;
+  align-items: center;
   color: #fff;
   font-weight: bold;
   width: 70%;
 `;
 
-export const ButtonText = styled.Text`
-
-
-`;
 export const TextInput = styled.Text`
   font-size: 13px;
   margin-left: 100px;
-  
 `;
 
-export const BackButton =styled.TouchableOpacity`
-//margin-top: 85px;
-margin-right: 300px;
-flex-direction: row;
-align-items: center;
-//-content: space-evenly;
-
-width: 200px;
-`
-
-export const Container =styled.View`
-flex-direction: row;
-align-items: center;
-justify-content: space-evenly;
-`
+export const Container = styled.View`
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 50px;
+`;

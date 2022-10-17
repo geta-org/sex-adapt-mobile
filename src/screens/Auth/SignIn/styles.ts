@@ -24,7 +24,6 @@ export const LoginWrapper = styled.View`
 
 export const TextSubmit = styled.Text`
   color: #fff;
-
   width: 200px;
   text-align: center;
   font-size: 12px;

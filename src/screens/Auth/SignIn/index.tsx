@@ -1,13 +1,7 @@
-import { Lock, NumberOne, User } from 'phosphor-react-native';
-import { 
-  TextInput,
-  Image,
-} from 'react-native';
+import { TextInput, Image } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import logoImg from '../../../assets/logotipo.png';
-
 import { useNavigation } from '@react-navigation/native';
-
 import background from '../../../assets/background-login.png';
 import {
   LoginContainer,
@@ -26,6 +20,7 @@ import {
   Background
 } from './styles';
 import { SignUp } from '../SignUp';
+import { useEffect } from 'react';
 
 export function SignIn() {
   const navigation = useNavigation();
@@ -40,7 +35,6 @@ export function SignIn() {
 
   return (
     <LoginContainer>
-      <StatusBar style="light" />
       <Background source={background} resizeMode="cover">
         <Header>
           <Image source={logoImg} />
