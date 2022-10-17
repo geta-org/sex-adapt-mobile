@@ -30,8 +30,8 @@ export const theme = {
   },
 
   font_size: {
-    SM: 14,
-    MD: 16,
-    LG: 24
+    SM: '14px',
+    MD: '16px',
+    LG: '24px'
   }
 };
