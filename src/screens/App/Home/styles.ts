@@ -1,15 +1,13 @@
 import styled from 'styled-components/native';
 
-export const HomeContainer = styled.View`
+export const HomeContainer = styled.SafeAreaView`
   flex: 1;
-  background-color: ${({ theme }) => theme.colors.red_900};
+  background-color: ${({ theme }) => theme.colors.gray_200};
   align-items: center;
-  justify-content: center;
   font-family: ${({ theme }) => theme.font_family.bold};
 `;
 
-export const Title = styled.Text`
-  color: ${({ theme }) => theme.colors.gray_100};
-  text-align: center;
-  font-size: 16px;
+export const HomeWrapper = styled.FlatList`
+  padding-top: 70px;
+  padding-bottom: 64px;
 `;
