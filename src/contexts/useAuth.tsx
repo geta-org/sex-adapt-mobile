@@ -63,7 +63,7 @@ export function UserProvider({ children }: UserProviderProps) {
   return (
     <UserContext.Provider
       value={{
-        isLoggedIn: true,
+        isLoggedIn: false,
         user: user || null,
         signIn,
         logoff
