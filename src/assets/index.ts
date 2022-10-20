@@ -1,5 +1,9 @@
 //Logo
 import Logo from './Logo/logo.svg';
+import LogoWithText from './Logo/logo-with-text.png';
+
+//BG
+import BackgroundSignIn from './background/background-SignIn.png';
 
 //Avatar
 import Man from './avatar/man.svg';
@@ -43,6 +47,8 @@ import RampOff from './accessibility/ramp/rampOff.svg';
 
 export {
   Logo,
+  LogoWithText,
+  BackgroundSignIn,
   Man,
   ManBlind,
   ManWheelchair,
