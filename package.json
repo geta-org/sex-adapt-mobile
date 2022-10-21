@@ -9,8 +9,8 @@
     "web": "expo start --web",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
-    "post-install": "npx husky install .husky && npx husky add .husky/pre-commit && npx husky add .husky/commit-msg && chmod ug+x .husky/* && chmod ug+x .git/hooks/* && npm install eslint --location=global",
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged",
+    "post-install": "husky install .husky && chmod ug+x .husky/* && chmod ug+x .git/hooks/* && npm i eslint --location=global"
   },
   "dependencies": {
     "@expo-google-fonts/montserrat": "^0.2.2",
