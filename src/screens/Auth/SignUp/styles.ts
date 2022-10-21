@@ -30,14 +30,14 @@ export const TitleInput = styled.Text`
 
 export const Input = styled.TextInput`
   border-bottom-width: 1px;
-  border-color: ${({ theme }) => theme.colors.gray_600};
+  border-color: #bababa;
   height: 50px;
   width: 300px;
   font-size: 16px;
 `;
 
 export const Button = styled.TouchableOpacity`
-  background-color: ${({ theme }) => theme.colors.red_900};
+  background-color: #cc3333;
   border-radius: 90px;
   width: 60%;
   padding: 15px 20px;
@@ -51,7 +51,7 @@ export const Button = styled.TouchableOpacity`
 export const TextButton = styled.Text`
   flex-direction: row;
   align-items: center;
-  color: ${({ theme }) => theme.colors.white};
+  color: #fff;
   font-weight: bold;
   width: 70%;
 `;
