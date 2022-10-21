@@ -1,15 +1,16 @@
 import styled from 'styled-components/native';
 
-export const Title = styled.Text`
-  font-size: 30px;
-  font-weight: bold;
-  width: 220px;
-  align-items: center;
-`;
 export const RecoverPasswordWrapper = styled.SafeAreaView`
   margin-top: 50px;
   display: flex;
   justify-content: center;
+  align-items: center;
+`;
+
+export const Title = styled.Text`
+  font-size: 30px;
+  font-weight: bold;
+  width: 220px;
   align-items: center;
 `;
 

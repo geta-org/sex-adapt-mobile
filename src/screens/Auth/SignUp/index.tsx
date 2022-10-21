@@ -1,9 +1,8 @@
-import {} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { Text as Subtitle } from 'react-native';
 import {
-  Text,
+  TitleInput,
   Header,
-  Subtitle,
   SingUpContainer,
   Input,
   Title,
@@ -20,40 +19,36 @@ export function SignUp() {
     navigation.navigate('Accessibility');
   }
 
-  function handleGoBack() {
-    navigation.goBack();
-  }
-
   return (
     <SingUpContainer>
       <BackButton />
       <Container>
-        <Title> Cadastro</Title>
+        <Title>Cadastro</Title>
         <Subtitle>
           Conte-nos um pouco mais sobre você para realizarmos o seu cadastro
         </Subtitle>
       </Container>
 
       <Header>
-        <Text>Usuário</Text>
+        <TitleInput>Usuário</TitleInput>
+        <Input placeholder="Usuário" placeholderTextColor="#bababa"></Input>
+        <TitleInput>E-mail</TitleInput>
         <Input
-          placeholder="     Usuário"
+          placeholder="Insira seu e-mail"
           placeholderTextColor="#bababa"></Input>
-        <Text>E-mail</Text>
+        <TitleInput>Senha</TitleInput>
         <Input
-          placeholder="     Insira seu e-mail"
-          placeholderTextColor="#bababa"></Input>
-        <Text>Senha </Text>
-        <Input
-          placeholder="     Senha"
+          placeholder="Senha"
           placeholderTextColor="#bababa"
           secureTextEntry></Input>
-        <Text>Confirmação da senha </Text>
+        <TitleInput>Confirmação da senha </TitleInput>
 
         <Input
-          placeholder="     Senha"
+          placeholder="Senha"
           placeholderTextColor="#bababa"
-          secureTextEntry></Input>
+          secureTextEntry
+        />
+
         <Button activeOpacity={0.7} onPress={handleAccessibility}>
           <TextButton>Próximo</TextButton>
           <CaretDoubleRight size={32} color="#FFF" weight="bold" />

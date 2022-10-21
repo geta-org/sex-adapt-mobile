@@ -1,26 +1,25 @@
 import { TextInput, Image } from 'react-native';
-import { StatusBar } from 'expo-status-bar';
 import logoImg from '../../../assets/logotipo.png';
 import { useNavigation } from '@react-navigation/native';
 import background from '../../../assets/background-login.png';
 import {
   LoginContainer,
-  Button,
+  LoginButton,
   TextButton,
   LoginWrapper,
-  InputUser,
+  UserInput,
   InputPassword,
   PasswordButton,
   PasswordText,
   TextSubmit,
   SingUpText,
-  TextAnother,
+  SingUpButtonText,
   Header,
-  AnotherButton,
+  SingUpButton,
   Background
 } from './styles';
 import { SignUp } from '../SignUp';
-import { useEffect } from 'react';
+
 
 export function SignIn() {
   const navigation = useNavigation();
@@ -44,10 +43,11 @@ export function SignIn() {
           </TextSubmit>
         </Header>
       </Background>
+
       <LoginWrapper>
-        <InputUser>
+        <UserInput>
           <TextInput placeholder="Usuário" placeholderTextColor="#bababa" />
-        </InputUser>
+        </UserInput>
 
         <InputPassword>
           <TextInput
@@ -56,19 +56,20 @@ export function SignIn() {
             secureTextEntry></TextInput>
         </InputPassword>
 
-        <PasswordButton activeOpacity={0.3} onPress={handlePasswordReset}>
+        <PasswordButton activeOpacity={0.7} onPress={handlePasswordReset}>
           <PasswordText>Esqueci a senha</PasswordText>
         </PasswordButton>
 
-        <Button activeOpacity={0.3}>
+        <LoginButton activeOpacity={0.7}>
           <TextButton>Login </TextButton>
-        </Button>
+        </LoginButton>
 
-        <AnotherButton onPress={handleSingUp}>
+        
           <SingUpText>
-            Não possui conta? Faça o<TextAnother> cadastro</TextAnother>
+            Não possui conta? Faça o
+            <SingUpButton onPress={handleSingUp}><SingUpButtonText>cadastro</SingUpButtonText></SingUpButton>
           </SingUpText>
-        </AnotherButton>
+        
       </LoginWrapper>
     </LoginContainer>
   );

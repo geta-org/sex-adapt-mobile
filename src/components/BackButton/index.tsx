@@ -1,6 +1,6 @@
 import { useNavigation } from "@react-navigation/native";
 import { CaretLeft } from "phosphor-react-native";
-import {BackContainer  } from "./styles"
+import {BackContainer} from "./styles"
 
 
 export function BackButton(){

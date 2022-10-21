@@ -8,12 +8,11 @@ export const AccessibilityContainer = styled.View`
   margin-top: 30px;
 `;
 
-export const AccessibilityWrapper = styled.View`
-  width: 100%;
-  padding: 0 70px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+export const Container = styled.View`
+ flex-direction: column;
+align-items: center;
+justify-content: center;
+padding-left: 50px;
 `;
 
 export const Title = styled.Text`
@@ -27,25 +26,29 @@ export const Subtitle = styled.Text`
  font-size: 12px;
  margin-bottom: 15px;
 `;
-export const Container = styled.View`
- flex-direction: column;
-align-items: center;
-justify-content: center;
-padding-left: 50px;
-`;
-export const BackButton = styled.TouchableOpacity`
-display: flex;
-position: absolute;
-left: 15px;
 
-top: 15px;
+
+export const AccessibilityWrapper = styled.View`
+  width: 100%;
+  padding: 0 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
-export const TextButtons = styled.Text`
+export const BoxContainer = styled.View`
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+`;
+export const TextBox = styled.Text`
   font-weight: bold;
-  color: #fff;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 `;
-
-export const Box = styled.TouchableOpacity`
+export const AccessibilityBox = styled.TouchableOpacity`
   width: 125px;
   height: 140px;
   border: 1px;
@@ -54,6 +57,11 @@ export const Box = styled.TouchableOpacity`
   margin-bottom: 10px;
   align-items: center;
   justify-content: space-evenly;
+`;
+
+export const TextButtons = styled.Text`
+  font-weight: bold;
+  color: #fff;
 `;
 
 export const Button = styled.TouchableOpacity`
@@ -68,21 +76,6 @@ export const Button = styled.TouchableOpacity`
   box-shadow: 1px 1px 1px;
  margin-left: 15px;
 `;
-export const ButtonText = styled.Text`
-  font-weight: bold;
-  color: #fff;
-`;
 
-export const BoxContainer = styled.View`
-  flex-direction: row;
-  width: 100%;
-  justify-content: space-between;
-`;
-export const BoxText = styled.Text`
-  font-weight: bold;
-  font-size: 11px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-`;
+
+

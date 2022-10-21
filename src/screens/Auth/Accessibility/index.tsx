@@ -1,5 +1,4 @@
-import {} from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+
 import {
   FloorUneven,
   BarsWithSupport,
@@ -18,19 +17,14 @@ import {
   Container,
   Button,
   TextButtons,
-  Box,
+  AccessibilityBox,
   BoxContainer,
-  BoxText
+  TextBox
 } from './styles';
-import { StatusBar } from 'expo-status-bar';
-import { CaretLeft } from 'phosphor-react-native';
 import { BackButton } from 'src/components/BackButton';
 
 export function Accessibility() {
-  const navigation = useNavigation();
-  function handleGoBack() {
-    navigation.goBack();
-  }
+  
   return (
     <AccessibilityContainer>
       <BackButton />
@@ -43,48 +37,48 @@ export function Accessibility() {
       </Container>
       <AccessibilityWrapper>
         <BoxContainer>
-          <Box>
+          <AccessibilityBox>
             <ElevatorWith width={70} height={70} />
-            <BoxText>Elevador</BoxText>
-          </Box>
+            <TextBox>Elevador</TextBox>
+          </AccessibilityBox>
 
-          <Box>
+          <AccessibilityBox>
             <TactileFloorWith width={70} height={70} />
-            <BoxText>Piso tátil</BoxText>
-          </Box>
+            <TextBox>Piso tátil</TextBox>
+          </AccessibilityBox>
         </BoxContainer>
 
         <BoxContainer>
-          <Box>
+          <AccessibilityBox>
             <FloorUneven width={70} height={70} />
-            <BoxText>Sem desníveis</BoxText>
-          </Box>
+            <TextBox>Sem desníveis</TextBox>
+          </AccessibilityBox>
 
-          <Box>
+          <AccessibilityBox>
             <BarsWithSupport width={70} height={70} />
-            <BoxText> Barras de suporte</BoxText>
-          </Box>
+            <TextBox> Barras de suporte</TextBox>
+          </AccessibilityBox>
         </BoxContainer>
 
         <BoxContainer>
-          <Box>
+          <AccessibilityBox>
             <BrailleWithSupport width={70} height={70} />
-            <BoxText> Sinalização em braile</BoxText>
-          </Box>
+            <TextBox> Sinalização em braile</TextBox>
+          </AccessibilityBox>
 
-          <Box>
+          <AccessibilityBox>
             <DoorWide width={70} height={70} />
-            <BoxText>Dimensões diversas</BoxText>
-          </Box>
+            <TextBox>Dimensões diversas</TextBox>
+          </AccessibilityBox>
         </BoxContainer>
 
         <BoxContainer>
-          <Box>
+          <AccessibilityBox>
             <PoundWithSupport width={70} height={70} />
-            <BoxText> Atendimento em Libras</BoxText>
-          </Box>
+            <TextBox> Atendimento em Libras</TextBox>
+          </AccessibilityBox>
           <Button>
-            <TextButtons activeOpacity={0.7}>Continuar</TextButtons>
+            <TextButtons activeOpacity={0.7}>Confirmar</TextButtons>
           </Button>
         </BoxContainer>
       </AccessibilityWrapper>

@@ -9,20 +9,17 @@ import {
   Button,
   TextButton
 } from './styles';
-import { CaretLeft } from 'phosphor-react-native';
 import { BackButton } from 'src/components/BackButton';
 
 export function RecoverPassword() {
   const navigation = useNavigation();
-  function handleAcessibility() {
+  function handleAccessibility() {
     navigation.navigate('Accessibility');
   }
-  function handleGoBack() {
-    navigation.goBack();
-  }
+
   return (
     <RecoverPasswordWrapper>
-      <BackButton />
+      <BackButton/>
       <View>
         <Title>Esqueceu sua Senha?</Title>
         <Subtitle>Seu e-mail pode ajudar a recuperar</Subtitle>
@@ -30,7 +27,7 @@ export function RecoverPassword() {
 
       <Input placeholder="Insira seu e-mail" placeholderTextColor="#bababa" />
 
-      <Button activeOpacity={0.7} Onpress={handleAcessibility}>
+      <Button activeOpacity={0.7} onPress={handleAccessibility}>
         <TextButton>Recuperar senha</TextButton>
       </Button>
     </RecoverPasswordWrapper>
