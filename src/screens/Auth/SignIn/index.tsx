@@ -1,7 +1,6 @@
-import { TextInput, Image } from 'react-native';
-import logoImg from '../../../assets/logotipo.png';
-import { useNavigation } from '@react-navigation/native';
-import background from '../../../assets/background-login.png';
+import { TextInput, Image } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
+
 import {
   LoginContainer,
   LoginButton,
@@ -16,27 +15,27 @@ import {
   SingUpButtonText,
   Header,
   SingUpButton,
-  Background
-} from './styles';
-import { SignUp } from '../SignUp';
+  Background,
+} from './styles'
 
+import { BackgroundSignIn, LogoWithText } from '@assets'
 
 export function SignIn() {
-  const navigation = useNavigation();
+  const navigation = useNavigation()
 
   function handlePasswordReset() {
-    navigation.navigate('RecoverPassword');
+    navigation.navigate('RecoverPassword')
   }
 
   function handleSingUp() {
-    navigation.navigate('SignUp');
+    navigation.navigate('SignUp')
   }
 
   return (
     <LoginContainer>
-      <Background source={background} resizeMode="cover">
+      <Background source={BackgroundSignIn} resizeMode="cover">
         <Header>
-          <Image source={logoImg} />
+          <Image source={LogoWithText} />
 
           <TextSubmit>
             Ache o melhor motel para experimentar sua independência
@@ -64,13 +63,13 @@ export function SignIn() {
           <TextButton>Login </TextButton>
         </LoginButton>
 
-        
-          <SingUpText>
-            Não possui conta? Faça o
-            <SingUpButton onPress={handleSingUp}><SingUpButtonText>cadastro</SingUpButtonText></SingUpButton>
-          </SingUpText>
-        
+        <SingUpText>
+          Não possui conta? Faça o
+          <SingUpButton onPress={handleSingUp}>
+            <SingUpButtonText>cadastro</SingUpButtonText>
+          </SingUpButton>
+        </SingUpText>
       </LoginWrapper>
     </LoginContainer>
-  );
+  )
 }
