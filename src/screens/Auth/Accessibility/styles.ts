@@ -52,7 +52,7 @@ export const AccessibilityBox = styled.TouchableOpacity`
   width: 125px;
   height: 140px;
   border: 1px;
-  border-color: #bebebe;
+  border-color: ${({ theme }) => theme.colors.gray_600};
   border-radius: 30px;
   margin-bottom: 10px;
   align-items: center;
@@ -61,11 +61,11 @@ export const AccessibilityBox = styled.TouchableOpacity`
 
 export const TextButtons = styled.Text`
   font-weight: bold;
-  color: #fff;
+  color: ${({ theme }) => theme.colors.white};
 `;
 
 export const Button = styled.TouchableOpacity`
-  background-color: #cc3333;
+  background-color: ${({ theme }) => theme.colors.red_900};
   border-radius: 90px;
   width: 150px;
   height: 50px;
