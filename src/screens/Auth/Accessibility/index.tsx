@@ -1,4 +1,3 @@
-
 import {
   FloorUneven,
   BarsWithSupport,
@@ -6,8 +5,8 @@ import {
   TactileFloorWith,
   BrailleWithSupport,
   ElevatorWith,
-  DoorWide
-} from '@assets';
+  DoorWide,
+} from '@assets'
 
 import {
   AccessibilityContainer,
@@ -19,12 +18,11 @@ import {
   TextButtons,
   AccessibilityBox,
   BoxContainer,
-  TextBox
-} from './styles';
-import { BackButton } from 'src/components/BackButton';
+  TextBox,
+} from './styles'
+import { BackButton } from 'src/components/BackButton'
 
 export function Accessibility() {
-  
   return (
     <AccessibilityContainer>
       <BackButton />
@@ -83,5 +81,5 @@ export function Accessibility() {
         </BoxContainer>
       </AccessibilityWrapper>
     </AccessibilityContainer>
-  );
+  )
 }

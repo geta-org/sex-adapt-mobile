@@ -1,5 +1,5 @@
-import { useNavigation } from '@react-navigation/native';
-import { Text as Subtitle } from 'react-native';
+import { useNavigation } from '@react-navigation/native'
+import { Text as Subtitle } from 'react-native'
 import {
   TitleInput,
   Header,
@@ -8,15 +8,16 @@ import {
   Title,
   Button,
   TextButton,
-  Container
-} from './styles';
-import { CaretDoubleRight } from 'phosphor-react-native';
-import { BackButton } from 'src/components/BackButton';
+  Container,
+} from './styles'
+import { CaretDoubleRight } from 'phosphor-react-native'
+import { BackButton } from 'src/components/BackButton'
+
 export function SignUp() {
-  const navigation = useNavigation();
+  const navigation = useNavigation()
 
   function handleAccessibility() {
-    navigation.navigate('Accessibility');
+    navigation.navigate('Accessibility')
   }
 
   return (
@@ -33,14 +34,17 @@ export function SignUp() {
         <TitleInput>Usuário</TitleInput>
         <Input placeholder="Usuário" placeholderTextColor="#bababa"></Input>
         <TitleInput>E-mail</TitleInput>
+
         <Input
           placeholder="Insira seu e-mail"
-          placeholderTextColor="#bababa"></Input>
+          placeholderTextColor="#bababa"
+        ></Input>
         <TitleInput>Senha</TitleInput>
         <Input
           placeholder="Senha"
           placeholderTextColor="#bababa"
-          secureTextEntry></Input>
+          secureTextEntry
+        ></Input>
         <TitleInput>Confirmação da senha </TitleInput>
 
         <Input
@@ -49,11 +53,13 @@ export function SignUp() {
           secureTextEntry
         />
 
+        <Button />
+
         <Button activeOpacity={0.7} onPress={handleAccessibility}>
           <TextButton>Próximo</TextButton>
           <CaretDoubleRight size={32} color="#FFF" weight="bold" />
         </Button>
       </Header>
     </SingUpContainer>
-  );
+  )
 }

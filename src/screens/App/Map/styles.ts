@@ -1,4 +1,4 @@
-import styled from 'styled-components/native';
+import styled from 'styled-components/native'
 
 export const MapContainer = styled.View`
   flex: 1;
@@ -6,10 +6,10 @@ export const MapContainer = styled.View`
   align-items: center;
   justify-content: center;
   font-family: ${({ theme }) => theme.font_family.bold};
-`;
+`
 
 export const Title = styled.Text`
   color: ${({ theme }) => theme.colors.gray_100};
   text-align: center;
   font-size: 16px;
-`;
+`

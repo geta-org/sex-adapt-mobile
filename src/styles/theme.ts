@@ -20,13 +20,13 @@ export const theme = {
     gray_700: '#979797',
     gray_800: '#707070',
     gray_900: '#7D7D7D',
-    gray_1000: '#333333'
+    gray_1000: '#333333',
   },
 
   font_family: {
     regular: 'Montserrat_400Regular',
     medium: 'Montserrat_500Medium',
-    bold: 'Montserrat_700Bold'
+    bold: 'Montserrat_700Bold',
   },
 
   font_size: {
@@ -35,13 +35,13 @@ export const theme = {
     md: '16px',
     lg: '21px',
     xl: '28px',
-    xl_2: '37px'
+    xl_2: '37px',
   },
 
   margins: {
     sm: '8px',
     md: '16px',
     lg: '24px',
-    xl: '36px'
-  }
-};
+    xl: '36px',
+  },
+}

@@ -1,4 +1,4 @@
-import styled from 'styled-components/native';
+import styled from 'styled-components/native'
 
 export const ButtonContainer = styled.TouchableOpacity`
   display: flex;
@@ -19,4 +19,4 @@ export const ButtonContainer = styled.TouchableOpacity`
   border-radius: 26px;
 
   box-shadow: 0px 0px 2px ${({ theme }) => theme.colors.black};
-`;
+`
