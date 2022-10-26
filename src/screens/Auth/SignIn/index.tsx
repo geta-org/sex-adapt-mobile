@@ -1,7 +1,6 @@
 import { TextInput, Image } from 'react-native'
-import logoImg from '../../../assets/logotipo.png'
 import { useNavigation } from '@react-navigation/native'
-import background from '../../../assets/background-login.png'
+
 import {
   LoginContainer,
   LoginButton,
@@ -19,6 +18,8 @@ import {
   Background,
 } from './styles'
 
+import { BackgroundSignIn, LogoWithText } from '@assets'
+
 export function SignIn() {
   const navigation = useNavigation()
 
@@ -32,9 +33,9 @@ export function SignIn() {
 
   return (
     <LoginContainer>
-      <Background source={background} resizeMode="cover">
+      <Background source={BackgroundSignIn} resizeMode="cover">
         <Header>
-          <Image source={logoImg} />
+          <Image source={LogoWithText} />
 
           <TextSubmit>
             Ache o melhor motel para experimentar sua independência
