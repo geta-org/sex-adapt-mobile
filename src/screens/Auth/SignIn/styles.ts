@@ -24,8 +24,8 @@ export const LoginWrapper = styled.View`
   height: 60%;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.red_900};
-  border-top-left-radius: 40%;
-  border-top-right-radius: 40%;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
   border-bottom: 2px ${({ theme }) => theme.colors.white} solid;
   align-items: center;
   padding: 80px 50px;
@@ -60,7 +60,8 @@ export const InputPassword = styled.View`
 export const PasswordText = styled.Text`
   font-size: 13px;
   display: flex;
-  justify-content: right;
+  //Nao existe essa propriedade no css, ver oque modificar e APAGAR DEPOIS DE LER.
+  //justify-content: right;
   color: ${({ theme }) => theme.colors.white};
   align-self: flex-end;
 `
