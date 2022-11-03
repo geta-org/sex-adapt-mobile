@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Keyboard, TouchableOpacity } from 'react-native';
 
 import { MagnifyingGlass } from 'phosphor-react-native';
@@ -12,24 +11,18 @@ export interface InputProps {
 }
 
 export function InputSearch({ onChangeText }: InputProps) {
-  const [searchMotel, setSearchMotel] = useState('');
-
-  function handleSearch(Text: string) {
-    setSearchMotel((prev) => {
-      onChangeText(prev);
-      return Text;
-    });
-    Keyboard.dismiss;
-  }
-
   return (
     <SearchContainer style={{ shadowOpacity: 0.29, elevation: 3 }}>
       <SearchInput
-        value={searchMotel}
-        onChangeText={(text: string) => handleSearch(text)}
+        onChangeText={(text: string) => onChangeText(text)}
         accessibilityLabel={'Campo de busca de estabelecimento'}
         placeholder="Buscar Motel..."
-        onEndEditing={() => handleSearch}
+        onEndEditing={() => Keyboard.dismiss}
+        onKeyPress={(e: any) => {
+          if (e.key === 'Backspace') {
+            onChangeText('');
+          }
+        }}
         returnKeyType="search"
       />
       <TouchableOpacity
