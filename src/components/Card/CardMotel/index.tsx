@@ -1,4 +1,8 @@
-import { TouchableWithoutFeedback, View } from 'react-native';
+import {
+  TouchableWithoutFeedback,
+  TouchableWithoutFeedbackProps,
+  View
+} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Rating } from 'react-native-ratings';
 
@@ -22,7 +26,15 @@ import { theme } from 'src/styles/theme';
 
 // TODO: TYPE MOTEL DATA
 
-export function CardMotel() {
+interface CardMotelProps {
+  name: string;
+}
+
+interface Props extends TouchableWithoutFeedbackProps {
+  data: CardMotelProps;
+}
+
+export function CardMotel({ data, ...rest }: Props) {
   const navigation = useNavigation();
 
   function handleOpenMotel() {
@@ -34,12 +46,13 @@ export function CardMotel() {
       accessibilityLabel={'Card de nome do motel'}
       accessibilityHint={'Navega para página do motel'}
       accessibilityRole={'button'}
-      onPress={handleOpenMotel}>
+      onPress={handleOpenMotel}
+      {...rest}>
       <CardMotelContainer>
         <MotelWrapper>
           <MotelLogo accessibilityLabel={'Logo do motel x '} source={logo} />
           <MotelTextField>
-            <MotelTitle>Motel Locomotiva</MotelTitle>
+            <MotelTitle>{data.name}</MotelTitle>
             <MotelText>Av. Pedro Álvares C. - Sacramenta</MotelText>
             <MotelInfo>
               <MotelText accessible={true}>

@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
 
-export const HeaderContainer = styled.View`
+export const HeaderContainer = styled.SafeAreaView`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -9,6 +9,6 @@ export const HeaderContainer = styled.View`
   position: absolute;
 
   width: 311px;
-  margin-top: 30px;
+  margin-top: 40px;
   z-index: 15;
 `;
