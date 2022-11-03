@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { CardMotel } from 'src/components/Card/CardMotel';
 import { SkeletonCard } from 'src/components/Card/SkeletonCard';
 import { HeaderMotel } from 'src/components/HeaderMotel';
+import { formattedText } from 'src/helpers/formattedText';
 import { HomeContainer, HomeWrapper, styles } from './styles';
 
 export function Home() {
@@ -29,10 +30,10 @@ export function Home() {
   ]);
   const [filteredMotel, setFilteredMotel] = useState(data);
 
-  function handleSearchMotel(text: string) {
-    if (text) {
+  function handleSearchMotel(inputText: string) {
+    if (inputText) {
       const filtered = data.filter((motel) => {
-        return motel.name.toLowerCase().includes(text.toLowerCase());
+        return formattedText(motel.name).includes(formattedText(inputText));
       });
 
       setFilteredMotel(filtered);
