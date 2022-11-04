@@ -1,3 +1,4 @@
+import { StyleSheet } from 'react-native';
 import styled from 'styled-components/native';
 
 export const HomeContainer = styled.SafeAreaView`
@@ -11,3 +12,10 @@ export const HomeWrapper = styled.FlatList`
   padding-top: 70px;
   padding-bottom: 64px;
 `;
+
+export const styles = StyleSheet.create({
+  contentList: {
+    paddingTop: 32,
+    paddingBottom: 64
+  }
+});

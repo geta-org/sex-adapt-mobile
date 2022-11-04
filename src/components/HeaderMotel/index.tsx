@@ -1,13 +1,13 @@
 import { FunnelSimple } from 'phosphor-react-native';
 import { theme } from '../../styles/theme';
 import { ButtonRound } from '../Button/ButtonRound';
-import { InputSearch } from '../Input/InputSearch';
+import { InputProps, InputSearch } from '../Input/InputSearch';
 import { HeaderContainer } from './styles';
 
-export function HeaderMotel() {
+export function HeaderMotel({ onChangeText }: InputProps) {
   return (
     <HeaderContainer>
-      <InputSearch />
+      <InputSearch onChangeText={onChangeText} />
       <ButtonRound
         accessibilityLabel="Filtro"
         accessibilityHint="Navega para página de filtro"
