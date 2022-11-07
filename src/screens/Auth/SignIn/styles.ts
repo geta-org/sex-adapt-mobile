@@ -6,7 +6,7 @@ export const LoginContainer = styled.View`
   justify-content: flex-end;
   background-color: ${({ theme }) => theme.colors.black};
 `
-export const Background = styled.ImageBackground`
+export const BackgroundLogin = styled.ImageBackground`
   flex: 1;
   height: 320px;
 `
@@ -31,7 +31,7 @@ export const LoginWrapper = styled.View`
   padding: 80px 50px;
 `
 
-export const TextSubmit = styled.Text`
+export const Subtitle = styled.Text`
   color: ${({ theme }) => theme.colors.white};
   width: 200px;
   text-align: center;
@@ -46,7 +46,7 @@ export const UserInput = styled.View`
   border-color: ${({ theme }) => theme.colors.black};
 `
 
-export const InputPassword = styled.View`
+export const PasswordInput = styled.View`
   border-bottom-width: 1px;
   border-color: ${({ theme }) => theme.colors.white};
   margin-top: 40px;

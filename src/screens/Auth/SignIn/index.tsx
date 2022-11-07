@@ -7,15 +7,15 @@ import {
   TextButton,
   LoginWrapper,
   UserInput,
-  InputPassword,
+  PasswordInput,
   PasswordButton,
   PasswordText,
-  TextSubmit,
+  Subtitle,
   SingUpText,
   SingUpButtonText,
   Header,
   SingUpButton,
-  Background,
+  BackgroundLogin,
 } from './styles'
 
 import { BackgroundSignIn, LogoWithText } from '@assets'
@@ -34,28 +34,28 @@ export function SignIn() {
 
   return (
     <LoginContainer>
-      <Background source={BackgroundSignIn} resizeMode="cover">
+      <BackgroundLogin source={BackgroundSignIn} resizeMode="cover">
         <Header>
           <Image source={LogoWithText} />
 
-          <TextSubmit>
+          <Subtitle>
             Ache o melhor motel para experimentar sua independência
-          </TextSubmit>
+          </Subtitle>
         </Header>
-      </Background>
+      </BackgroundLogin>
 
       <LoginWrapper>
         <UserInput>
           <TextInput placeholder="Usuário" placeholderTextColor="#bababa" />
         </UserInput>
 
-        <InputPassword>
+        <PasswordInput>
           <TextInput
             placeholder="Senha"
             placeholderTextColor="#bababa"
             secureTextEntry
-          ></TextInput>
-        </InputPassword>
+          />
+        </PasswordInput>
 
         <PasswordButton activeOpacity={0.7} onPress={handlePasswordReset}>
           <PasswordText>Esqueci a senha</PasswordText>
