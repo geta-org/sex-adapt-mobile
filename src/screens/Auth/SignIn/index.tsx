@@ -1,4 +1,4 @@
-import { TextInput, Image } from 'react-native'
+import { TextInput, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native'
 
 import {
@@ -19,6 +19,7 @@ import {
 } from './styles'
 
 import { BackgroundSignIn, LogoWithText } from '@assets'
+
 
 export function SignIn() {
   const navigation = useNavigation()
