@@ -60,8 +60,6 @@ export const InputPassword = styled.View`
 export const PasswordText = styled.Text`
   font-size: 13px;
   display: flex;
-  //Nao existe essa propriedade no css, ver oque modificar e APAGAR DEPOIS DE LER.
-  //justify-content: right;
   color: ${({ theme }) => theme.colors.white};
   align-self: flex-end;
 `
