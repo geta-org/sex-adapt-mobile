@@ -15,9 +15,7 @@ export const Header = styled.View`
   margin-left: 70px;
   margin-bottom: 100px;
 `;
-export const Subtitle = styled.Text`
-
-`;
+export const Subtitle = styled.Text``;
 export const Input = styled.TextInput`
   border-bottom-width: 1px;
   border-color: #bababa;

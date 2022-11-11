@@ -67,3 +67,45 @@ export function Home() {
     </HomeContainer>
   );
 }
+
+import React from 'react';
+import { useState } from 'react';
+import { Alert, Modal } from 'react-native';
+import {
+  ModalContainer,
+  Box,
+  ModalWrapper,
+  Title,
+  TextButton,
+  Button
+} from './styles';
+
+export function Conf() {
+  const [modalVisible, setModalVisible] = useState(false);
+  return (
+    <ModalContainer>
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={true}
+        onRequestClose={() => {
+          Alert.alert(' Modal has been closed.');
+          setModalVisible(!modalVisible);
+        }}>
+        <ModalContainer>
+          <Box>
+            <Title>Você tem certeza que quer desconectar?</Title>
+          </Box>
+          <ModalWrapper>
+            <Button onPress={() => setModalVisible(!modalVisible)}>
+              <TextButton>Sim</TextButton>
+            </Button>
+            <Button onPress={() => setModalVisible(!modalVisible)}>
+              <TextButton>Não</TextButton>
+            </Button>
+          </ModalWrapper>
+        </ModalContainer>
+      </Modal>
+    </ModalContainer>
+  );
+}
