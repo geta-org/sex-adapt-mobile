@@ -87,7 +87,7 @@ export function Conf() {
       <Modal
         animationType="slide"
         transparent={true}
-        visible={true}
+        visible={false}
         onRequestClose={() => {
           Alert.alert(' Modal has been closed.');
           setModalVisible(!modalVisible);
