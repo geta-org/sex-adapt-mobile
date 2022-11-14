@@ -24,21 +24,21 @@ export const Title = styled.Text`
 
 export const Subtitle = styled.Text`
   width: 300px;
- font-size: 12px;
- margin-bottom: 15px;
+  font-size: 12px;
+  margin-bottom: 15px;
 `;
 export const Container = styled.View`
- flex-direction: column;
-align-items: center;
-justify-content: center;
-padding-left: 50px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 50px;
 `;
 export const BackButton = styled.TouchableOpacity`
-display: flex;
-position: absolute;
-left: 15px;
+  display: flex;
+  position: absolute;
+  left: 15px;
 
-top: 15px;
+  top: 15px;
 `;
 export const TextButtons = styled.Text`
   font-weight: bold;
@@ -66,7 +66,7 @@ export const Button = styled.TouchableOpacity`
   align-items: center;
   justify-content: center;
   box-shadow: 1px 1px 1px;
- margin-left: 15px;
+  margin-left: 15px;
 `;
 export const ButtonText = styled.Text`
   font-weight: bold;
