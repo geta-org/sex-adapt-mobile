@@ -67,41 +67,61 @@ export function Home() {
     </HomeContainer>
   );
 }
-
 import React from 'react';
-import { useState } from 'react';
-import { Alert, Modal } from 'react-native';
+import { Alert, Modal, Image } from 'react-native';
 import {
   ModalContainer,
-  Box,
   ModalWrapper,
   Title,
+  Subtitle,
   TextButton,
-  Button
+  Button,
+  PicContainer,
+  ExitButton,
+  ExitButtonText
 } from './styles';
+import { CardAccessibility } from 'src/components/Card/CardAccessibility';
 
-export function Conf() {
+export function IntroduceModal() {
   const [modalVisible, setModalVisible] = useState(false);
   return (
     <ModalContainer>
       <Modal
         animationType="slide"
         transparent={true}
-        visible={false}
+        visible={true}
         onRequestClose={() => {
           Alert.alert(' Modal has been closed.');
           setModalVisible(!modalVisible);
         }}>
         <ModalContainer>
+          <ExitButton>
+            <ExitButtonText>X</ExitButtonText>
+          </ExitButton>
           <Box>
-            <Title>Você tem certeza que quer desconectar?</Title>
+            <Title>
+              {' '}
+              Escolha a suíte que mais combina com você e seu parceiro!{' '}
+            </Title>
+            <Subtitle>
+              Nós mapeamos as seguintes estruturas para vocês:
+            </Subtitle>
           </Box>
           <ModalWrapper>
+            <PicContainer>
+              <CardAccessibility
+                bar
+                braille
+                elevator
+                signLanguage
+                tactileFloor
+                uneeveness
+                incompatibleDimensions
+              />
+            </PicContainer>
+
             <Button onPress={() => setModalVisible(!modalVisible)}>
-              <TextButton>Sim</TextButton>
-            </Button>
-            <Button onPress={() => setModalVisible(!modalVisible)}>
-              <TextButton>Não</TextButton>
+              <TextButton>Começar</TextButton>
             </Button>
           </ModalWrapper>
         </ModalContainer>
