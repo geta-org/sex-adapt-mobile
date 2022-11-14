@@ -44,7 +44,7 @@ export function Support() {
             <UserStatisticText>13 Sugestões</UserStatisticText>
           </UserStatistic>
 
-          <TouchableWithoutFeedback onPress={() => console.log('abri modal')}>
+          <TouchableWithoutFeedback onPress={() => Confirmation()}>
             <DisconnectButton>
               <DisconnectText>Desconectar</DisconnectText>
               <SignOut color="white" weight="bold" size={16} />
@@ -90,5 +90,47 @@ export function Support() {
         </CardContent>
       </IconContext.Provider>
     </SupportContainer>
+  );
+}
+
+import React from 'react';
+import { useState } from 'react';
+import { Alert, Modal } from 'react-native';
+import {
+  ModalContainer,
+  Box,
+  ModalWrapper,
+  Title,
+  TextButton,
+  Button
+} from './styles';
+
+export function Confirmation() {
+  const [modalVisible, setModalVisible] = useState(false);
+  return (
+    <ModalContainer>
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={true}
+        onRequestClose={() => {
+          Alert.alert(' Modal has been closed.');
+          setModalVisible(!modalVisible);
+        }}>
+        <ModalContainer>
+          <Box>
+            <Title>Você tem certeza que quer desconectar?</Title>
+          </Box>
+          <ModalWrapper>
+            <Button onPress={() => setModalVisible(!modalVisible)}>
+              <TextButton>Sim</TextButton>
+            </Button>
+            <Button onPress={() => setModalVisible(!modalVisible)}>
+              <TextButton>Não</TextButton>
+            </Button>
+          </ModalWrapper>
+        </ModalContainer>
+      </Modal>
+    </ModalContainer>
   );
 }
