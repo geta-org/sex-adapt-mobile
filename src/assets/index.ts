@@ -45,6 +45,10 @@ import DoorWideOff from './accessibility/door/doorWideOff.svg'
 import RampWith from './accessibility/ramp/rampWith.svg'
 import RampOff from './accessibility/ramp/rampOff.svg'
 
+// Map
+import PinUser from './map/PinUser.png'
+import PinMotel from './map/PinMotel.png'
+
 export {
   Logo,
   LogoWithText,
@@ -76,4 +80,6 @@ export {
   DoorWideOff,
   RampWith,
   RampOff,
+  PinUser,
+  PinMotel,
 }
