@@ -19,7 +19,7 @@ export const SuggestionWrapper = styled.View`
 `;
 
 export const Title = styled.Text`
-  font-weight: bold;
+  font-family: ${({ theme }) => theme.font_family.bold};
   font-size: 42px;
 
   width: 300px;
@@ -34,7 +34,7 @@ export const Subtitle = styled.Text`
 `;
 
 export const Name = styled.Text`
-  font-weight: bold;
+  font-family: ${({ theme }) => theme.font_family.bold};
   font-size: 17px;
 
   margin-right: 10px;
@@ -44,11 +44,11 @@ export const Input = styled.TextInput`
   height: 50px;
   width: 320px;
 
-  font-size: 16px;
+  font-size: ${({ theme }) => theme.font_size.md};
 `;
 
 export const InputContainer = styled.View`
-  background-color: #f1f1f1;
+  background-color: ${({ theme }) => theme.colors.gray_200};
 
   border-radius: 30px;
   margin: 15px 0 15px 0;
@@ -59,7 +59,7 @@ export const Button = styled.TouchableOpacity`
   align-items: center;
   justify-content: center;
 
-  background-color: #cc3333;
+  background-color: ${({ theme }) => theme.colors.red_900};
   box-shadow: 1px 1px 1px;
 
   width: 300px;
@@ -71,6 +71,6 @@ export const Button = styled.TouchableOpacity`
 `;
 
 export const TextButton = styled.Text`
-  color: white;
-  font-weight: bold;
+  color: ${({ theme }) => theme.colors.white};
+  font-family: ${({ theme }) => theme.font_family.bold};
 `;
