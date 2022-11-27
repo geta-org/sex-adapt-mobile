@@ -1,8 +1,7 @@
-import { Modal } from "react-native";
+import { Modal, View } from "react-native";
 
 import {
   ModalContainer,
-  Box,
   ModalWrapper,
   Title,
   TextButton,
@@ -31,9 +30,9 @@ export function ModalConfirmation({
         onRequestClose={changeStateModal}
       >
         <ModalContainer>
-          <Box>
+          <View>
             <Title>{title}</Title>
-          </Box>
+          </View>
           <ModalWrapper>
             <Button onPress={redirectTo}>
               <TextButton>Sim</TextButton>

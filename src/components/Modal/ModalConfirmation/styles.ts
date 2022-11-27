@@ -17,8 +17,6 @@ export const ModalContainer = styled.View`
   margin-left: 20px;
 `;
 
-export const Box = styled.View``;
-
 export const ModalWrapper = styled.View`
   display: flex;
   flex-direction: row;
