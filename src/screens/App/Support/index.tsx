@@ -1,12 +1,12 @@
-import { TouchableWithoutFeedback, View } from 'react-native';
+import { TouchableWithoutFeedback, View } from "react-native";
 import {
   Buildings,
   Headset,
   IconContext,
   PencilSimpleLine,
   SignOut,
-  Sliders
-} from 'phosphor-react-native';
+  Sliders,
+} from "phosphor-react-native";
 
 import {
   CardContent,
@@ -19,14 +19,20 @@ import {
   UserContent,
   UserStatistic,
   UserStatisticText,
-  UserText
-} from './styles';
+  UserText,
+} from "./styles";
 
-import { WomenA } from '@assets';
-import { StatusBar } from 'expo-status-bar';
-import { theme } from 'src/styles/theme';
+import { WomenA } from "@assets";
+import { StatusBar } from "expo-status-bar";
+import { theme } from "src/styles/theme";
 
 export function Support() {
+  const navigation = useNavigation();
+
+  function HandleGoSuggestion() {
+    navigation.navigate("MotelSuggestion");
+  }
+
   return (
     <SupportContainer>
       <StatusBar style="light" />
@@ -44,7 +50,7 @@ export function Support() {
             <UserStatisticText>13 Sugestões</UserStatisticText>
           </UserStatistic>
 
-          <TouchableWithoutFeedback onPress={() => console.log('abri modal')}>
+          <TouchableWithoutFeedback onPress={() => console.log("abri modal")}>
             <DisconnectButton>
               <DisconnectText>Desconectar</DisconnectText>
               <SignOut color="white" weight="bold" size={16} />
@@ -56,32 +62,33 @@ export function Support() {
       <IconContext.Provider
         value={{
           color: theme.colors.red_900,
-          size: 57
-        }}>
+          size: 57,
+        }}
+      >
         <CardContent>
           {/* TODO: CREATE BUTTON COMPONENT */}
-          <TouchableWithoutFeedback onPress={() => Suggestion()}>
+          <TouchableWithoutFeedback onPress={() => HandleGoSuggestion()}>
             <CardSupport>
               <Buildings />
               <CardText>Sugerir Motel</CardText>
             </CardSupport>
           </TouchableWithoutFeedback>
 
-          <TouchableWithoutFeedback onPress={() => console.log('abrir')}>
+          <TouchableWithoutFeedback onPress={() => console.log("abrir")}>
             <CardSupport>
               <Sliders />
               <CardText>Preferências</CardText>
             </CardSupport>
           </TouchableWithoutFeedback>
 
-          <TouchableWithoutFeedback onPress={() => console.log('abrir')}>
+          <TouchableWithoutFeedback onPress={() => console.log("abrir")}>
             <CardSupport>
               <PencilSimpleLine />
               <CardText>Editar Perfil</CardText>
             </CardSupport>
           </TouchableWithoutFeedback>
 
-          <TouchableWithoutFeedback onPress={() => console.log('abrir')}>
+          <TouchableWithoutFeedback onPress={() => console.log("abrir")}>
             <CardSupport>
               <Headset />
               <CardText>Suporte</CardText>
@@ -93,8 +100,8 @@ export function Support() {
   );
 }
 
-import React from 'react';
-import { ScrollView } from 'react-native';
+import React from "react";
+import { ScrollView } from "react-native";
 import {
   SuggestionContainer,
   InputContainer,
@@ -105,8 +112,9 @@ import {
   SuggestionWrapper,
   Header,
   Button,
-  TextButton
-} from './styles';
+  TextButton,
+} from "./styles";
+import { useNavigation } from "@react-navigation/native";
 export function Suggestion() {
   return (
     <SuggestionContainer>
