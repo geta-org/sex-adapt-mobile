@@ -8,7 +8,7 @@ export const ModalContainer = styled.View`
   height: 30%;
   width: 85%;
 
-  background-color: #cc3333;
+  background-color: ${({ theme }) => theme.colors.red_900};
   box-shadow: 1px 1px 1px;
 
   margin-top: 250px;
@@ -28,16 +28,16 @@ export const ModalWrapper = styled.View`
 `;
 
 export const Title = styled.Text`
-  font-weight: bold;
+  font-family: ${({ theme }) => theme.font_family.bold};
   font-size: 18px;
-  color: white;
+  color: ${({ theme }) => theme.colors.white};
 
   text-align: center;
 `;
 
 export const TextButton = styled.Text`
-  font-weight: bold;
-  color: #fff;
+  font-family: ${({ theme }) => theme.font_family.bold};
+  color: ${({ theme }) => theme.colors.white};
 `;
 
 export const Button = styled.TouchableOpacity`
@@ -48,8 +48,8 @@ export const Button = styled.TouchableOpacity`
   width: 100px;
   height: 50px;
 
-  border: 1px solid #fff;
-  background-color: #cc3333;
+  border: 1px solid ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.red_900};
 
   border-radius: 90px;
   padding: 15px 20px;
@@ -57,5 +57,5 @@ export const Button = styled.TouchableOpacity`
 `;
 
 export const OpenButton = styled.TouchableOpacity`
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.colors.white};
 `;
