@@ -1,12 +1,13 @@
-import { TouchableWithoutFeedback, View } from 'react-native';
+import { TouchableWithoutFeedback, View } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import {
   Buildings,
   Headset,
   IconContext,
   PencilSimpleLine,
   SignOut,
-  Sliders
-} from 'phosphor-react-native';
+  Sliders,
+} from "phosphor-react-native";
 
 import {
   CardContent,
@@ -19,14 +20,27 @@ import {
   UserContent,
   UserStatistic,
   UserStatisticText,
-  UserText
-} from './styles';
+  UserText,
+} from "./styles";
 
-import { WomenA } from '@assets';
-import { StatusBar } from 'expo-status-bar';
-import { theme } from 'src/styles/theme';
+import { WomenA } from "@assets";
+import { StatusBar } from "expo-status-bar";
+import { theme } from "src/styles/theme";
+import { ModalConfirmation } from "src/components/Modal/ModalConfirmation";
+import { useState } from "react";
 
 export function Support() {
+  const navigation = useNavigation();
+  const [modalConfirmationOpen, setModalConfirmationOpen] = useState(false);
+
+  function changeStateModal() {
+    setModalConfirmationOpen((curr) => !curr);
+  }
+
+  function disconnectUser() {
+    navigation.navigate("Home");
+  }
+
   return (
     <SupportContainer>
       <StatusBar style="light" />
@@ -44,7 +58,7 @@ export function Support() {
             <UserStatisticText>13 Sugestões</UserStatisticText>
           </UserStatistic>
 
-          <TouchableWithoutFeedback onPress={() => Confirmation()}>
+          <TouchableWithoutFeedback onPress={changeStateModal}>
             <DisconnectButton>
               <DisconnectText>Desconectar</DisconnectText>
               <SignOut color="white" weight="bold" size={16} />
@@ -56,32 +70,33 @@ export function Support() {
       <IconContext.Provider
         value={{
           color: theme.colors.red_900,
-          size: 57
-        }}>
+          size: 57,
+        }}
+      >
         <CardContent>
           {/* TODO: CREATE BUTTON COMPONENT */}
-          <TouchableWithoutFeedback onPress={() => console.log('abrir')}>
+          <TouchableWithoutFeedback onPress={() => console.log("abrir")}>
             <CardSupport>
               <Buildings />
               <CardText>Sugerir Motel</CardText>
             </CardSupport>
           </TouchableWithoutFeedback>
 
-          <TouchableWithoutFeedback onPress={() => console.log('abrir')}>
+          <TouchableWithoutFeedback onPress={() => console.log("abrir")}>
             <CardSupport>
               <Sliders />
               <CardText>Preferências</CardText>
             </CardSupport>
           </TouchableWithoutFeedback>
 
-          <TouchableWithoutFeedback onPress={() => console.log('abrir')}>
+          <TouchableWithoutFeedback onPress={() => console.log("abrir")}>
             <CardSupport>
               <PencilSimpleLine />
               <CardText>Editar Perfil</CardText>
             </CardSupport>
           </TouchableWithoutFeedback>
 
-          <TouchableWithoutFeedback onPress={() => console.log('abrir')}>
+          <TouchableWithoutFeedback onPress={() => console.log("abrir")}>
             <CardSupport>
               <Headset />
               <CardText>Suporte</CardText>
@@ -89,48 +104,13 @@ export function Support() {
           </TouchableWithoutFeedback>
         </CardContent>
       </IconContext.Provider>
+
+      <ModalConfirmation
+        title="Você tem certeza que quer desconectar?"
+        isModalOpen={modalConfirmationOpen}
+        changeStateModal={changeStateModal}
+        redirectTo={disconnectUser}
+      />
     </SupportContainer>
-  );
-}
-
-import React from 'react';
-import { useState } from 'react';
-import { Alert, Modal } from 'react-native';
-import {
-  ModalContainer,
-  Box,
-  ModalWrapper,
-  Title,
-  TextButton,
-  Button
-} from './styles';
-
-export function Confirmation() {
-  const [modalVisible, setModalVisible] = useState(false);
-  return (
-    <ModalContainer>
-      <Modal
-        animationType="slide"
-        transparent={true}
-        visible={true}
-        onRequestClose={() => {
-          Alert.alert(' Modal has been closed.');
-          setModalVisible(!modalVisible);
-        }}>
-        <ModalContainer>
-          <Box>
-            <Title>Você tem certeza que quer desconectar?</Title>
-          </Box>
-          <ModalWrapper>
-            <Button onPress={() => setModalVisible(!modalVisible)}>
-              <TextButton>Sim</TextButton>
-            </Button>
-            <Button onPress={() => setModalVisible(!modalVisible)}>
-              <TextButton>Não</TextButton>
-            </Button>
-          </ModalWrapper>
-        </ModalContainer>
-      </Modal>
-    </ModalContainer>
   );
 }
