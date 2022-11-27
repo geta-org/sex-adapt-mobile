@@ -1,4 +1,6 @@
 import { TouchableWithoutFeedback, View } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+
 import {
   Buildings,
   Headset,
@@ -29,7 +31,7 @@ import { theme } from "src/styles/theme";
 export function Support() {
   const navigation = useNavigation();
 
-  function HandleGoSuggestion() {
+  function handleOpenMotel() {
     navigation.navigate("MotelSuggestion");
   }
 
@@ -67,7 +69,7 @@ export function Support() {
       >
         <CardContent>
           {/* TODO: CREATE BUTTON COMPONENT */}
-          <TouchableWithoutFeedback onPress={() => HandleGoSuggestion()}>
+          <TouchableWithoutFeedback onPress={handleOpenMotel}>
             <CardSupport>
               <Buildings />
               <CardText>Sugerir Motel</CardText>
@@ -114,7 +116,6 @@ import {
   Button,
   TextButton,
 } from "./styles";
-import { useNavigation } from "@react-navigation/native";
 export function Suggestion() {
   return (
     <SuggestionContainer>
