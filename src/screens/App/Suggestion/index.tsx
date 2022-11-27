@@ -1,6 +1,8 @@
-import React from 'react';
-import { ScrollView } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import React from "react";
+import { ScrollView } from "react-native";
+
+import { BackButton } from "src/components/BackButton";
+
 import {
   SuggestionContainer,
   InputContainer,
@@ -11,14 +13,10 @@ import {
   SuggestionWrapper,
   Header,
   Button,
-  TextButton
-} from './styles';
-import { BackButton } from 'src/components/BackButton';
+  TextButton,
+} from "./styles";
+
 export function Suggestion() {
-  const navigation = useNavigation();
-  function handleGoBack() {
-    navigation.goBack();
-  }
   return (
     <SuggestionContainer>
       <BackButton />
