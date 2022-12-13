@@ -75,3 +75,23 @@ export const Button = styled.TouchableOpacity`
   box-shadow: 1px 1px 1px;
   margin-left: 15px;
 `
+
+export const ButtonText = styled.Text`
+  font-weight: bold;
+  color: #fff;
+`
+
+export const BoxContainer = styled.View`
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+`
+
+export const BoxText = styled.Text`
+  font-weight: bold;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+`

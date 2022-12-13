@@ -33,6 +33,7 @@ export function UserProvider({ children }: UserProviderProps) {
     async function loadStoredData() {
       const storedUser = await SecureStore.getItemAsync('user')
 
+
       if (storedUser) {
         const userData: User = JSON.parse(storedUser)
         if (userData.email) {
@@ -63,7 +64,7 @@ export function UserProvider({ children }: UserProviderProps) {
   return (
     <UserContext.Provider
       value={{
-        isLoggedIn: false,
+        isLoggedIn: true,
         user: user || null,
         signIn,
         logoff,

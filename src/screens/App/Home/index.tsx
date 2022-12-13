@@ -67,3 +67,65 @@ export function Home() {
     </HomeContainer>
   );
 }
+import React from 'react';
+import { Alert, Modal, Image } from 'react-native';
+import {
+  ModalContainer,
+  ModalWrapper,
+  Title,
+  Subtitle,
+  TextButton,
+  Button,
+  PicContainer,
+  ExitButton,
+  ExitButtonText
+} from './styles';
+import { CardAccessibility } from 'src/components/Card/CardAccessibility';
+
+export function IntroduceModal() {
+  const [modalVisible, setModalVisible] = useState(false);
+  return (
+    <ModalContainer>
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={true}
+        onRequestClose={() => {
+          Alert.alert(' Modal has been closed.');
+          setModalVisible(!modalVisible);
+        }}>
+        <ModalContainer>
+          <ExitButton>
+            <ExitButtonText>X</ExitButtonText>
+          </ExitButton>
+          <Box>
+            <Title>
+              {' '}
+              Escolha a suíte que mais combina com você e seu parceiro!{' '}
+            </Title>
+            <Subtitle>
+              Nós mapeamos as seguintes estruturas para vocês:
+            </Subtitle>
+          </Box>
+          <ModalWrapper>
+            <PicContainer>
+              <CardAccessibility
+                bar
+                braille
+                elevator
+                signLanguage
+                tactileFloor
+                uneeveness
+                incompatibleDimensions
+              />
+            </PicContainer>
+
+            <Button onPress={() => setModalVisible(!modalVisible)}>
+              <TextButton>Começar</TextButton>
+            </Button>
+          </ModalWrapper>
+        </ModalContainer>
+      </Modal>
+    </ModalContainer>
+  );
+}
