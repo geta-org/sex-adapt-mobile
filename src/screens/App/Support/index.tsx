@@ -33,6 +33,7 @@ export function Support() {
 
   function handleOpenMotel() {
     navigation.navigate("MotelSuggestion");
+
   }
 
   return (
@@ -53,6 +54,7 @@ export function Support() {
           </UserStatistic>
 
           <TouchableWithoutFeedback onPress={() => console.log("abri modal")}>
+
             <DisconnectButton>
               <DisconnectText>Desconectar</DisconnectText>
               <SignOut color="white" weight="bold" size={16} />
@@ -70,6 +72,7 @@ export function Support() {
         <CardContent>
           {/* TODO: CREATE BUTTON COMPONENT */}
           <TouchableWithoutFeedback onPress={handleOpenMotel}>
+
             <CardSupport>
               <Buildings />
               <CardText>Sugerir Motel</CardText>
@@ -98,6 +101,13 @@ export function Support() {
           </TouchableWithoutFeedback>
         </CardContent>
       </IconContext.Provider>
+
+      <ModalConfirmation
+        title="Você tem certeza que quer desconectar?"
+        isModalOpen={modalConfirmationOpen}
+        changeStateModal={changeStateModal}
+        redirectTo={disconnectUser}
+      />
     </SupportContainer>
   );
 }
