@@ -1,73 +1,77 @@
 import { TextInput, Image } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native'
 
 import {
   LoginContainer,
-  Button,
+  LoginButton,
   TextButton,
   LoginWrapper,
-  InputUser,
-  InputPassword,
+  UserInput,
+  PasswordInput,
   PasswordButton,
   PasswordText,
-  TextSubmit,
+  Subtitle,
   SingUpText,
-  TextAnother,
+  SingUpButtonText,
   Header,
-  AnotherButton,
-  Background
-} from './styles';
+  SingUpButton,
+  BackgroundLogin,
+} from './styles'
 
-import { BackgroundSignIn, LogoWithText } from '@assets';
+import { BackgroundSignIn, LogoWithText } from '@assets'
+
 
 export function SignIn() {
-  const navigation = useNavigation();
+  const navigation = useNavigation()
 
   function handlePasswordReset() {
-    navigation.navigate('RecoverPassword');
+    navigation.navigate('RecoverPassword')
   }
 
   function handleSingUp() {
-    navigation.navigate('SignUp');
+    navigation.navigate('SignUp')
   }
 
   return (
     <LoginContainer>
-      <Background source={BackgroundSignIn} resizeMode="cover">
+      <BackgroundLogin source={BackgroundSignIn} resizeMode="cover">
         <Header>
           <Image source={LogoWithText} />
 
-          <TextSubmit>
+          <Subtitle>
             Ache o melhor motel para experimentar sua independência
-          </TextSubmit>
+          </Subtitle>
         </Header>
-      </Background>
-      <LoginWrapper>
-        <InputUser>
-          <TextInput placeholder="Usuário" placeholderTextColor="#bababa" />
-        </InputUser>
+      </BackgroundLogin>
 
-        <InputPassword>
+      <LoginWrapper>
+        <UserInput>
+          <TextInput placeholder="Usuário" placeholderTextColor="#bababa" />
+        </UserInput>
+
+        <PasswordInput>
           <TextInput
             placeholder="Senha"
             placeholderTextColor="#bababa"
-            secureTextEntry></TextInput>
-        </InputPassword>
+            secureTextEntry
+          />
+        </PasswordInput>
 
-        <PasswordButton activeOpacity={0.3} onPress={handlePasswordReset}>
+        <PasswordButton activeOpacity={0.7} onPress={handlePasswordReset}>
           <PasswordText>Esqueci a senha</PasswordText>
         </PasswordButton>
 
-        <Button activeOpacity={0.3}>
+        <LoginButton activeOpacity={0.7}>
           <TextButton>Login </TextButton>
-        </Button>
+        </LoginButton>
 
-        <AnotherButton onPress={handleSingUp}>
-          <SingUpText>
-            Não possui conta? Faça o<TextAnother> cadastro</TextAnother>
-          </SingUpText>
-        </AnotherButton>
+        <SingUpText>
+          Não possui conta? Faça o
+          <SingUpButton onPress={handleSingUp}>
+            <SingUpButtonText>cadastro</SingUpButtonText>
+          </SingUpButton>
+        </SingUpText>
       </LoginWrapper>
     </LoginContainer>
-  );
+  )
 }

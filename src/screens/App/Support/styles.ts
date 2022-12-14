@@ -1,10 +1,10 @@
-import styled from 'styled-components/native';
+import styled from 'styled-components/native'
 
 export const SupportContainer = styled.View`
   flex: 1;
   align-items: center;
   background-color: ${({ theme }) => theme.colors.gray_200};
-`;
+`
 
 export const ProfileContainer = styled.View`
   display: flex;
@@ -23,13 +23,13 @@ export const ProfileContainer = styled.View`
 
   border-bottom-left-radius: ${({ theme }) => theme.margins.lg};
   border-bottom-right-radius: ${({ theme }) => theme.margins.lg};
-`;
+`
 
 export const UserContent = styled.View`
   width: 200px;
   border-bottom-width: 1px;
   border-bottom-color: 'rgba(255, 255, 255, 0.6)';
-`;
+`
 
 export const UserText = styled.Text`
   color: ${({ theme }) => theme.colors.white};
@@ -38,17 +38,17 @@ export const UserText = styled.Text`
   text-transform: capitalize;
 
   padding-bottom: ${({ theme }) => theme.margins.sm};
-`;
+`
 
 export const UserStatistic = styled.View`
   margin-top: ${({ theme }) => theme.margins.sm};
-`;
+`
 
 export const UserStatisticText = styled.Text`
   color: ${({ theme }) => theme.colors.white};
   font-family: ${({ theme }) => theme.font_family.regular};
   font-size: ${({ theme }) => theme.font_size.sm};
-`;
+`
 
 export const DisconnectButton = styled.View`
   display: flex;
@@ -56,14 +56,14 @@ export const DisconnectButton = styled.View`
   align-items: center;
 
   margin-top: ${({ theme }) => theme.margins.md};
-`;
+`
 
 export const DisconnectText = styled.Text`
   color: ${({ theme }) => theme.colors.white};
   font-family: ${({ theme }) => theme.font_family.bold};
 
   margin-right: 6px;
-`;
+`
 
 export const CardContent = styled.View`
   display: flex;
@@ -75,7 +75,7 @@ export const CardContent = styled.View`
   width: 300px;
 
   margin-top: 46px;
-`;
+`
 
 export const CardSupport = styled.View`
   display: flex;
@@ -91,13 +91,13 @@ export const CardSupport = styled.View`
   margin-bottom: ${({ theme }) => theme.margins.sm};
   /* margin-left: ; */
   border-radius: 16px;
-`;
+`
 
 export const CardText = styled.Text`
   color: ${({ theme }) => theme.colors.red_900};
   font-family: ${({ theme }) => theme.font_family.bold};
   font-size: ${({ theme }) => theme.font_size.sm};
-`;
+`
 
 export const ModalContainer = styled.View`
   display: flex;

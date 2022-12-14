@@ -1,4 +1,4 @@
-import styled from 'styled-components/native';
+import styled from 'styled-components/native'
 
 export const CardMotelContainer = styled.View`
   display: flex;
@@ -14,7 +14,7 @@ export const CardMotelContainer = styled.View`
   border-radius: 16px;
   padding: ${({ theme }) => theme.margins.md};
   margin-bottom: ${({ theme }) => theme.margins.md};
-`;
+`
 
 export const MotelWrapper = styled.View`
   display: flex;
@@ -24,13 +24,13 @@ export const MotelWrapper = styled.View`
 
   width: 300px;
   min-height: 90px;
-`;
+`
 
 export const MotelLogo = styled.Image`
   height: 71px;
   width: 71px;
   border-radius: 16px;
-`;
+`
 
 export const MotelTextField = styled.View`
   display: flex;
@@ -39,23 +39,23 @@ export const MotelTextField = styled.View`
   justify-content: space-between;
 
   margin-left: ${({ theme }) => theme.margins.md};
-`;
+`
 
 export const MotelTitle = styled.Text`
   color: ${({ theme }) => theme.colors.red_900};
   font-size: ${({ theme }) => theme.font_size.lg};
   font-family: ${({ theme }) => theme.font_family.bold};
-`;
+`
 
 export const MotelText = styled.Text`
   color: ${({ theme }) => theme.colors.gray_700};
   font-size: ${({ theme }) => theme.font_size.md};
-`;
+`
 
 export const ModelTextRed = styled.Text`
   color: ${({ theme }) => theme.colors.red_900};
   font-size: ${({ theme }) => theme.font_size.md};
-`;
+`
 
 export const MotelInfo = styled.View`
   display: flex;
@@ -63,7 +63,7 @@ export const MotelInfo = styled.View`
   justify-content: space-between;
 
   width: 200px;
-`;
+`
 
 export const MotelAccessibility = styled.View`
   display: flex;
@@ -73,4 +73,4 @@ export const MotelAccessibility = styled.View`
   align-self: center;
 
   height: 36px;
-`;
+`
