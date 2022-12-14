@@ -3,9 +3,9 @@ import {
   ReactNode,
   useContext,
   useEffect,
-  useState
-} from 'react';
-import * as SecureStore from 'expo-secure-store';
+  useState,
+} from "react";
+import * as SecureStore from "expo-secure-store";
 
 interface UserProviderProps {
   children: ReactNode;
@@ -31,7 +31,7 @@ export function UserProvider({ children }: UserProviderProps) {
 
   useEffect(() => {
     async function loadStoredData() {
-      const storedUser = await SecureStore.getItemAsync('user');
+      const storedUser = await SecureStore.getItemAsync("user");
 
       if (storedUser) {
         const userData: User = JSON.parse(storedUser);
@@ -48,11 +48,11 @@ export function UserProvider({ children }: UserProviderProps) {
 
   async function signIn(email: string, password: string) {
     const userCredential = { email, password };
-    await SecureStore.setItemAsync('user', JSON.stringify(userCredential));
+    await SecureStore.setItemAsync("user", JSON.stringify(userCredential));
   }
 
   async function logoff() {
-    await SecureStore.deleteItemAsync('user');
+    await SecureStore.deleteItemAsync("user");
     setUser(null);
   }
 
@@ -66,8 +66,9 @@ export function UserProvider({ children }: UserProviderProps) {
         isLoggedIn: true,
         user: user || null,
         signIn,
-        logoff
-      }}>
+        logoff,
+      }}
+    >
       {children}
     </UserContext.Provider>
   );
