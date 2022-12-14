@@ -6,6 +6,7 @@ export const Title = styled.Text`
   width: 220px;
   align-items: center;
 `;
+
 export const RecoverPasswordWrapper = styled.SafeAreaView`
   margin-top: 50px;
   display: flex;
