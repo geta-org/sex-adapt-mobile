@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from 'react';
 
-import { FlatList, TouchableOpacityProps } from 'react-native';
+import {
+  FlatList,
+  TouchableOpacityProps,
+  View as TitleBox
+} from 'react-native';
 
 import {
   ButtonComment,
-  TextButton,
+  CommentText,
   CommentInput,
   Title,
   EvaluationContainer,
   ViewEvaluation,
   Subtitle,
-  TitleBox,
   ButtonText
 } from './styles';
 
@@ -68,11 +71,12 @@ export default function Testar() {
           style={{ alignSelf: 'center', paddingVertical: 1.8 }}
           onStartRating={(value: number) => setStar(value)}
         />
-        <TextButton>{comment}</TextButton>
+        <CommentText>{comment}</CommentText>
       </ViewEvaluation>
     );
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   useEffect(() => {}, [myUserComment]);
   return (
     <EvaluationContainer>
