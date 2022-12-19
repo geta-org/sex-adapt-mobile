@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 import {
   FlatList,
@@ -17,6 +18,8 @@ import {
   ButtonText
 } from './styles';
 
+import { BackButton } from 'src/components/BackButton';
+
 // import { PriceRating } from '../components/PriceRating';
 import { Rating } from 'react-native-ratings';
 interface UserCommentData {
@@ -27,9 +30,13 @@ interface UserCommentData {
 
 export default function Testar() {
   const [newUserComment, setNewUserComment] = useState(' ');
-
   const [myUserComment, setMyUserComment] = useState<UserCommentData[]>([]);
   const [star, setStar] = useState(0);
+
+  const navigation = useNavigation();
+  function handleGoBack() {
+    navigation.goBack();
+  }
 
   function handleAddNewComment() {
     // colocar a data
@@ -80,6 +87,7 @@ export default function Testar() {
   useEffect(() => {}, [myUserComment]);
   return (
     <EvaluationContainer>
+      <BackButton />
       <TitleBox>
         <Title>Avaliações</Title>
       </TitleBox>
