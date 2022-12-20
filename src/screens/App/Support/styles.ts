@@ -111,25 +111,25 @@ export const ModalContainer = styled.View`
   border-radius: 25px;
   box-shadow: 1px 1px 1px;
   margin-left: 20px;
-`;
-export const Box = styled.View``;
+`
+export const Box = styled.View``
 export const ModalWrapper = styled.View`
   flex-direction: row;
   justify-content: space-evenly;
   margin-top: 18px;
-`;
+`
 
 export const Title = styled.Text`
   font-weight: bold;
   font-size: 18px;
   color: white;
   text-align: center;
-`;
+`
 
 export const TextButton = styled.Text`
   font-weight: bold;
   color: #fff;
-`;
+`
 
 export const Button = styled.TouchableOpacity`
   border: 1px solid #fff;
@@ -144,8 +144,8 @@ export const Button = styled.TouchableOpacity`
   justify-content: center;
 
   margin-left: 15px;
-`;
+`
 
 export const OpenButton = styled.TouchableOpacity`
   background-color: #fff;
-`;
+`
