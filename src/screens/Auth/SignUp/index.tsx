@@ -53,8 +53,6 @@ export function SignUp() {
           secureTextEntry
         />
 
-        <Button />
-
         <Button activeOpacity={0.7} onPress={handleAccessibility}>
           <TextButton>Próximo</TextButton>
           <CaretDoubleRight size={32} color="#FFF" weight="bold" />
