@@ -81,12 +81,6 @@ export const ButtonText = styled.Text`
   color: #fff;
 `
 
-export const BoxContainer = styled.View`
-  flex-direction: row;
-  width: 100%;
-  justify-content: space-between;
-`
-
 export const BoxText = styled.Text`
   font-weight: bold;
   font-size: 11px;
