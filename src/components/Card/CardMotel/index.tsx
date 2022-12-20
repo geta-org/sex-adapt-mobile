@@ -38,7 +38,7 @@ export function CardMotel({ data, ...rest }: Props) {
   const navigation = useNavigation()
 
   function handleOpenMotel() {
-    navigation.navigate('MotelDetails')
+    navigation.navigate('MotelDetails', { name: data.name })
   }
 
   return (
