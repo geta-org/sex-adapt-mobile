@@ -28,7 +28,7 @@ interface UserCommentData {
   Rating: number;
 }
 
-export default function Testar() {
+export default function Evaluation() {
   const [newUserComment, setNewUserComment] = useState(' ');
   const [myUserComment, setMyUserComment] = useState<UserCommentData[]>([]);
   const [star, setStar] = useState(0);
