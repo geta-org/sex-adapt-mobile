@@ -1,4 +1,5 @@
-import { TextInput, Image } from 'react-native';
+/* eslint-disable jsx-a11y/alt-text */
+import { TextInput, Image } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 
 import {
@@ -14,12 +15,10 @@ import {
   SingUpText,
   SingUpButtonText,
   Header,
-  SingUpButton,
   BackgroundLogin,
 } from './styles'
 
 import { BackgroundSignIn, LogoWithText } from '@assets'
-
 
 export function SignIn() {
   const navigation = useNavigation()
@@ -65,11 +64,8 @@ export function SignIn() {
           <TextButton>Login </TextButton>
         </LoginButton>
 
-        <SingUpText>
-          Não possui conta? Faça o
-          <SingUpButton onPress={handleSingUp}>
-            <SingUpButtonText>cadastro</SingUpButtonText>
-          </SingUpButton>
+        <SingUpText onPress={handleSingUp}>
+          Não possui conta? Faça o <SingUpButtonText>cadastro</SingUpButtonText>
         </SingUpText>
       </LoginWrapper>
     </LoginContainer>

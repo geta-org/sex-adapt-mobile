@@ -6,6 +6,7 @@ export const LoginContainer = styled.View`
   justify-content: flex-end;
   background-color: ${({ theme }) => theme.colors.black};
 `
+
 export const BackgroundLogin = styled.ImageBackground`
   flex: 1;
   height: 320px;
@@ -28,7 +29,7 @@ export const LoginWrapper = styled.View`
   border-top-right-radius: 40px;
   border-bottom: 2px ${({ theme }) => theme.colors.white} solid;
   align-items: center;
-  padding: 80px 50px;
+  padding: 80px 50px 0;
 `
 
 export const Subtitle = styled.Text`
@@ -41,7 +42,7 @@ export const Subtitle = styled.Text`
 export const UserInput = styled.View`
   border-bottom-width: 1px;
   color: ${({ theme }) => theme.colors.white};
-  height: 8%;
+  height: 6%;
   width: 100%;
   border-color: ${({ theme }) => theme.colors.black};
 `
@@ -52,7 +53,7 @@ export const PasswordInput = styled.View`
   margin-top: 40px;
   color: ${({ theme }) => theme.colors.black};
   font-size: 20px;
-  height: 8%;
+  height: 6%;
   width: 100%;
   font-size: 16px;
 `
@@ -65,11 +66,11 @@ export const PasswordText = styled.Text`
 `
 
 export const PasswordButton = styled.TouchableOpacity`
-  margin: 1px;
+  margin-top: 8px;
   border-bottom-width: 1px;
   border-color: ${({ theme }) => theme.colors.white};
   align-self: flex-end;
-  height: 6%;
+  height: 4%;
 `
 
 export const LoginButton = styled.TouchableOpacity`
@@ -90,14 +91,14 @@ export const TextButton = styled.Text`
 `
 export const SingUpText = styled.Text`
   color: ${({ theme }) => theme.colors.white};
-  margin-top: 25px;
+
+  position: absolute;
+  bottom: 24px;
 `
 
 export const SingUpButtonText = styled.Text`
   color: ${({ theme }) => theme.colors.white};
   font-weight: bold;
-  height: 86%;
-  padding: 200px;
 `
 
 export const SingUpButton = styled.TouchableOpacity`
