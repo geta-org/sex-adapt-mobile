@@ -8,6 +8,7 @@ export declare global {
       RecoverPassword: undefined;
       Home: undefined;
       MotelDetails: undefined;
+      MotelSuggestion: undefined;
     }
   }
 }

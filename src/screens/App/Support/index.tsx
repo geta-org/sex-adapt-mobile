@@ -1,5 +1,6 @@
 import { TouchableWithoutFeedback, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+
 import {
   Buildings,
   Headset,
@@ -26,19 +27,12 @@ import {
 import { WomenA } from "@assets";
 import { StatusBar } from "expo-status-bar";
 import { theme } from "src/styles/theme";
-import { ModalConfirmation } from "src/components/Modal/ModalConfirmation";
-import { useState } from "react";
 
 export function Support() {
   const navigation = useNavigation();
-  const [modalConfirmationOpen, setModalConfirmationOpen] = useState(false);
 
-  function changeStateModal() {
-    setModalConfirmationOpen((curr) => !curr);
-  }
-
-  function disconnectUser() {
-    navigation.navigate("Home");
+  function handleOpenMotel() {
+    navigation.navigate("MotelSuggestion");
   }
 
   return (
@@ -58,7 +52,7 @@ export function Support() {
             <UserStatisticText>13 Sugestões</UserStatisticText>
           </UserStatistic>
 
-          <TouchableWithoutFeedback onPress={changeStateModal}>
+          <TouchableWithoutFeedback onPress={() => console.log("abri modal")}>
             <DisconnectButton>
               <DisconnectText>Desconectar</DisconnectText>
               <SignOut color="white" weight="bold" size={16} />

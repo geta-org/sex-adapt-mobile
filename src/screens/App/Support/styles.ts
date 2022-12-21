@@ -126,26 +126,6 @@ export const Title = styled.Text`
   text-align: center;
 `;
 
-export const TextButton = styled.Text`
-  font-weight: bold;
-  color: #fff;
-`;
-
-export const Button = styled.TouchableOpacity`
-  border: 1px solid #fff;
-
-  background-color: #cc3333;
-  border-radius: 90px;
-  width: 100px;
-  height: 50px;
-  padding: 15px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin-left: 15px;
-`;
-
 export const OpenButton = styled.TouchableOpacity`
   background-color: #fff;
 `;
@@ -163,11 +143,6 @@ export const Header = styled.View`
 export const SuggestionWrapper = styled.View`
   align-items: initial;
   margin-left: 70px;
-`;
-export const Title = styled.Text`
-  font-weight: bold;
-  font-size: 42px;
-  width: 300px;
 `;
 
 export const Subtitle = styled.Text`
