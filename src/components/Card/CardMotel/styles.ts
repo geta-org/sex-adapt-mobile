@@ -1,4 +1,4 @@
-import styled from 'styled-components/native';
+import styled from "styled-components/native";
 
 export const CardMotelContainer = styled.View`
   display: flex;

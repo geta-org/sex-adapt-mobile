@@ -1,5 +1,4 @@
-import { View } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { View } from "react-native";
 
 import {
   RecoverPasswordWrapper,
@@ -7,19 +6,11 @@ import {
   Subtitle,
   Input,
   Button,
-  TextButton
-} from './styles';
-import { CaretLeft } from 'phosphor-react-native';
-import { BackButton } from 'src/components/BackButton';
+  TextButton,
+} from "./styles";
+import { BackButton } from "src/components/BackButton";
 
 export function RecoverPassword() {
-  const navigation = useNavigation();
-  function handleAcessibility() {
-    navigation.navigate('Accessibility');
-  }
-  function handleGoBack() {
-    navigation.goBack();
-  }
   return (
     <RecoverPasswordWrapper>
       <BackButton />
@@ -30,7 +21,7 @@ export function RecoverPassword() {
 
       <Input placeholder="Insira seu e-mail" placeholderTextColor="#bababa" />
 
-      <Button activeOpacity={0.7} Onpress={handleAcessibility}>
+      <Button activeOpacity={0.7}>
         <TextButton>Recuperar senha</TextButton>
       </Button>
     </RecoverPasswordWrapper>
