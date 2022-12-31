@@ -5,7 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 import { CaretLeft, Gear, HouseSimple, MapTrifold } from 'phosphor-react-native'
 
-import { Home, Map, MotelDetails, Support } from '../screens/App/index'
+import { Filter, Home, Map, MotelDetails, Support } from '../screens/App/index'
 import { theme } from 'src/styles/theme'
 
 const { Navigator, Screen } = createNativeStackNavigator()
@@ -26,6 +26,23 @@ export function AppRoutes() {
         component={MotelDetails}
         options={{
           title: 'Perfil',
+          headerLeft: () => (
+            <TouchableOpacity onPress={() => navigation.goBack()}>
+              <CaretLeft size={28} color="#333" weight="bold" />
+            </TouchableOpacity>
+          ),
+          contentStyle: {
+            height: 63,
+            borderBottomWidth: 0,
+            elevation: 0,
+          },
+        }}
+      />
+      <Screen
+        name="Filter"
+        component={Filter}
+        options={{
+          title: 'Filtro',
           headerLeft: () => (
             <TouchableOpacity onPress={() => navigation.goBack()}>
               <CaretLeft size={28} color="#333" weight="bold" />
