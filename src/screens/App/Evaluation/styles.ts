@@ -13,12 +13,11 @@ export const Title = styled.Text`
   font-weight: bold;
   width: 220px;
   align-items: center;
-  margin-bottom: 30px;
+  margin-left: 20px;
 `;
 
 export const Subtitle = styled.Text`
-  align-self: flex-start;
-  margin: 20px 400px 0 0;
+  margin: 20px 199px 0 0;
   font-size: 18px;
   font-weight: bold;
   width: 150px;
@@ -31,7 +30,7 @@ export const CommentInput = styled.TextInput`
   width: 350px;
   margin-bottom: 15px;
   font-size: 16px;
-  padding-left: 15px;
+  padding-left: 25px;
   align-items: flex-start;
   padding-bottom: 100px;
 `;
@@ -59,11 +58,11 @@ export const CommentText = styled.Text`
   align-self: center;
 `;
 export const ViewEvaluation = styled.View`
-  background-color: white;
+  background-color: #fff;
   border-radius: 25px;
-  border-color: black;
+  border-color: #1f1e25;
 `;
 export const ButtonText = styled.Text`
-  color: white;
+  color: #fff;
   font-weight: bold;
 `;

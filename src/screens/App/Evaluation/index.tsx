@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
 
 import {
+  View as TitleBox,
   FlatList,
   TouchableOpacityProps,
-  View as TitleBox
+  StyleSheet
 } from 'react-native';
 
 import {
@@ -20,8 +21,8 @@ import {
 
 import { BackButton } from 'src/components/BackButton';
 
-// import { PriceRating } from '../components/PriceRating';
 import { Rating } from 'react-native-ratings';
+
 interface UserCommentData {
   id: string;
   name: string;
@@ -39,7 +40,6 @@ export default function Evaluation() {
   }
 
   function handleAddNewComment() {
-    // colocar a data
     const data = {
       id: String(new Date().getTime()),
       name: newUserComment,
@@ -83,12 +83,11 @@ export default function Evaluation() {
     );
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
   useEffect(() => {}, [myUserComment]);
   return (
     <EvaluationContainer>
       <BackButton />
-      <TitleBox>
+      <TitleBox style={[styles.card, styles.shadowProp]}>
         <Title>Avaliações</Title>
       </TitleBox>
 
@@ -104,17 +103,70 @@ export default function Evaluation() {
       />
 
       <Subtitle>Comente</Subtitle>
-      <CommentInput onChangeText={setNewUserComment} />
+      <CommentInput
+        multiline={true}
+        numberOfLines={5}
+        placeholder="Digite o seu comentário..."
+        onChangeText={setNewUserComment}
+      />
 
       <Button title="ENVIAR" onPress={handleAddNewComment} />
 
       <FlatList
+        style={{
+          marginTop: 30,
+          borderBottomColor: 'black',
+          height: 62,
+          width: 470,
+          paddingHorizontal: 20,
+          paddingVertical: 10
+        }}
         data={myUserComment}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <CommentCard comment={item.name} rating={item.Rating} />
+          <CommentCard
+            style={[styles.underline, styles.underline1]}
+            comment={item.name}
+            rating={item.Rating}
+          />
         )}
       />
     </EvaluationContainer>
   );
 }
+
+const styles = StyleSheet.create({
+  heading: {
+    fontSize: 18,
+    fontWeight: '600',
+    marginBottom: 13
+  },
+  card: {
+    backgroundColor: 'white',
+    borderRadius: 8,
+    paddingVertical: 15,
+    paddingHorizontal: 65,
+
+    width: 420
+  },
+  shadowProp: {
+    shadowColor: '#171717',
+    shadowOffset: { width: -5, height: 5 },
+    shadowOpacity: 0.2,
+    shadowRadius: 3
+  },
+
+  underline: {
+    height: 202,
+    width: 520,
+    borderBottomWidth: 0.5,
+    borderTopWidth: 0.5,
+    borderColor: '#bababa',
+    paddingTop: 25,
+    alignSelf: 'flex-start'
+  },
+  underline1: {
+    paddingRight: 100,
+    paddingLeft: 10
+  }
+});
