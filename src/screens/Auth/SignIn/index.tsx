@@ -23,11 +23,11 @@ import { BackgroundSignIn, LogoWithText } from '@assets'
 export function SignIn() {
   const navigation = useNavigation()
 
-  function handlePasswordReset() {
+  function handleGoPasswordRecover() {
     navigation.navigate('RecoverPassword')
   }
 
-  function handleSingUp() {
+  function handleGoSignUp() {
     navigation.navigate('SignUp')
   }
 
@@ -56,7 +56,7 @@ export function SignIn() {
           />
         </PasswordInput>
 
-        <PasswordButton activeOpacity={0.7} onPress={handlePasswordReset}>
+        <PasswordButton activeOpacity={0.7} onPress={handleGoPasswordRecover}>
           <PasswordText>Esqueci a senha</PasswordText>
         </PasswordButton>
 
@@ -64,7 +64,7 @@ export function SignIn() {
           <TextButton>Login </TextButton>
         </LoginButton>
 
-        <SingUpText onPress={handleSingUp}>
+        <SingUpText onPress={handleGoSignUp}>
           Não possui conta? Faça o <SingUpButtonText>cadastro</SingUpButtonText>
         </SingUpText>
       </LoginWrapper>
