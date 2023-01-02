@@ -1,6 +1,6 @@
 import styled from 'styled-components/native'
 
-export const SignInContainer = styled.View`
+export const SignInContainer = styled.KeyboardAvoidingView`
   flex: 1;
   flex-direction: column;
   justify-content: flex-end;
@@ -27,15 +27,16 @@ export const Subtitle = styled.Text`
   font-size: ${({ theme }) => theme.font_size.xs};
 `
 
-export const SignInWrapper = styled.View`
+export const SignInWrapper = styled.KeyboardAvoidingView`
   align-items: center;
+  justify-content: center;
 
   height: 60%;
   width: 100%;
 
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
-  padding: 80px 50px 0;
+  padding: 0 32px;
 
   background-color: ${({ theme }) => theme.colors.red_900};
 `
@@ -43,7 +44,7 @@ export const SignInWrapper = styled.View`
 export const PasswordRecoverButton = styled.TouchableOpacity`
   align-self: flex-end;
 
-  height: 4%;
+  height: 15px;
 
   border-bottom-width: 1px;
   border-color: ${({ theme }) => theme.colors.white};
