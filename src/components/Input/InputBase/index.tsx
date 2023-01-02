@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Text } from 'react-native'
 import { TextInput, HelperText, TextInputProps } from 'react-native-paper'
 
-import { theme } from '../../../styles/theme'
+import { theme } from 'src/styles/theme'
 import styles from './styles'
 
 interface InputBaseProps extends Omit<TextInputProps, 'theme'> {
@@ -36,11 +36,11 @@ export function InputBase({
         secureTextEntry={secureMode}
         onChangeText={onChangeText}
         style={styles.input}
-        selectionColor="#ffff"
-        textColor="#ffff"
-        underlineColor="#ffff"
-        activeUnderlineColor="#ffff"
-        outlineColor="#ffff"
+        selectionColor={theme.colors.white}
+        textColor={theme.colors.white}
+        underlineColor={theme.colors.white}
+        activeUnderlineColor={theme.colors.white}
+        outlineColor={theme.colors.white}
         right={
           secureTextEntry ? (
             <TextInput.Icon

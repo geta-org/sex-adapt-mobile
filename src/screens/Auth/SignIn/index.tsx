@@ -20,6 +20,7 @@ import {
   SignUp,
   SignUpUnderline,
 } from './styles'
+import { theme } from 'src/styles/theme'
 import { BackgroundSignIn, LogoWithText } from '@assets'
 
 export function SignIn() {
@@ -61,7 +62,9 @@ export function SignIn() {
           keyboardType="email-address"
           returnKeyType="next"
           left={
-            <TextInput.Icon icon={() => <User color="#bababa" size={18} />} />
+            <TextInput.Icon
+              icon={() => <User color={theme.colors.gray_600} size={18} />}
+            />
           }
         />
 
@@ -74,7 +77,9 @@ export function SignIn() {
           returnKeyType="done"
           secureTextEntry
           left={
-            <TextInput.Icon icon={() => <Lock color="#bababa" size={18} />} />
+            <TextInput.Icon
+              icon={() => <Lock color={theme.colors.gray_600} size={18} />}
+            />
           }
         />
         <PasswordRecoverButton
