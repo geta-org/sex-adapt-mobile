@@ -39,25 +39,6 @@ export const Subtitle = styled.Text`
   font-size: 12px;
 `
 
-export const UserInput = styled.View`
-  border-bottom-width: 1px;
-  color: ${({ theme }) => theme.colors.white};
-  height: 6%;
-  width: 100%;
-  border-color: ${({ theme }) => theme.colors.black};
-`
-
-export const PasswordInput = styled.View`
-  border-bottom-width: 1px;
-  border-color: ${({ theme }) => theme.colors.white};
-  margin-top: 40px;
-  color: ${({ theme }) => theme.colors.black};
-  font-size: 20px;
-  height: 6%;
-  width: 100%;
-  font-size: 16px;
-`
-
 export const PasswordText = styled.Text`
   font-size: 13px;
   display: flex;
