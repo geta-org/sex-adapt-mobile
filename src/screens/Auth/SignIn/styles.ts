@@ -1,13 +1,13 @@
 import styled from 'styled-components/native'
 
-export const LoginContainer = styled.View`
+export const SignInContainer = styled.View`
   flex: 1;
   flex-direction: column;
   justify-content: flex-end;
   background-color: ${({ theme }) => theme.colors.black};
 `
 
-export const BackgroundLogin = styled.ImageBackground`
+export const SignInBackground = styled.ImageBackground`
   flex: 1;
   height: 320px;
 `
@@ -21,7 +21,14 @@ export const Header = styled.View`
   padding-bottom: 38px;
 `
 
-export const LoginWrapper = styled.View`
+export const Subtitle = styled.Text`
+  color: ${({ theme }) => theme.colors.white};
+  width: 200px;
+  text-align: center;
+  font-size: 12px;
+`
+
+export const SignInWrapper = styled.View`
   height: 60%;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.red_900};
@@ -32,21 +39,7 @@ export const LoginWrapper = styled.View`
   padding: 80px 50px 0;
 `
 
-export const Subtitle = styled.Text`
-  color: ${({ theme }) => theme.colors.white};
-  width: 200px;
-  text-align: center;
-  font-size: 12px;
-`
-
-export const PasswordText = styled.Text`
-  font-size: 13px;
-  display: flex;
-  color: ${({ theme }) => theme.colors.white};
-  align-self: flex-end;
-`
-
-export const PasswordButton = styled.TouchableOpacity`
+export const PasswordRecoverButton = styled.TouchableOpacity`
   margin-top: 8px;
   border-bottom-width: 1px;
   border-color: ${({ theme }) => theme.colors.white};
@@ -54,7 +47,12 @@ export const PasswordButton = styled.TouchableOpacity`
   height: 4%;
 `
 
-export const LoginButton = styled.TouchableOpacity`
+export const Label = styled.Text`
+  font-size: 12px;
+  color: ${({ theme }) => theme.colors.white};
+`
+
+export const SignInButton = styled.TouchableOpacity`
   background-color: ${({ theme }) => theme.colors.white};
   border-radius: 90px;
   width: 50%;
@@ -66,22 +64,18 @@ export const LoginButton = styled.TouchableOpacity`
   box-shadow: 1px 1px 1px;
 `
 
-export const TextButton = styled.Text`
+export const SignInTextButton = styled.Text`
   color: ${({ theme }) => theme.colors.red_900};
   font-weight: bold;
 `
-export const SingUpText = styled.Text`
+export const SignUp = styled.Text`
   color: ${({ theme }) => theme.colors.white};
 
   position: absolute;
   bottom: 24px;
 `
 
-export const SingUpButtonText = styled.Text`
+export const SignUpUnderline = styled.Text`
   color: ${({ theme }) => theme.colors.white};
   font-weight: bold;
-`
-
-export const SingUpButton = styled.TouchableOpacity`
-  border-color: ${({ theme }) => theme.colors.gray_600};
 `

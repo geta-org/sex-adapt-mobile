@@ -1,26 +1,26 @@
 /* eslint-disable jsx-a11y/alt-text */
+import { useState } from 'react'
 import { Image } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
-
-import {
-  LoginContainer,
-  LoginButton,
-  TextButton,
-  LoginWrapper,
-  PasswordButton,
-  PasswordText,
-  Subtitle,
-  SingUpText,
-  SingUpButtonText,
-  Header,
-  BackgroundLogin,
-} from './styles'
-
-import { BackgroundSignIn, LogoWithText } from '@assets'
-import { InputBase } from 'src/components/Input/InputBase'
-import { useState } from 'react'
 import { Lock, User } from 'phosphor-react-native'
 import { TextInput } from 'react-native-paper'
+
+import { InputBase } from 'src/components/Input/InputBase'
+
+import {
+  SignInContainer,
+  SignInBackground,
+  Header,
+  Subtitle,
+  SignInWrapper,
+  SignInButton,
+  SignInTextButton,
+  PasswordRecoverButton,
+  Label,
+  SignUp,
+  SignUpUnderline,
+} from './styles'
+import { BackgroundSignIn, LogoWithText } from '@assets'
 
 export function SignIn() {
   const navigation = useNavigation()
@@ -38,8 +38,8 @@ export function SignIn() {
   }
 
   return (
-    <LoginContainer>
-      <BackgroundLogin source={BackgroundSignIn} resizeMode="cover">
+    <SignInContainer>
+      <SignInBackground source={BackgroundSignIn} resizeMode="cover">
         <Header>
           <Image source={LogoWithText} />
 
@@ -47,9 +47,9 @@ export function SignIn() {
             Ache o melhor motel para experimentar sua independência
           </Subtitle>
         </Header>
-      </BackgroundLogin>
+      </SignInBackground>
 
-      <LoginWrapper>
+      <SignInWrapper>
         <InputBase
           label="E-mail"
           value={userInfo.email}
@@ -77,17 +77,21 @@ export function SignIn() {
             <TextInput.Icon icon={() => <Lock color="#bababa" size={18} />} />
           }
         />
-        <PasswordButton activeOpacity={0.7} onPress={handleGoPasswordRecover}>
-          <PasswordText>Esqueci a senha</PasswordText>
-        </PasswordButton>
+        <PasswordRecoverButton
+          activeOpacity={0.7}
+          onPress={handleGoPasswordRecover}
+        >
+          <Label>Esqueci a senha</Label>
+        </PasswordRecoverButton>
 
-        <LoginButton activeOpacity={0.7}>
-          <TextButton>Login </TextButton>
-        </LoginButton>
-        <SingUpText onPress={handleGoSignUp}>
-          Não possui conta? Faça o <SingUpButtonText>cadastro</SingUpButtonText>
-        </SingUpText>
-      </LoginWrapper>
-    </LoginContainer>
+        <SignInButton activeOpacity={0.7}>
+          <SignInTextButton>Login</SignInTextButton>
+        </SignInButton>
+
+        <SignUp onPress={handleGoSignUp}>
+          Não possui conta? Faça o <SignUpUnderline>cadastro</SignUpUnderline>
+        </SignUp>
+      </SignInWrapper>
+    </SignInContainer>
   )
 }
