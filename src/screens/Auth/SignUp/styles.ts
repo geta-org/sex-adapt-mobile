@@ -4,7 +4,7 @@ export const SingUpContainer = styled.SafeAreaView`
   margin-top: 60px;
 `
 
-export const Container = styled.View`
+export const Header = styled.View`
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -14,10 +14,9 @@ export const Container = styled.View`
 export const Title = styled.Text`
   font-weight: bold;
   font-size: 30px;
-  margin-right: 50%;
 `
 
-export const Header = styled.View`
+export const FormWrapper = styled.View`
   align-items: initial;
   margin: 0 0 100px 70px;
 `

@@ -1,17 +1,18 @@
-import { useNavigation } from '@react-navigation/native'
 import { Text as Subtitle } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
+import { ButtonBack } from 'src/components/Button/ButtonBack'
+import { CaretDoubleRight } from 'phosphor-react-native'
+
 import {
-  TitleInput,
-  Header,
   SingUpContainer,
-  Input,
   Title,
+  Header,
+  FormWrapper,
+  TitleInput,
+  Input,
   Button,
   TextButton,
-  Container,
 } from './styles'
-import { CaretDoubleRight } from 'phosphor-react-native'
-import { ButtonBack } from 'src/components/Button/ButtonBack'
 
 export function SignUp() {
   const navigation = useNavigation()
@@ -22,15 +23,16 @@ export function SignUp() {
 
   return (
     <SingUpContainer>
-      <ButtonBack />
-      <Container>
+      <Header>
+        <ButtonBack />
+
         <Title>Cadastro</Title>
         <Subtitle>
           Conte-nos um pouco mais sobre você para realizarmos o seu cadastro
         </Subtitle>
-      </Container>
+      </Header>
 
-      <Header>
+      <FormWrapper>
         <TitleInput>Usuário</TitleInput>
         <Input placeholder="Usuário" placeholderTextColor="#bababa"></Input>
         <TitleInput>E-mail</TitleInput>
@@ -57,7 +59,7 @@ export function SignUp() {
           <TextButton>Próximo</TextButton>
           <CaretDoubleRight size={32} color="#FFF" weight="bold" />
         </Button>
-      </Header>
+      </FormWrapper>
     </SingUpContainer>
   )
 }
