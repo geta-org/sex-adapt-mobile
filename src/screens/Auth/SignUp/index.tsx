@@ -3,13 +3,14 @@ import { useNavigation } from '@react-navigation/native'
 import { ButtonBack } from 'src/components/Button/ButtonBack'
 import { CaretDoubleRight } from 'phosphor-react-native'
 
+import { InputForm } from 'src/components/Input/InputForm'
+
 import {
   SingUpContainer,
   Title,
   Header,
   FormWrapper,
   TitleInput,
-  Input,
   Button,
   TextButton,
 } from './styles'
@@ -23,9 +24,8 @@ export function SignUp() {
 
   return (
     <SingUpContainer>
+      <ButtonBack />
       <Header>
-        <ButtonBack />
-
         <Title>Cadastro</Title>
         <Subtitle>
           Conte-nos um pouco mais sobre você para realizarmos o seu cadastro
@@ -34,24 +34,30 @@ export function SignUp() {
 
       <FormWrapper>
         <TitleInput>Usuário</TitleInput>
-        <Input placeholder="Usuário" placeholderTextColor="#bababa"></Input>
-        <TitleInput>E-mail</TitleInput>
+        <InputForm icon="user" label="Nome" placeholder="john doe" />
 
-        <Input
-          placeholder="Insira seu e-mail"
-          placeholderTextColor="#bababa"
-        ></Input>
+        <TitleInput>E-mail</TitleInput>
+        <InputForm
+          icon="mail"
+          label="Insira seu e-mail"
+          placeholder="john@doe.com"
+        />
+
         <TitleInput>Senha</TitleInput>
-        <Input
-          placeholder="Senha"
-          placeholderTextColor="#bababa"
+
+        <InputForm
+          icon="password"
+          label="Senha"
+          placeholder="******"
           secureTextEntry
-        ></Input>
+        />
+
         <TitleInput>Confirmação da senha </TitleInput>
 
-        <Input
-          placeholder="Senha"
-          placeholderTextColor="#bababa"
+        <InputForm
+          icon="password"
+          label="Senha"
+          placeholder="******"
           secureTextEntry
         />
 
