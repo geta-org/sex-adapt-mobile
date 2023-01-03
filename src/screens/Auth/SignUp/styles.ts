@@ -16,7 +16,10 @@ export const Title = styled.Text`
 `
 
 export const FormWrapper = styled.View`
-  margin: 0 0 100px 70px;
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 32px;
 `
 
 export const TitleInput = styled.Text`
