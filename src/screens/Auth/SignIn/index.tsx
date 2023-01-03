@@ -21,6 +21,7 @@ import {
   Label,
   SignUp,
   SignUpUnderline,
+  FormWrapper,
 } from './styles'
 import { theme } from 'src/styles/theme'
 import { BackgroundSignIn, LogoWithText } from '@assets'
@@ -56,37 +57,39 @@ export function SignIn() {
         </SignInBackground>
 
         <SignInWrapper>
-          <InputBase
-            label="E-mail"
-            value={userInfo.email}
-            onChangeText={(text) =>
-              setUserInfo((prev) => ({ ...prev, email: text }))
-            }
-            autoCorrect={false}
-            autoCapitalize="none"
-            keyboardType="email-address"
-            returnKeyType="next"
-            left={
-              <TextInput.Icon
-                icon={() => <User color={theme.colors.gray_600} size={18} />}
-              />
-            }
-          />
+          <FormWrapper>
+            <InputBase
+              label="E-mail"
+              value={userInfo.email}
+              onChangeText={(text) =>
+                setUserInfo((prev) => ({ ...prev, email: text }))
+              }
+              autoCorrect={false}
+              autoCapitalize="none"
+              keyboardType="email-address"
+              returnKeyType="next"
+              left={
+                <TextInput.Icon
+                  icon={() => <User color={theme.colors.gray_600} size={18} />}
+                />
+              }
+            />
 
-          <InputBase
-            label="Senha"
-            value={userInfo.password}
-            onChangeText={(text) =>
-              setUserInfo((prev) => ({ ...prev, password: text }))
-            }
-            returnKeyType="done"
-            secureTextEntry
-            left={
-              <TextInput.Icon
-                icon={() => <Lock color={theme.colors.gray_600} size={18} />}
-              />
-            }
-          />
+            <InputBase
+              label="Senha"
+              value={userInfo.password}
+              onChangeText={(text) =>
+                setUserInfo((prev) => ({ ...prev, password: text }))
+              }
+              returnKeyType="done"
+              secureTextEntry
+              left={
+                <TextInput.Icon
+                  icon={() => <Lock color={theme.colors.gray_600} size={18} />}
+                />
+              }
+            />
+          </FormWrapper>
           <PasswordRecoverButton
             activeOpacity={0.7}
             onPress={handleGoPasswordRecover}

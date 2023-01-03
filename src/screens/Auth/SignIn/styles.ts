@@ -38,6 +38,13 @@ export const SignInWrapper = styled.KeyboardAvoidingView`
   background-color: ${({ theme }) => theme.colors.red_900};
 `
 
+export const FormWrapper = styled.View`
+  justify-content: space-between;
+
+  width: 100%;
+  height: 120px;
+`
+
 export const PasswordRecoverButton = styled.TouchableOpacity`
   align-self: flex-end;
 
