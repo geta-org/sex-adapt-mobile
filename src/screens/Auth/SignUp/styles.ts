@@ -1,14 +1,13 @@
 import styled from 'styled-components/native'
 
 export const SingUpContainer = styled.SafeAreaView`
-  margin-top: 60px;
+  margin-top: 50px;
+  padding: 0 62px;
 `
 
 export const Header = styled.View`
+  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-left: 50px;
 `
 
 export const Title = styled.Text`
