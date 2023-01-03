@@ -45,6 +45,9 @@ export function SignUp() {
             icon="mail"
             label="Insira seu e-mail"
             placeholder="john@doe.com"
+            autoCapitalize="none"
+            keyboardType="email-address"
+            returnKeyType="next"
           />
         </InputContainer>
 
@@ -55,6 +58,7 @@ export function SignUp() {
             label="Senha"
             placeholder="******"
             secureTextEntry
+            returnKeyType="next"
           />
         </InputContainer>
 
@@ -65,6 +69,7 @@ export function SignUp() {
             label="Senha"
             placeholder="******"
             secureTextEntry
+            returnKeyType="done"
           />
         </InputContainer>
       </FormWrapper>

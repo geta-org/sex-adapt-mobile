@@ -22,7 +22,14 @@ export function RecoverPassword() {
       </View>
 
       <FormWrapper>
-        <InputForm icon="mail" label="E-mail" placeholder="john@doe.com" />
+        <InputForm
+          icon="mail"
+          label="E-mail"
+          placeholder="john@doe.com"
+          autoCapitalize="none"
+          keyboardType="email-address"
+          returnKeyType="done"
+        />
       </FormWrapper>
 
       <Button activeOpacity={0.7}>
