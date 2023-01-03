@@ -10,7 +10,6 @@ export const SignInContainer = styled.KeyboardAvoidingView`
 
 export const SignInBackground = styled.ImageBackground`
   flex: 1;
-  height: 320px;
 `
 
 export const Header = styled.View`
@@ -29,14 +28,12 @@ export const Subtitle = styled.Text`
 
 export const SignInWrapper = styled.KeyboardAvoidingView`
   align-items: center;
-  justify-content: center;
-
   height: 60%;
   width: 100%;
 
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
-  padding: 0 32px;
+  padding: 35px 32px;
 
   background-color: ${({ theme }) => theme.colors.red_900};
 `
