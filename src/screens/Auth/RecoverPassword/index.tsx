@@ -2,7 +2,7 @@ import { View } from 'react-native'
 import { TextInput } from 'react-native-paper'
 import { EnvelopeSimple } from 'phosphor-react-native'
 
-import { BackButton } from 'src/components/Button/BackButton'
+import { ButtonBack } from 'src/components/Button/ButtonBack'
 import { InputBase } from 'src/components/Input/InputBase'
 
 import {
@@ -18,7 +18,7 @@ import { theme } from 'src/styles/theme'
 export function RecoverPassword() {
   return (
     <RecoverPasswordWrapper>
-      <BackButton />
+      <ButtonBack />
       <View>
         <Title>Esqueceu sua Senha?</Title>
         <Subtitle>Seu e-mail pode ajudar a recuperar</Subtitle>

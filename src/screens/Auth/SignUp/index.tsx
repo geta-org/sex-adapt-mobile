@@ -11,7 +11,7 @@ import {
   Container,
 } from './styles'
 import { CaretDoubleRight } from 'phosphor-react-native'
-import { BackButton } from 'src/components/Button/BackButton'
+import { ButtonBack } from 'src/components/Button/ButtonBack'
 
 export function SignUp() {
   const navigation = useNavigation()
@@ -22,7 +22,7 @@ export function SignUp() {
 
   return (
     <SingUpContainer>
-      <BackButton />
+      <ButtonBack />
       <Container>
         <Title>Cadastro</Title>
         <Subtitle>

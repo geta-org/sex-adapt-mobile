@@ -20,12 +20,12 @@ import {
   BoxContainer,
   TextBox,
 } from './styles'
-import { BackButton } from 'src/components/Button/BackButton'
+import { ButtonBack } from 'src/components/Button/ButtonBack'
 
 export function Accessibility() {
   return (
     <AccessibilityContainer>
-      <BackButton />
+      <ButtonBack />
       <Container>
         <Title>Qual sua necessidade quanto ao acesso?</Title>
         <Subtitle>
