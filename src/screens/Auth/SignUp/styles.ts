@@ -22,17 +22,14 @@ export const FormWrapper = styled.View`
   margin-top: 32px;
 `
 
-export const TitleInput = styled.Text`
-  font-weight: bold;
-  font-size: 15px;
-  margin: 10px 10px 0 0;
+export const InputContainer = styled.View`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
 `
 
-export const Input = styled.TextInput`
-  border-bottom-width: 1px;
-  border-color: ${({ theme }) => theme.colors.gray_600};
-  height: 50px;
-  width: 300px;
+export const Label = styled.Text`
+  font-weight: bold;
   font-size: 16px;
 `
 

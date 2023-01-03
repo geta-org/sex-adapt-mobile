@@ -10,9 +10,10 @@ import {
   Title,
   Header,
   FormWrapper,
-  TitleInput,
   Button,
   TextButton,
+  InputContainer,
+  Label,
 } from './styles'
 
 export function SignUp() {
@@ -33,33 +34,39 @@ export function SignUp() {
       </Header>
 
       <FormWrapper>
-        <TitleInput>Usuário</TitleInput>
-        <InputForm icon="user" label="Nome" placeholder="john doe" />
+        <InputContainer>
+          <Label>Usuário</Label>
+          <InputForm icon="user" label="Nome" placeholder="john doe" />
+        </InputContainer>
 
-        <TitleInput>E-mail</TitleInput>
-        <InputForm
-          icon="mail"
-          label="Insira seu e-mail"
-          placeholder="john@doe.com"
-        />
+        <InputContainer>
+          <Label>E-mail</Label>
+          <InputForm
+            icon="mail"
+            label="Insira seu e-mail"
+            placeholder="john@doe.com"
+          />
+        </InputContainer>
 
-        <TitleInput>Senha</TitleInput>
+        <InputContainer>
+          <Label>Senha</Label>
+          <InputForm
+            icon="password"
+            label="Senha"
+            placeholder="******"
+            secureTextEntry
+          />
+        </InputContainer>
 
-        <InputForm
-          icon="password"
-          label="Senha"
-          placeholder="******"
-          secureTextEntry
-        />
-
-        <TitleInput>Confirmação da senha </TitleInput>
-
-        <InputForm
-          icon="password"
-          label="Senha"
-          placeholder="******"
-          secureTextEntry
-        />
+        <InputContainer>
+          <Label>Confirmação da senha</Label>
+          <InputForm
+            icon="password"
+            label="Senha"
+            placeholder="******"
+            secureTextEntry
+          />
+        </InputContainer>
 
         <Button activeOpacity={0.7} onPress={handleAccessibility}>
           <TextButton>Próximo</TextButton>
