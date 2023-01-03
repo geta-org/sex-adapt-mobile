@@ -10,6 +10,7 @@ export const SignInContainer = styled.KeyboardAvoidingView`
 
 export const SignInBackground = styled.ImageBackground`
   flex: 1;
+  height: 120%;
 `
 
 export const Header = styled.View`
