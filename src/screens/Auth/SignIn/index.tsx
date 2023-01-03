@@ -70,7 +70,9 @@ export function SignIn() {
               returnKeyType="next"
               left={
                 <TextInput.Icon
-                  icon={() => <User color={theme.colors.gray_600} size={18} />}
+                  icon={() => (
+                    <User color={theme.colors.white} size={18} weight="bold" />
+                  )}
                 />
               }
             />
@@ -85,7 +87,9 @@ export function SignIn() {
               secureTextEntry
               left={
                 <TextInput.Icon
-                  icon={() => <Lock color={theme.colors.gray_600} size={18} />}
+                  icon={() => (
+                    <Lock color={theme.colors.white} size={18} weight="bold" />
+                  )}
                 />
               }
             />
