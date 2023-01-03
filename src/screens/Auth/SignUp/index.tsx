@@ -67,12 +67,12 @@ export function SignUp() {
             secureTextEntry
           />
         </InputContainer>
-
-        <Button activeOpacity={0.7} onPress={handleAccessibility}>
-          <TextButton>Próximo</TextButton>
-          <CaretDoubleRight size={32} color="#FFF" weight="bold" />
-        </Button>
       </FormWrapper>
+
+      <Button activeOpacity={0.7} onPress={handleAccessibility}>
+        <TextButton>Próximo</TextButton>
+        <CaretDoubleRight size={24} color="#FFF" weight="bold" />
+      </Button>
     </SingUpContainer>
   )
 }

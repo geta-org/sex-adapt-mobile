@@ -1,6 +1,9 @@
 import styled from 'styled-components/native'
 
 export const SingUpContainer = styled.SafeAreaView`
+  display: flex;
+  flex-direction: column;
+
   margin-top: 50px;
   padding: 0 62px;
 `
@@ -19,7 +22,7 @@ export const FormWrapper = styled.View`
   display: flex;
   flex-direction: column;
 
-  margin-top: 32px;
+  margin: 32px 0;
 `
 
 export const InputContainer = styled.View`
@@ -34,21 +37,19 @@ export const Label = styled.Text`
 `
 
 export const Button = styled.TouchableOpacity`
-  background-color: ${({ theme }) => theme.colors.red_900};
-  border-radius: 90px;
-  width: 60%;
-  padding: 15px 20px;
   display: flex;
-  align-items: center;
-  box-shadow: 1px 1px 1px;
-  margin: 20px 0 0 45px;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
+
+  border-radius: 23px;
+  padding: 13px 18px;
+  box-shadow: 0px 3px 6px #00000029;
+
+  background-color: ${({ theme }) => theme.colors.red_900};
 `
+
 export const TextButton = styled.Text`
-  flex-direction: row;
-  align-items: center;
   color: ${({ theme }) => theme.colors.white};
   font-weight: bold;
-  width: 70%;
 `
