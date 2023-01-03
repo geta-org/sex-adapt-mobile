@@ -1,42 +1,47 @@
 import styled from 'styled-components/native'
 
 export const RecoverPasswordWrapper = styled.SafeAreaView`
-  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  margin-top: 50px;
   padding: 0 32px;
 `
 
 export const Title = styled.Text`
-  font-size: 30px;
-  font-weight: bold;
-  width: 220px;
   align-items: center;
+  width: 220px;
+
+  font-size: ${({ theme }) => theme.font_size.xl};
+  font-family: ${({ theme }) => theme.font_family.bold};
 `
 
 export const Subtitle = styled.Text`
-  font-size: 13px;
+  font-size: ${({ theme }) => theme.font_size.xs};
   margin-bottom: 50px;
 `
 
 export const FormWrapper = styled.View`
   width: 300px;
-  margin-bottom: 15px;
+  margin-bottom: 23px;
 `
 
 export const Button = styled.TouchableOpacity`
-  background-color: ${({ theme }) => theme.colors.red_900};
-  border-radius: 90px;
-  width: 50%;
-  padding: 15px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 1px 1px 1px;
+
+  width: 50%;
+
+  border-radius: 23px;
+  padding: 12px 20px;
+  box-shadow: 0px 3px 6px #00000029;
+
+  background-color: ${({ theme }) => theme.colors.red_900};
 `
 
 export const TextButton = styled.Text`
   color: ${({ theme }) => theme.colors.white};
-  font-weight: bold;
+  font-family: ${({ theme }) => theme.font_family.bold};
 `
