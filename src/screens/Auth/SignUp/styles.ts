@@ -16,7 +16,6 @@ export const Title = styled.Text`
 `
 
 export const FormWrapper = styled.View`
-  align-items: initial;
   margin: 0 0 100px 70px;
 `
 
