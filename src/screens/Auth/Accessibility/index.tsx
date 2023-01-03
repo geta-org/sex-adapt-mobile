@@ -20,7 +20,7 @@ import {
   BoxContainer,
   TextBox,
 } from './styles'
-import { BackButton } from 'src/components/BackButton'
+import { BackButton } from 'src/components/Button/BackButton'
 
 export function Accessibility() {
   return (

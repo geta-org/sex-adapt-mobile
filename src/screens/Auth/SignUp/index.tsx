@@ -11,7 +11,7 @@ import {
   Container,
 } from './styles'
 import { CaretDoubleRight } from 'phosphor-react-native'
-import { BackButton } from 'src/components/BackButton'
+import { BackButton } from 'src/components/Button/BackButton'
 
 export function SignUp() {
   const navigation = useNavigation()
