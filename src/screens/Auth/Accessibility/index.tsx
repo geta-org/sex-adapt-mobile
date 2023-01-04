@@ -26,6 +26,7 @@ export function Accessibility() {
   return (
     <AccessibilityContainer>
       <ButtonBack />
+
       <Container>
         <Title>Qual sua necessidade quanto ao acesso?</Title>
         <Subtitle>
@@ -33,6 +34,7 @@ export function Accessibility() {
           em um motel
         </Subtitle>
       </Container>
+
       <AccessibilityWrapper>
         <BoxContainer>
           <AccessibilityBox>
@@ -75,8 +77,9 @@ export function Accessibility() {
             <PoundWithSupport width={70} height={70} />
             <TextBox> Atendimento em Libras</TextBox>
           </AccessibilityBox>
-          <Button>
-            <TextButtons activeOpacity={0.7}>Confirmar</TextButtons>
+
+          <Button activeOpacity={0.7}>
+            <TextButtons>Confirmar</TextButtons>
           </Button>
         </BoxContainer>
       </AccessibilityWrapper>

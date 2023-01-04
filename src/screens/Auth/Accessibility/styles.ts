@@ -1,4 +1,5 @@
 import styled from 'styled-components/native'
+
 export const AccessibilityContainer = styled.View`
   flex: 1;
   display: flex;
@@ -34,11 +35,13 @@ export const AccessibilityWrapper = styled.View`
   align-items: center;
   justify-content: space-between;
 `
+
 export const BoxContainer = styled.View`
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
 `
+
 export const TextBox = styled.Text`
   font-weight: bold;
   font-size: 11px;
@@ -47,6 +50,7 @@ export const TextBox = styled.Text`
   justify-content: center;
   text-align: center;
 `
+
 export const AccessibilityBox = styled.TouchableOpacity`
   width: 125px;
   height: 140px;
