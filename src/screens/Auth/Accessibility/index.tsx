@@ -1,14 +1,5 @@
 import { ButtonBack } from 'src/components/Button/ButtonBack'
-
-import {
-  FloorUneven,
-  BarsWithSupport,
-  PoundWithSupport,
-  TactileFloorWith,
-  BrailleWithSupport,
-  ElevatorWith,
-  DoorWide,
-} from '@assets'
+import { CardAccessDifficulty } from 'src/components/Card/CardAccessDifficulty'
 
 import {
   AccessibilityContainer,
@@ -17,9 +8,7 @@ import {
   Title,
   Button,
   TextButtons,
-  AccessibilityBox,
   BoxContainer,
-  TextBox,
   Header,
 } from './styles'
 
@@ -27,7 +16,6 @@ export function Accessibility() {
   return (
     <AccessibilityContainer>
       <ButtonBack />
-
       <Header>
         <Title>Qual sua necessidade quanto ao acesso?</Title>
         <Subtitle>
@@ -38,46 +26,53 @@ export function Accessibility() {
 
       <AccessibilityWrapper>
         <BoxContainer>
-          <AccessibilityBox>
-            <ElevatorWith width={70} height={70} />
-            <TextBox>Elevador</TextBox>
-          </AccessibilityBox>
+          <CardAccessDifficulty
+            accessibility="Elevator"
+            onSelectDifficulty={(Text) => console.log(Text)}
+            toggleAccessDifficulty={true}
+          />
 
-          <AccessibilityBox>
-            <TactileFloorWith width={70} height={70} />
-            <TextBox>Piso tátil</TextBox>
-          </AccessibilityBox>
+          <CardAccessDifficulty
+            accessibility="TactileFloor"
+            onSelectDifficulty={(Text) => console.log(Text)}
+            toggleAccessDifficulty={true}
+          />
         </BoxContainer>
 
         <BoxContainer>
-          <AccessibilityBox>
-            <FloorUneven width={70} height={70} />
-            <TextBox>Sem desníveis</TextBox>
-          </AccessibilityBox>
+          <CardAccessDifficulty
+            accessibility="FloorUneven"
+            onSelectDifficulty={(Text) => console.log(Text)}
+            toggleAccessDifficulty={true}
+          />
 
-          <AccessibilityBox>
-            <BarsWithSupport width={70} height={70} />
-            <TextBox> Barras de suporte</TextBox>
-          </AccessibilityBox>
+          <CardAccessDifficulty
+            accessibility="SupportBars"
+            onSelectDifficulty={(Text) => console.log(Text)}
+            toggleAccessDifficulty={true}
+          />
         </BoxContainer>
 
         <BoxContainer>
-          <AccessibilityBox>
-            <BrailleWithSupport width={70} height={70} />
-            <TextBox> Sinalização em braile</TextBox>
-          </AccessibilityBox>
+          <CardAccessDifficulty
+            accessibility="BrailleSignage"
+            onSelectDifficulty={(Text) => console.log(Text)}
+            toggleAccessDifficulty={true}
+          />
 
-          <AccessibilityBox>
-            <DoorWide width={70} height={70} />
-            <TextBox>Dimensões diversas</TextBox>
-          </AccessibilityBox>
+          <CardAccessDifficulty
+            accessibility="DifferentDimensions"
+            onSelectDifficulty={(Text) => console.log(Text)}
+            toggleAccessDifficulty={false}
+          />
         </BoxContainer>
 
         <BoxContainer>
-          <AccessibilityBox>
-            <PoundWithSupport width={70} height={70} />
-            <TextBox> Atendimento em Libras</TextBox>
-          </AccessibilityBox>
+          <CardAccessDifficulty
+            accessibility="ServicePounds"
+            onSelectDifficulty={(Text) => console.log(Text)}
+            toggleAccessDifficulty={false}
+          />
 
           <Button activeOpacity={0.7}>
             <TextButtons>Confirmar</TextButtons>
