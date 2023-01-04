@@ -9,7 +9,7 @@ export const AccessibilityContainer = styled.View`
   margin-top: 30px;
 `
 
-export const Container = styled.View`
+export const Header = styled.View`
   flex-direction: column;
   align-items: center;
   justify-content: center;

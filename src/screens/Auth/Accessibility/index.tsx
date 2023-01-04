@@ -1,3 +1,5 @@
+import { ButtonBack } from 'src/components/Button/ButtonBack'
+
 import {
   FloorUneven,
   BarsWithSupport,
@@ -13,27 +15,26 @@ import {
   AccessibilityWrapper,
   Subtitle,
   Title,
-  Container,
   Button,
   TextButtons,
   AccessibilityBox,
   BoxContainer,
   TextBox,
+  Header,
 } from './styles'
-import { ButtonBack } from 'src/components/Button/ButtonBack'
 
 export function Accessibility() {
   return (
     <AccessibilityContainer>
       <ButtonBack />
 
-      <Container>
+      <Header>
         <Title>Qual sua necessidade quanto ao acesso?</Title>
         <Subtitle>
           Conte-nos um pouco sobre as estruturas que dificultam a sua autonomia
           em um motel
         </Subtitle>
-      </Container>
+      </Header>
 
       <AccessibilityWrapper>
         <BoxContainer>
