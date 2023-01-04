@@ -1,75 +1,57 @@
 import styled from 'styled-components/native'
 
 export const AccessibilityContainer = styled.View`
-  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: 30px;
+
+  margin-top: 10px;
+  padding: 0 62px;
 `
 
 export const Header = styled.View`
+  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-left: 50px;
+
+  margin-bottom: ${({ theme }) => theme.margins.lg};
 `
 
 export const Title = styled.Text`
-  font-weight: bold;
-  font-size: 22px;
-  width: 300px;
+  font-size: ${({ theme }) => theme.font_size.lg};
+  font-family: ${({ theme }) => theme.font_family.bold};
 `
 
 export const Subtitle = styled.Text`
-  width: 300px;
-  font-size: 12px;
-  margin-bottom: 15px;
+  font-size: ${({ theme }) => theme.font_size.xs};
 `
 
 export const AccessibilityWrapper = styled.View`
-  width: 100%;
-  padding: 0 70px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
 `
 
-export const BoxContainer = styled.View`
+export const CardRow = styled.View`
+  display: flex;
   flex-direction: row;
-  width: 100%;
   justify-content: space-between;
+
+  margin-bottom: ${({ theme }) => theme.margins.sm};
 `
 
 export const TextButtons = styled.Text`
-  font-weight: bold;
+  font-family: ${({ theme }) => theme.font_family.bold};
   color: ${({ theme }) => theme.colors.white};
 `
 
 export const Button = styled.TouchableOpacity`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+
+  width: 120px;
+  height: 38px;
+
+  border-radius: 26px;
+
   background-color: ${({ theme }) => theme.colors.red_900};
-  border-radius: 90px;
-  width: 150px;
-  height: 50px;
-  padding: 15px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 1px 1px 1px;
-  margin-left: 15px;
-`
-
-export const ButtonText = styled.Text`
-  font-weight: bold;
-  color: #fff;
-`
-
-export const BoxText = styled.Text`
-  font-weight: bold;
-  font-size: 11px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 `
