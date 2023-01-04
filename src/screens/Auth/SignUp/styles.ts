@@ -1,6 +1,6 @@
 import styled from 'styled-components/native'
 
-export const SingUpContainer = styled.SafeAreaView`
+export const SingUpContainer = styled.View`
   display: flex;
   flex-direction: column;
 
@@ -14,8 +14,8 @@ export const Header = styled.View`
 `
 
 export const Title = styled.Text`
-  font-weight: bold;
-  font-size: 30px;
+  font-size: ${({ theme }) => theme.font_size.xl};
+  font-family: ${({ theme }) => theme.font_family.bold};
 `
 
 export const FormWrapper = styled.View`
@@ -28,12 +28,13 @@ export const FormWrapper = styled.View`
 export const InputContainer = styled.View`
   display: flex;
   flex-direction: column;
+
   margin-bottom: 10px;
 `
 
 export const Label = styled.Text`
-  font-weight: bold;
-  font-size: 16px;
+  font-size: ${({ theme }) => theme.font_size.md};
+  font-family: ${({ theme }) => theme.font_family.bold};
 `
 
 export const Button = styled.TouchableOpacity`
@@ -51,5 +52,5 @@ export const Button = styled.TouchableOpacity`
 
 export const TextButton = styled.Text`
   color: ${({ theme }) => theme.colors.white};
-  font-weight: bold;
+  font-family: ${({ theme }) => theme.font_family.bold};
 `
