@@ -1,6 +1,6 @@
 import styled from 'styled-components/native'
 
-export const RecoverPasswordWrapper = styled.SafeAreaView`
+export const RecoverPasswordWrapper = styled.View`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,8 +18,6 @@ export const Header = styled.View`
 `
 
 export const Title = styled.Text`
-  width: 220px;
-
   font-size: ${({ theme }) => theme.font_size.xl};
   font-family: ${({ theme }) => theme.font_family.bold};
 `
