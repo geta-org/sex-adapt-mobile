@@ -6,11 +6,18 @@ export const RecoverPasswordWrapper = styled.SafeAreaView`
   align-items: center;
 
   margin-top: 50px;
-  padding: 0 32px;
+  padding: 0 62px;
+`
+
+export const Header = styled.View`
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+
+  margin-bottom: 50px;
 `
 
 export const Title = styled.Text`
-  align-items: center;
   width: 220px;
 
   font-size: ${({ theme }) => theme.font_size.xl};
@@ -19,7 +26,6 @@ export const Title = styled.Text`
 
 export const Subtitle = styled.Text`
   font-size: ${({ theme }) => theme.font_size.xs};
-  margin-bottom: 50px;
 `
 
 export const FormWrapper = styled.View`
@@ -31,8 +37,6 @@ export const Button = styled.TouchableOpacity`
   display: flex;
   align-items: center;
   justify-content: center;
-
-  width: 50%;
 
   border-radius: 23px;
   padding: 12px 20px;
