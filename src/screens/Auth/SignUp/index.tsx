@@ -1,11 +1,10 @@
-import { Text as Subtitle } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
-import { ButtonBack } from 'src/components/Button/ButtonBack'
 import { CaretDoubleRight } from 'phosphor-react-native'
 
 import { DismissKeyboard } from 'src/utils/DismissKeyBoard'
 
 import { InputForm } from 'src/components/Input/InputForm'
+import { ButtonBack } from 'src/components/Button/ButtonBack'
 
 import {
   SingUpContainer,
@@ -16,6 +15,7 @@ import {
   TextButton,
   InputContainer,
   Label,
+  Subtitle,
 } from './styles'
 
 export function SignUp() {

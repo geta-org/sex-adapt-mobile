@@ -18,6 +18,10 @@ export const Title = styled.Text`
   font-family: ${({ theme }) => theme.font_family.bold};
 `
 
+export const Subtitle = styled.Text`
+  font-size: ${({ theme }) => theme.font_size.xs};
+`
+
 export const FormWrapper = styled.View`
   display: flex;
   flex-direction: column;
