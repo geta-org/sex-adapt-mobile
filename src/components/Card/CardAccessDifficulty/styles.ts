@@ -16,6 +16,7 @@ export const CardAccessDifficultyContainer = styled.TouchableOpacity<CardAccessD
   border-color: ${({ active, theme }) =>
     !active ? theme.colors.gray_600 : theme.colors.red_500};
   border-radius: 24px;
+  padding: 0 10px;
 `
 
 export const Label = styled.Text`
