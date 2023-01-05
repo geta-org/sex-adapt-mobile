@@ -26,20 +26,13 @@ export const Subtitle = styled.Text`
 
 export const AccessibilityWrapper = styled.View`
   display: flex;
-  flex-direction: column;
-`
-
-export const CardRow = styled.View`
-  display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
-
-  margin-bottom: ${({ theme }) => theme.margins.sm};
 `
 
-export const TextButtons = styled.Text`
-  font-family: ${({ theme }) => theme.font_family.bold};
-  color: ${({ theme }) => theme.colors.white};
+export const CardsWrapper = styled.View`
+  margin-bottom: ${({ theme }) => theme.margins.sm};
 `
 
 export const Button = styled.TouchableOpacity`
@@ -54,4 +47,9 @@ export const Button = styled.TouchableOpacity`
   border-radius: 26px;
 
   background-color: ${({ theme }) => theme.colors.red_900};
+`
+
+export const TextButton = styled.Text`
+  font-family: ${({ theme }) => theme.font_family.bold};
+  color: ${({ theme }) => theme.colors.white};
 `

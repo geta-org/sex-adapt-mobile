@@ -1,6 +1,9 @@
+import { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
+
 import { ButtonBack } from 'src/components/Button/ButtonBack'
 import { CardAccessDifficulty } from 'src/components/Card/CardAccessDifficulty'
+import { userNeedList } from './userNeedList'
 
 import {
   AccessibilityContainer,
@@ -8,12 +11,22 @@ import {
   Subtitle,
   Title,
   Button,
-  TextButtons,
   Header,
-  CardRow,
+  CardsWrapper,
+  TextButton,
 } from './styles'
 
+interface userNeedProps {
+  name: string
+  isSelected: boolean
+}
+
 export function Accessibility() {
+  // eslint-disable-next-line no-unused-vars
+  const [userNeed, setUserNeed] = useState<userNeedProps[]>(userNeedList)
+
+  function handleToggleUserNeed() {}
+
   return (
     <SafeAreaView>
       <AccessibilityContainer>
@@ -27,59 +40,19 @@ export function Accessibility() {
         </Header>
 
         <AccessibilityWrapper>
-          <CardRow>
-            <CardAccessDifficulty
-              accessibility="Elevator"
-              onSelectDifficulty={(Text) => console.log(Text)}
-              toggleAccessDifficulty={true}
-            />
+          {userNeed.map((need) => (
+            <CardsWrapper key={need.name}>
+              <CardAccessDifficulty
+                accessibility={need.name}
+                onSelectDifficulty={handleToggleUserNeed}
+                toggleAccessDifficulty={need.isSelected}
+              />
+            </CardsWrapper>
+          ))}
 
-            <CardAccessDifficulty
-              accessibility="TactileFloor"
-              onSelectDifficulty={(Text) => console.log(Text)}
-              toggleAccessDifficulty={true}
-            />
-          </CardRow>
-
-          <CardRow>
-            <CardAccessDifficulty
-              accessibility="FloorUneven"
-              onSelectDifficulty={(Text) => console.log(Text)}
-              toggleAccessDifficulty={true}
-            />
-
-            <CardAccessDifficulty
-              accessibility="SupportBars"
-              onSelectDifficulty={(Text) => console.log(Text)}
-              toggleAccessDifficulty={true}
-            />
-          </CardRow>
-
-          <CardRow>
-            <CardAccessDifficulty
-              accessibility="BrailleSignage"
-              onSelectDifficulty={(Text) => console.log(Text)}
-              toggleAccessDifficulty={true}
-            />
-
-            <CardAccessDifficulty
-              accessibility="DifferentDimensions"
-              onSelectDifficulty={(Text) => console.log(Text)}
-              toggleAccessDifficulty={false}
-            />
-          </CardRow>
-
-          <CardRow>
-            <CardAccessDifficulty
-              accessibility="ServicePounds"
-              onSelectDifficulty={(Text) => console.log(Text)}
-              toggleAccessDifficulty={false}
-            />
-
-            <Button activeOpacity={0.7}>
-              <TextButtons>Confirmar</TextButtons>
-            </Button>
-          </CardRow>
+          <Button activeOpacity={0.7}>
+            <TextButton>Confirmar</TextButton>
+          </Button>
         </AccessibilityWrapper>
       </AccessibilityContainer>
     </SafeAreaView>
