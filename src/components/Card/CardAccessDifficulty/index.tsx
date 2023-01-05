@@ -20,6 +20,7 @@ interface CardAccessDifficultyProps {
     | 'BrailleSignage'
     | 'DifferentDimensions'
     | 'ServicePounds'
+    | string
   onSelectDifficulty: (Accessibility: string) => void
   toggleAccessDifficulty: boolean
 }
