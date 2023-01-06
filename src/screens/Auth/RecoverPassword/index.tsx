@@ -1,5 +1,3 @@
-import { View } from 'react-native'
-
 import { ButtonBack } from 'src/components/Button/ButtonBack'
 import { InputForm } from 'src/components/Input/InputForm'
 
@@ -10,16 +8,17 @@ import {
   Button,
   TextButton,
   FormWrapper,
+  Header,
 } from './styles'
 
 export function RecoverPassword() {
   return (
     <RecoverPasswordWrapper>
       <ButtonBack />
-      <View>
+      <Header>
         <Title>Esqueceu sua Senha?</Title>
         <Subtitle>Seu e-mail pode ajudar a recuperar</Subtitle>
-      </View>
+      </Header>
 
       <FormWrapper>
         <InputForm
