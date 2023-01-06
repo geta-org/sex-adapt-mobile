@@ -91,7 +91,7 @@ export const Button = styled.TouchableOpacity`
 export const ButtonText = styled.Text`
   font-weight: bold;
   color: #fff;
-`;
+`
 
 export const BoxText = styled.Text`
   font-weight: bold;

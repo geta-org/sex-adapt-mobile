@@ -1,3 +1,4 @@
+import { establishment } from './establishment.d'
 /* eslint-disable no-unused-vars */
 export declare global {
   namespace ReactNavigation {
@@ -7,7 +8,7 @@ export declare global {
       SignUp: undefined;
       RecoverPassword: undefined;
       Home: undefined;
-      MotelDetails: undefined;
+      MotelDetails: establishment
       MotelSuggestion: undefined;
     }
   }
