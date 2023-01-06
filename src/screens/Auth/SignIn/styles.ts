@@ -83,6 +83,8 @@ export const SignUp = styled.Text`
 
   position: absolute;
   bottom: 24px;
+
+  margin-top: 25px;
 `
 
 export const SignUpUnderline = styled.Text`
