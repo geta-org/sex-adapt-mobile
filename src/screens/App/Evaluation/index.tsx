@@ -5,7 +5,8 @@ import {
   View as TitleBox,
   FlatList,
   TouchableOpacityProps,
-  StyleSheet
+  StyleSheet,
+  Keyboard
 } from 'react-native';
 
 import {
@@ -31,7 +32,7 @@ interface UserCommentData {
 
 export default function Evaluation() {
   const [newUserComment, setNewUserComment] = useState(' ');
-  const [myUserComment, setMyUserComment] = useState<UserCommentData[]>([]);
+  const [userComment, setUserComment] = useState<UserCommentData[]>([]);
   const [star, setStar] = useState(0);
 
   const navigation = useNavigation();
@@ -45,8 +46,9 @@ export default function Evaluation() {
       name: newUserComment,
       Rating: star
     };
-
-    setMyUserComment((oldState) => [...oldState, data]);
+    Keyboard.dismiss();
+    setNewUserComment('');
+    setUserComment((oldState) => [...oldState, data]);
   }
   interface ButtonProps extends TouchableOpacityProps {
     title: string;
@@ -83,7 +85,7 @@ export default function Evaluation() {
     );
   }
 
-  useEffect(() => {}, [myUserComment]);
+  useEffect(() => {}, [userComment]);
   return (
     <EvaluationContainer>
       <BackButton />
@@ -107,6 +109,7 @@ export default function Evaluation() {
         multiline={true}
         numberOfLines={5}
         placeholder="Digite o seu comentário..."
+        value={newUserComment}
         onChangeText={setNewUserComment}
       />
 
@@ -121,7 +124,7 @@ export default function Evaluation() {
           paddingHorizontal: 20,
           paddingVertical: 10
         }}
-        data={myUserComment}
+        data={userComment}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <CommentCard
