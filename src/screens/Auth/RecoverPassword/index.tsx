@@ -10,16 +10,18 @@ import {
   Button,
   TextButton,
   FormWrapper,
+  Header,
 } from './styles'
+import { theme } from 'src/styles/theme'
 
 export function RecoverPassword() {
   return (
     <RecoverPasswordWrapper>
       <ButtonBack />
-      <View>
+      <Header>
         <Title>Esqueceu sua Senha?</Title>
         <Subtitle>Seu e-mail pode ajudar a recuperar</Subtitle>
-      </View>
+      </Header>
 
       <FormWrapper>
         <InputForm
