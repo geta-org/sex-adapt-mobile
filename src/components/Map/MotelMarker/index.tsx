@@ -1,24 +1,29 @@
 /* eslint-disable jsx-a11y/alt-text */
-import { Image } from 'react-native'
-import { Callout, Marker } from 'react-native-maps'
-import { useNavigation } from '@react-navigation/native'
+import { Image } from "react-native";
+import { Callout, Marker } from "react-native-maps";
+import { useNavigation } from "@react-navigation/native";
 
-import { CalloutView } from '../CalloutView'
+import { CalloutView } from "../CalloutView";
 
-import { PinMotel } from '@assets'
-import { ButtonOpenMotelDetails, ButtonText, MotelName, styles } from './styles'
+import { PinMotel } from "@assets";
+import {
+  ButtonOpenMotelDetails,
+  ButtonText,
+  MotelName,
+  styles,
+} from "./styles";
 
 // eslint-disable-next-line no-undef
 interface MotelMarkerProps extends establishment {
-  userLatitude: number
-  userLongitude: number
+  userLatitude: number;
+  userLongitude: number;
 }
 
 export function MotelMarker(props: MotelMarkerProps) {
-  const navigation = useNavigation()
+  const navigation = useNavigation();
 
   function handleOpenMotel() {
-    navigation.navigate('MotelDetails')
+    navigation.navigate("MotelDetails");
   }
 
   return (
@@ -30,9 +35,9 @@ export function MotelMarker(props: MotelMarkerProps) {
       <Image source={PinMotel} />
 
       <Callout
-        accessibilityLabel={'Ver estabelecimento'}
-        accessibilityHint={'Ir para perfil de ' + props.name}
-        accessibilityRole={'button'}
+        accessibilityLabel={"Ver estabelecimento"}
+        accessibilityHint={"Ir para perfil de " + props.name}
+        accessibilityRole={"button"}
         tooltip={true}
         style={styles.markerCallout}
         onPress={handleOpenMotel}
@@ -47,13 +52,13 @@ export function MotelMarker(props: MotelMarkerProps) {
           average_grade={props.average_grade}
         />
         <ButtonOpenMotelDetails
-          accessibilityLabel={'Ver mais'}
-          accessibilityHint={'Navega para página de perfil de ' + props.name}
-          accessibilityRole={'button'}
+          accessibilityLabel={"Ver mais"}
+          accessibilityHint={"Navega para página de perfil de " + props.name}
+          accessibilityRole={"button"}
         >
           <ButtonText>Ver Mais</ButtonText>
         </ButtonOpenMotelDetails>
       </Callout>
     </Marker>
-  )
+  );
 }

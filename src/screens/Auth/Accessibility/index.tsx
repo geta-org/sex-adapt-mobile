@@ -6,7 +6,7 @@ import {
   BrailleWithSupport,
   ElevatorWith,
   DoorWide,
-} from '@assets'
+} from "@assets";
 
 import {
   AccessibilityContainer,
@@ -19,8 +19,8 @@ import {
   AccessibilityBox,
   BoxContainer,
   TextBox,
-} from './styles'
-import { BackButton } from 'src/components/BackButton'
+} from "./styles";
+import { BackButton } from "src/components/BackButton";
 
 export function Accessibility() {
   return (
@@ -81,5 +81,5 @@ export function Accessibility() {
         </BoxContainer>
       </AccessibilityWrapper>
     </AccessibilityContainer>
-  )
+  );
 }

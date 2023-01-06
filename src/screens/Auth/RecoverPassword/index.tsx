@@ -1,4 +1,4 @@
-import { View } from 'react-native'
+import { View } from "react-native";
 
 import {
   RecoverPasswordWrapper,
@@ -7,8 +7,8 @@ import {
   Input,
   Button,
   TextButton,
-} from './styles'
-import { BackButton } from 'src/components/BackButton'
+} from "./styles";
+import { BackButton } from "src/components/BackButton";
 
 export function RecoverPassword() {
   return (
@@ -25,5 +25,5 @@ export function RecoverPassword() {
         <TextButton>Recuperar senha</TextButton>
       </Button>
     </RecoverPasswordWrapper>
-  )
+  );
 }

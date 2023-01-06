@@ -1,5 +1,5 @@
-import { useNavigation } from '@react-navigation/native'
-import { Text as Subtitle } from 'react-native'
+import { useNavigation } from "@react-navigation/native";
+import { Text as Subtitle } from "react-native";
 import {
   TitleInput,
   Header,
@@ -9,15 +9,15 @@ import {
   Button,
   TextButton,
   Container,
-} from './styles'
-import { CaretDoubleRight } from 'phosphor-react-native'
-import { BackButton } from 'src/components/BackButton'
+} from "./styles";
+import { CaretDoubleRight } from "phosphor-react-native";
+import { BackButton } from "src/components/BackButton";
 
 export function SignUp() {
-  const navigation = useNavigation()
+  const navigation = useNavigation();
 
   function handleAccessibility() {
-    navigation.navigate('Accessibility')
+    navigation.navigate("Accessibility");
   }
 
   return (
@@ -59,5 +59,5 @@ export function SignUp() {
         </Button>
       </Header>
     </SingUpContainer>
-  )
+  );
 }
