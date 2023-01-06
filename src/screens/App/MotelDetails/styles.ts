@@ -1,16 +1,16 @@
-import styled from 'styled-components/native'
+import styled from "styled-components/native";
 
 export const MotelDetailsContainer = styled.View`
   flex: 1;
   /*  looks better totally white */
   background-color: ${({ theme }) => theme.colors.white};
   align-items: center;
-`
+`;
 
 export const MotelImage = styled.Image`
   height: 161px;
   width: 443px;
-`
+`;
 
 export const ButtonHeart = styled.View`
   display: flex;
@@ -27,12 +27,12 @@ export const ButtonHeart = styled.View`
   background-color: ${({ theme }) => theme.colors.white};
 
   border-radius: 50px;
-`
+`;
 
 export const MotelInfoWrapper = styled.View`
   margin-top: ${({ theme }) => theme.margins.sm};
   margin-bottom: ${({ theme }) => theme.margins.md};
-`
+`;
 
 export const Title = styled.Text`
   font-family: ${({ theme }) => theme.font_family.bold};
@@ -41,18 +41,18 @@ export const Title = styled.Text`
 
   margin-bottom: ${({ theme }) => theme.margins.md};
   margin-top: ${({ theme }) => theme.margins.sm};
-`
+`;
 
 export const AddressText = styled.Text`
   font-size: ${({ theme }) => theme.font_size.md};
   font-family: ${({ theme }) => theme.font_family.regular};
   max-width: 350px;
-`
+`;
 
 export const TelephoneText = styled.Text`
   font-size: ${({ theme }) => theme.font_size.md};
   font-family: ${({ theme }) => theme.font_family.regular};
-`
+`;
 
 export const MotelInfo = styled.View`
   display: flex;
@@ -65,24 +65,24 @@ export const MotelInfo = styled.View`
 
   font-size: ${({ theme }) => theme.font_size.md};
   font-family: ${({ theme }) => theme.font_family.regular};
-`
+`;
 
 export const ReviewContainer = styled.View`
   margin-top: ${({ theme }) => theme.margins.sm};
   width: 296px;
-`
+`;
 
 export const MotelText = styled.Text`
   color: ${({ theme }) => theme.colors.black};
   font-family: ${({ theme }) => theme.font_family.regular};
   font-size: ${({ theme }) => theme.font_size.md};
-`
+`;
 
 export const ModelTextRed = styled.Text`
   color: ${({ theme }) => theme.colors.red_900};
   font-family: ${({ theme }) => theme.font_family.bold};
   font-size: ${({ theme }) => theme.font_size.md};
-`
+`;
 
 export const ReviewWrapper = styled.View`
   display: flex;
@@ -91,7 +91,7 @@ export const ReviewWrapper = styled.View`
   justify-content: flex-start;
 
   margin-top: ${({ theme }) => theme.margins.sm};
-`
+`;
 
 export const ReviewContent = styled.View`
   justify-content: center;
@@ -101,7 +101,7 @@ export const ReviewContent = styled.View`
 
   border-radius: 15px;
   background-color: ${({ theme }) => theme.colors.red_900};
-`
+`;
 
 export const ReviewText = styled.Text`
   color: ${({ theme }) => theme.colors.white};
@@ -109,7 +109,7 @@ export const ReviewText = styled.Text`
   font-family: ${({ theme }) => theme.font_family.medium};
 
   align-self: center;
-`
+`;
 
 export const CommentText = styled.Text`
   font-size: ${({ theme }) => theme.font_size.md};
@@ -117,7 +117,7 @@ export const CommentText = styled.Text`
   text-decoration-line: underline;
 
   margin-top: ${({ theme }) => theme.margins.sm};
-`
+`;
 
 export const ButtonNext = styled.View`
   display: flex;
@@ -130,11 +130,11 @@ export const ButtonNext = styled.View`
 
   border-radius: 20px;
   background-color: ${({ theme }) => theme.colors.red_900};
-`
+`;
 
 export const ButtonText = styled.Text`
   color: ${({ theme }) => theme.colors.white};
 
   font-size: ${({ theme }) => theme.font_size.lg};
   font-family: ${({ theme }) => theme.font_family.medium};
-`
+`;

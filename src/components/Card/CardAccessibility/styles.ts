@@ -1,4 +1,4 @@
-import styled from 'styled-components/native'
+import styled from "styled-components/native";
 
 export const CardAccessibilityContainer = styled.View`
   display: flex;
@@ -8,4 +8,4 @@ export const CardAccessibilityContainer = styled.View`
 
   width: 300px;
   height: 36px;
-`
+`;

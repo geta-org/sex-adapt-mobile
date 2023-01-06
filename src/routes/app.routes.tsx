@@ -5,7 +5,14 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 import { CaretLeft, Gear, HouseSimple, MapTrifold } from 'phosphor-react-native'
 
-import { Filter, Home, Map, MotelDetails, Support } from '../screens/App/index'
+import {
+  Home,
+  Map,
+  MotelDetails,
+  Suggestion,
+  Support,
+  Filter,
+} from '../screens/App/index'
 import { theme } from 'src/styles/theme'
 
 const { Navigator, Screen } = createNativeStackNavigator()
@@ -54,6 +61,11 @@ export function AppRoutes() {
             elevation: 0,
           },
         }}
+      />
+      <Screen
+        name="MotelSuggestion"
+        component={Suggestion}
+        options={{ headerShown: false }}
       />
     </Navigator>
   )
