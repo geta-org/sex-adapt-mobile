@@ -1,10 +1,12 @@
-import { Heart } from 'phosphor-react-native';
-import { useState } from 'react';
-import { ScrollView, TouchableWithoutFeedback, View } from 'react-native';
-import { Rating } from 'react-native-ratings';
-import { CardAccessibility } from 'src/components/Card/CardAccessibility';
-import { PriceRating } from 'src/components/PriceRating';
-import { theme } from 'src/styles/theme';
+import { useState } from 'react'
+import { useRoute } from '@react-navigation/native'
+import { Heart } from 'phosphor-react-native'
+import { ScrollView, TouchableWithoutFeedback, View } from 'react-native'
+import { Rating } from 'react-native-ratings'
+
+import { CardAccessibility } from 'src/components/Card/CardAccessibility'
+import { PriceRating } from 'src/components/PriceRating'
+import { theme } from 'src/styles/theme'
 
 import {
   MotelDetailsContainer,
@@ -23,26 +25,32 @@ import {
   TelephoneText,
   Title,
   ReviewContent,
-  ModelTextRed
-} from './styles';
+  ModelTextRed,
+} from './styles'
 
 // TODO: configure route parameters
 // TODO: create a section comment
 
 export function MotelDetails() {
-  const [favoriteMotel, setFavoriteMotel] = useState(false);
+  const route = useRoute()
+
+  const [favoriteMotel, setFavoriteMotel] = useState(false)
+
+  // eslint-disable-next-line no-undef
+  const motel = route.params as establishment
 
   return (
     <MotelDetailsContainer>
       <MotelImage
         source={{
-          uri: 'https://cdn.guiademoteis.com.br/imagens/suites/big/1130_big_9188_1.jpg'
+          uri: 'https://cdn.guiademoteis.com.br/imagens/suites/big/1130_big_9188_1.jpg',
         }}
       />
 
       {/* TODO:  Create a button component */}
       <TouchableWithoutFeedback
-        onPress={() => setFavoriteMotel((curr) => !curr)}>
+        onPress={() => setFavoriteMotel((curr) => !curr)}
+      >
         <ButtonHeart style={{ shadowOpacity: 0.29, elevation: 3 }}>
           <Heart
             weight="duotone"
@@ -53,7 +61,7 @@ export function MotelDetails() {
 
       <ScrollView>
         <MotelInfoWrapper>
-          <Title>Motel Locomotiva</Title>
+          <Title>{motel.name}</Title>
           <AddressText>
             Avenida Pedro Álvares Cabral, 4765 - Castanheira - Belém - PA
           </AddressText>
@@ -110,5 +118,5 @@ export function MotelDetails() {
         </TouchableWithoutFeedback>
       </ScrollView>
     </MotelDetailsContainer>
-  );
+  )
 }
