@@ -1,12 +1,12 @@
-import { StyleSheet } from 'react-native'
-import styled from 'styled-components/native'
+import { StyleSheet } from "react-native";
+import styled from "styled-components/native";
 
 export const MotelName = styled.Text`
   font-family: ${({ theme }) => theme.font_family.bold};
   font-size: ${({ theme }) => theme.font_size.xs};
 
   margin-bottom: 4px;
-`
+`;
 
 export const ButtonOpenMotelDetails = styled.TouchableOpacity`
   display: flex;
@@ -24,7 +24,7 @@ export const ButtonOpenMotelDetails = styled.TouchableOpacity`
 
   position: relative;
   bottom: 6px;
-`
+`;
 
 export const ButtonText = styled.Text`
   font-family: ${({ theme }) => theme.font_family.bold};
@@ -32,15 +32,15 @@ export const ButtonText = styled.Text`
   text-transform: uppercase;
 
   color: ${({ theme }) => theme.colors.white};
-`
+`;
 
 export const styles = StyleSheet.create({
   marker: {
-    alignItems: 'center',
+    alignItems: "center",
   },
 
   markerCallout: {
     width: 235,
-    alignItems: 'flex-end',
+    alignItems: "flex-end",
   },
-})
+});
