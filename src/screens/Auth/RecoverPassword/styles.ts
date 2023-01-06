@@ -1,12 +1,20 @@
 import styled from 'styled-components/native'
 
-export const RecoverPasswordWrapper = styled.SafeAreaView`
+export const RecoverPasswordWrapper = styled.View`
   display: flex;
   justify-content: center;
   align-items: center;
 
   margin-top: 50px;
-  padding: 0 32px;
+  padding: 0 62px;
+`
+
+export const Header = styled.View`
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+
+  margin-bottom: 50px;
 `
 
 export const Title = styled.Text`
