@@ -1,18 +1,16 @@
-import { TouchableWithoutFeedback, View } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+import { TouchableWithoutFeedback, View } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import {
   Buildings,
   Headset,
   IconContext,
   PencilSimpleLine,
   SignOut,
-  Sliders,
-} from "phosphor-react-native";
+  Sliders
+} from 'phosphor-react-native';
 
 import {
   CardContent,
-  CardSupport,
-  CardText,
   DisconnectButton,
   DisconnectText,
   ProfileContainer,
@@ -20,14 +18,15 @@ import {
   UserContent,
   UserStatistic,
   UserStatisticText,
-  UserText,
-} from "./styles";
+  UserText
+} from './styles';
 
-import { WomenA } from "@assets";
-import { StatusBar } from "expo-status-bar";
-import { theme } from "src/styles/theme";
-import { ModalConfirmation } from "src/components/Modal/ModalConfirmation";
-import { useState } from "react";
+import { WomenA } from '@assets';
+import { StatusBar } from 'expo-status-bar';
+import { theme } from 'src/styles/theme';
+import { ModalConfirmation } from 'src/components/Modal/ModalConfirmation';
+import { useState } from 'react';
+import { ButtonSupport } from 'src/components/Button/ButtonSupport';
 
 export function Support() {
   const navigation = useNavigation();
@@ -38,7 +37,7 @@ export function Support() {
   }
 
   function disconnectUser() {
-    navigation.navigate("Home");
+    navigation.navigate('Home');
   }
 
   return (
@@ -70,38 +69,32 @@ export function Support() {
       <IconContext.Provider
         value={{
           color: theme.colors.red_900,
-          size: 57,
-        }}
-      >
+          size: 57
+        }}>
         <CardContent>
-          {/* TODO: CREATE BUTTON COMPONENT */}
-          <TouchableWithoutFeedback onPress={() => console.log("abrir")}>
-            <CardSupport>
-              <Buildings />
-              <CardText>Sugerir Motel</CardText>
-            </CardSupport>
-          </TouchableWithoutFeedback>
+          <ButtonSupport
+            title="Sugerir Motel"
+            icon={<Buildings />}
+            onPress={() => Suggestion()}
+          />
 
-          <TouchableWithoutFeedback onPress={() => console.log("abrir")}>
-            <CardSupport>
-              <Sliders />
-              <CardText>Preferências</CardText>
-            </CardSupport>
-          </TouchableWithoutFeedback>
+          <ButtonSupport
+            title="Preferências"
+            icon={<Sliders />}
+            onPress={() => Suggestion()}
+          />
 
-          <TouchableWithoutFeedback onPress={() => console.log("abrir")}>
-            <CardSupport>
-              <PencilSimpleLine />
-              <CardText>Editar Perfil</CardText>
-            </CardSupport>
-          </TouchableWithoutFeedback>
+          <ButtonSupport
+            title="Editar Perfil"
+            icon={<PencilSimpleLine />}
+            onPress={() => Suggestion()}
+          />
 
-          <TouchableWithoutFeedback onPress={() => console.log("abrir")}>
-            <CardSupport>
-              <Headset />
-              <CardText>Suporte</CardText>
-            </CardSupport>
-          </TouchableWithoutFeedback>
+          <ButtonSupport
+            title="Suporte"
+            icon={<Headset />}
+            onPress={() => Suggestion()}
+          />
         </CardContent>
       </IconContext.Provider>
 
