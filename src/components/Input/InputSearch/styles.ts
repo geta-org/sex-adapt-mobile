@@ -1,4 +1,4 @@
-import styled from 'styled-components/native'
+import styled from "styled-components/native";
 
 export const SearchContainer = styled.View`
   display: flex;
@@ -16,7 +16,7 @@ export const SearchContainer = styled.View`
   border-radius: 26px;
 
   box-shadow: 0px 0px 2px ${({ theme }) => theme.colors.black};
-`
+`;
 
 export const SearchInput = styled.TextInput`
   width: 213px;
@@ -25,4 +25,4 @@ export const SearchInput = styled.TextInput`
   font-size: ${({ theme }) => theme.font_size.xs};
   font-family: ${({ theme }) => theme.font_family.bold};
   color: ${({ theme }) => theme.colors.gray_900};
-`
+`;

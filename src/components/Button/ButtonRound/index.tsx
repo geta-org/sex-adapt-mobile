@@ -1,8 +1,8 @@
-import { TouchableOpacityProps } from 'react-native'
-import { ButtonContainer } from './styles'
+import { TouchableOpacityProps } from "react-native";
+import { ButtonContainer } from "./styles";
 
 interface ButtonProps extends TouchableOpacityProps {
-  icon?: object
+  icon?: object;
 }
 
 export function ButtonRound({
@@ -16,11 +16,11 @@ export function ButtonRound({
       accessible={true}
       accessibilityLabel={accessibilityLabel}
       accessibilityHint={accessibilityHint}
-      accessibilityRole={'button'}
+      accessibilityRole={"button"}
       style={{ shadowOpacity: 0.29, elevation: 3 }}
       {...rest}
     >
       {icon === null ? null : icon}
     </ButtonContainer>
-  )
+  );
 }
