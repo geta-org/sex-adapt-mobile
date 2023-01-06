@@ -75,25 +75,25 @@ export function Support() {
           <ButtonSupport
             title="Sugerir Motel"
             icon={<Buildings />}
-            onPress={() => Suggestion()}
+            onPress={() => console.log('abrir')}
           />
 
           <ButtonSupport
             title="Preferências"
             icon={<Sliders />}
-            onPress={() => Suggestion()}
+            onPress={() => console.log('abrir')}
           />
 
           <ButtonSupport
             title="Editar Perfil"
             icon={<PencilSimpleLine />}
-            onPress={() => Suggestion()}
+            onPress={() => console.log('abrir')}
           />
 
           <ButtonSupport
             title="Suporte"
             icon={<Headset />}
-            onPress={() => Suggestion()}
+            onPress={() => console.log('abrir')}
           />
         </CardContent>
       </IconContext.Provider>
