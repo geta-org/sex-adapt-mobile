@@ -1,5 +1,4 @@
 import styled from 'styled-components/native'
-
 export const AccessibilityContainer = styled.View`
   display: flex;
   flex-direction: column;
