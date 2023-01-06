@@ -1,13 +1,13 @@
 /* eslint-disable jsx-a11y/alt-text */
-import { Text } from 'react-native'
-import { Rating } from 'react-native-ratings'
-import { getDistance } from 'geolib'
+import { Text } from "react-native";
+import { Rating } from "react-native-ratings";
+import { getDistance } from "geolib";
 // import haversine from 'haversine-distance'
 
-import { PriceRating } from 'src/components/PriceRating'
-import { theme } from 'src/styles/theme'
+import { PriceRating } from "src/components/PriceRating";
+import { theme } from "src/styles/theme";
 
-import logo from '../../../../assets/icon.png'
+import logo from "../../../../assets/icon.png";
 import {
   CalloutViewContainer,
   CalloutViewWrapper,
@@ -16,12 +16,12 @@ import {
   MotelName,
   PriceWrapper,
   styles,
-} from './styles'
+} from "./styles";
 
 // eslint-disable-next-line no-undef
 interface CalloutViewProps extends establishment {
-  userLatitude: number
-  userLongitude: number
+  userLatitude: number;
+  userLongitude: number;
 }
 
 export function CalloutView(props: CalloutViewProps) {
@@ -31,9 +31,9 @@ export function CalloutView(props: CalloutViewProps) {
       {
         latitude: props.userLatitude,
         longitude: props.userLongitude,
-      },
+      }
     ) / 1000
-  ).toFixed(1)
+  ).toFixed(1);
 
   // console.log(props.longitude)
 
@@ -69,7 +69,7 @@ export function CalloutView(props: CalloutViewProps) {
         />
       </CalloutViewWrapper>
     </CalloutViewContainer>
-  )
+  );
 }
 
-export default CalloutView
+export default CalloutView;

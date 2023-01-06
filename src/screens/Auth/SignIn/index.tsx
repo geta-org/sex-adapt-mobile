@@ -1,5 +1,5 @@
-import { TextInput, Image } from 'react-native';
-import { useNavigation } from '@react-navigation/native'
+import { TextInput, Image } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 import {
   LoginContainer,
@@ -16,20 +16,19 @@ import {
   Header,
   SingUpButton,
   BackgroundLogin,
-} from './styles'
+} from "./styles";
 
-import { BackgroundSignIn, LogoWithText } from '@assets'
-
+import { BackgroundSignIn, LogoWithText } from "@assets";
 
 export function SignIn() {
-  const navigation = useNavigation()
+  const navigation = useNavigation();
 
   function handlePasswordReset() {
-    navigation.navigate('RecoverPassword')
+    navigation.navigate("RecoverPassword");
   }
 
   function handleSingUp() {
-    navigation.navigate('SignUp')
+    navigation.navigate("SignUp");
   }
 
   return (
@@ -73,5 +72,5 @@ export function SignIn() {
         </SingUpText>
       </LoginWrapper>
     </LoginContainer>
-  )
+  );
 }
