@@ -6,7 +6,7 @@ import {
   BrailleWithSupport,
   ElevatorWith,
   DoorWide,
-} from "@assets";
+} from '@assets'
 
 import {
   AccessibilityContainer,
@@ -19,13 +19,13 @@ import {
   AccessibilityBox,
   BoxContainer,
   TextBox,
-} from "./styles";
-import { BackButton } from "src/components/BackButton";
+} from './styles'
+import { ButtonBack } from 'src/components/Button/ButtonBack'
 
 export function Accessibility() {
   return (
     <AccessibilityContainer>
-      <BackButton />
+      <ButtonBack />
       <Container>
         <Title>Qual sua necessidade quanto ao acesso?</Title>
         <Subtitle>
@@ -81,5 +81,5 @@ export function Accessibility() {
         </BoxContainer>
       </AccessibilityWrapper>
     </AccessibilityContainer>
-  );
+  )
 }
