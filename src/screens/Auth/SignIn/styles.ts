@@ -1,110 +1,93 @@
-import styled from "styled-components/native";
+import styled from 'styled-components/native'
 
-export const LoginContainer = styled.View`
+export const SignInContainer = styled.KeyboardAvoidingView`
   flex: 1;
   flex-direction: column;
   justify-content: flex-end;
+
   background-color: ${({ theme }) => theme.colors.black};
 `
 
-export const BackgroundLogin = styled.ImageBackground`
+export const SignInBackground = styled.ImageBackground`
   flex: 1;
-  height: 320px;
-`;
+  height: 120%;
+`
 
 export const Header = styled.View`
-  display: flex;
   flex: 1;
-  justify-content: flex-end;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 38px;
-`;
-
-export const LoginWrapper = styled.View`
-  height: 60%;
-  width: 100%;
-  background-color: ${({ theme }) => theme.colors.red_900};
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
-  border-bottom: 2px ${({ theme }) => theme.colors.white} solid;
-  align-items: center;
-  padding: 80px 50px 0;
+  justify-content: center;
 `
 
 export const Subtitle = styled.Text`
   color: ${({ theme }) => theme.colors.white};
   width: 200px;
   text-align: center;
-  font-size: 12px;
-`;
+  font-size: ${({ theme }) => theme.font_size.xs};
+`
 
-export const UserInput = styled.View`
-  border-bottom-width: 1px;
-  color: ${({ theme }) => theme.colors.white};
-  height: 6%;
+export const SignInWrapper = styled.KeyboardAvoidingView`
+  align-items: center;
+  height: 60%;
   width: 100%;
-  border-color: ${({ theme }) => theme.colors.black};
-`;
 
-export const PasswordInput = styled.View`
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  padding: 35px 32px;
+
+  background-color: ${({ theme }) => theme.colors.red_900};
+`
+
+export const FormWrapper = styled.View`
+  justify-content: space-between;
+
+  width: 100%;
+  height: 120px;
+`
+
+export const PasswordRecoverButton = styled.TouchableOpacity`
+  align-self: flex-end;
+
+  height: 15px;
+
   border-bottom-width: 1px;
   border-color: ${({ theme }) => theme.colors.white};
-  margin-top: 40px;
-  color: ${({ theme }) => theme.colors.black};
-  font-size: 20px;
-  height: 6%;
-  width: 100%;
-  font-size: 16px;
-`;
+  margin-top: ${({ theme }) => theme.margins.sm};
+`
 
-export const PasswordText = styled.Text`
-  font-size: 13px;
-  display: flex;
+export const Label = styled.Text`
+  font-size: ${({ theme }) => theme.font_size.xs};
   color: ${({ theme }) => theme.colors.white};
-  align-self: flex-end;
-`;
+`
 
-export const PasswordButton = styled.TouchableOpacity`
-  margin-top: 8px;
-  border-bottom-width: 1px;
-  border-color: ${({ theme }) => theme.colors.white};
-  align-self: flex-end;
-  height: 6%;
-`;
-
-export const LoginButton = styled.TouchableOpacity`
-  background-color: ${({ theme }) => theme.colors.white};
-  border-radius: 90px;
-  width: 50%;
-  padding: 15px 20px;
+export const SignInButton = styled.TouchableOpacity`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20%;
-  box-shadow: 1px 1px 1px;
-`;
 
-export const TextButton = styled.Text`
+  border-radius: 20px;
+  padding: 12px 40px;
+  margin-top: ${({ theme }) => theme.margins.lg};
+  box-shadow: 0px 3px 6px #00000029;
+
+  background-color: ${({ theme }) => theme.colors.white};
+`
+
+export const SignInTextButton = styled.Text`
   color: ${({ theme }) => theme.colors.red_900};
-  font-weight: bold;
-`;
-export const SingUpText = styled.Text`
+  font-family: ${({ theme }) => theme.font_family.bold};
+`
+export const SignUp = styled.Text`
   color: ${({ theme }) => theme.colors.white};
 
   position: absolute;
   bottom: 24px;
 
   margin-top: 25px;
-`;
+`
 
-export const SingUpButtonText = styled.Text`
+export const SignUpUnderline = styled.Text`
   color: ${({ theme }) => theme.colors.white};
-  font-weight: bold;
-  height: 86%;
-  padding: 200px;
-`;
-
-export const SingUpButton = styled.TouchableOpacity`
-  border-color: ${({ theme }) => theme.colors.gray_600};
-`;
+  font-family: ${({ theme }) => theme.font_family.bold};
+`

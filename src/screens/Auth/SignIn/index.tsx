@@ -1,73 +1,115 @@
 /* eslint-disable jsx-a11y/alt-text */
-import { TextInput, Image } from 'react-native'
+import { useState } from 'react'
+import { Image, Platform } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
+import { Lock, User } from 'phosphor-react-native'
+import { TextInput } from 'react-native-paper'
+
+import { DismissKeyboard } from 'src/utils/DismissKeyBoard'
+
+import { InputBase } from 'src/components/Input/InputBase'
 
 import {
-  LoginContainer,
-  LoginButton,
-  TextButton,
-  LoginWrapper,
-  UserInput,
-  PasswordInput,
-  PasswordButton,
-  PasswordText,
-  Subtitle,
-  SingUpText,
-  SingUpButtonText,
+  SignInContainer,
+  SignInBackground,
   Header,
-  BackgroundLogin,
-} from "./styles";
-
-import { BackgroundSignIn, LogoWithText } from "@assets";
+  Subtitle,
+  SignInWrapper,
+  SignInButton,
+  SignInTextButton,
+  PasswordRecoverButton,
+  Label,
+  SignUp,
+  SignUpUnderline,
+  FormWrapper,
+} from './styles'
+import { theme } from 'src/styles/theme'
+import { BackgroundSignIn, LogoWithText } from '@assets'
 
 export function SignIn() {
-  const navigation = useNavigation();
+  const navigation = useNavigation()
+  const [userInfo, setUserInfo] = useState({
+    email: '',
+    password: '',
+  })
 
-  function handlePasswordReset() {
-    navigation.navigate("RecoverPassword");
+  function handleGoPasswordRecover() {
+    navigation.navigate('RecoverPassword')
   }
 
-  function handleSingUp() {
-    navigation.navigate("SignUp");
+  function handleGoSignUp() {
+    navigation.navigate('SignUp')
   }
+
+  const behavior = Platform.OS === 'ios' ? 'padding' : 'height'
 
   return (
-    <LoginContainer>
-      <BackgroundLogin source={BackgroundSignIn} resizeMode="cover">
-        <Header>
-          <Image source={LogoWithText} />
+    <DismissKeyboard>
+      <SignInContainer behavior={behavior}>
+        <SignInBackground source={BackgroundSignIn} resizeMode="cover">
+          <Header>
+            <Image source={LogoWithText} />
 
-          <Subtitle>
-            Ache o melhor motel para experimentar sua independência
-          </Subtitle>
-        </Header>
-      </BackgroundLogin>
+            <Subtitle>
+              Ache o melhor motel para experimentar sua independência
+            </Subtitle>
+          </Header>
+        </SignInBackground>
 
-      <LoginWrapper>
-        <UserInput>
-          <TextInput placeholder="Usuário" placeholderTextColor="#bababa" />
-        </UserInput>
+        <SignInWrapper>
+          <FormWrapper>
+            <InputBase
+              label="E-mail"
+              value={userInfo.email}
+              onChangeText={(text) =>
+                setUserInfo((prev) => ({ ...prev, email: text }))
+              }
+              autoCorrect={false}
+              autoCapitalize="none"
+              keyboardType="email-address"
+              returnKeyType="next"
+              left={
+                <TextInput.Icon
+                  icon={() => (
+                    <User color={theme.colors.white} size={18} weight="bold" />
+                  )}
+                />
+              }
+            />
 
-        <PasswordInput>
-          <TextInput
-            placeholder="Senha"
-            placeholderTextColor="#bababa"
-            secureTextEntry
-          />
-        </PasswordInput>
+            <InputBase
+              label="Senha"
+              value={userInfo.password}
+              onChangeText={(text) =>
+                setUserInfo((prev) => ({ ...prev, password: text }))
+              }
+              returnKeyType="done"
+              secureTextEntry
+              left={
+                <TextInput.Icon
+                  icon={() => (
+                    <Lock color={theme.colors.white} size={18} weight="bold" />
+                  )}
+                />
+              }
+            />
+          </FormWrapper>
+          <PasswordRecoverButton
+            activeOpacity={0.7}
+            onPress={handleGoPasswordRecover}
+          >
+            <Label>Esqueci a senha</Label>
+          </PasswordRecoverButton>
 
-        <PasswordButton activeOpacity={0.7} onPress={handlePasswordReset}>
-          <PasswordText>Esqueci a senha</PasswordText>
-        </PasswordButton>
+          <SignInButton activeOpacity={0.7}>
+            <SignInTextButton>Login</SignInTextButton>
+          </SignInButton>
 
-        <LoginButton activeOpacity={0.7}>
-          <TextButton>Login </TextButton>
-        </LoginButton>
-
-        <SingUpText onPress={handleSingUp}>
-          Não possui conta? Faça o <SingUpButtonText>cadastro</SingUpButtonText>
-        </SingUpText>
-      </LoginWrapper>
-    </LoginContainer>
-  );
+          <SignUp onPress={handleGoSignUp}>
+            Não possui conta? Faça o <SignUpUnderline>cadastro</SignUpUnderline>
+          </SignUp>
+        </SignInWrapper>
+      </SignInContainer>
+    </DismissKeyboard>
+  )
 }
