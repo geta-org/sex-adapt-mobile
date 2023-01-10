@@ -1,85 +1,60 @@
-import {
-  FloorUneven,
-  BarsWithSupport,
-  PoundWithSupport,
-  TactileFloorWith,
-  BrailleWithSupport,
-  ElevatorWith,
-  DoorWide,
-} from '@assets'
+import { useState } from 'react'
+import { SafeAreaView } from 'react-native-safe-area-context'
+
+import { ButtonBack } from 'src/components/Button/ButtonBack'
+import { CardAccessDifficulty } from 'src/components/Card/CardAccessDifficulty'
+import { userNeedList } from './userNeedList'
 
 import {
   AccessibilityContainer,
   AccessibilityWrapper,
   Subtitle,
   Title,
-  Container,
   Button,
-  TextButtons,
-  AccessibilityBox,
-  BoxContainer,
-  TextBox,
+  Header,
+  CardsWrapper,
+  TextButton,
 } from './styles'
-import { ButtonBack } from 'src/components/Button/ButtonBack'
+
+interface userNeedProps {
+  name: string
+  isSelected: boolean
+}
 
 export function Accessibility() {
+  // eslint-disable-next-line no-unused-vars
+  const [userNeed, setUserNeed] = useState<userNeedProps[]>(userNeedList)
+
+  function handleToggleUserNeed() {}
+
   return (
-    <AccessibilityContainer>
-      <ButtonBack />
-      <Container>
-        <Title>Qual sua necessidade quanto ao acesso?</Title>
-        <Subtitle>
-          Conte-nos um pouco sobre as estruturas que dificultam a sua autonomia
-          em um motel
-        </Subtitle>
-      </Container>
-      <AccessibilityWrapper>
-        <BoxContainer>
-          <AccessibilityBox>
-            <ElevatorWith width={70} height={70} />
-            <TextBox>Elevador</TextBox>
-          </AccessibilityBox>
+    <SafeAreaView>
+      <AccessibilityContainer>
+        <ButtonBack />
+        <Header>
+          <Title>Qual sua necessidade quanto ao acesso?</Title>
+          <Subtitle>
+            Conte-nos um pouco sobre as estruturas que dificultam a sua
+            autonomia em um motel
+          </Subtitle>
+        </Header>
 
-          <AccessibilityBox>
-            <TactileFloorWith width={70} height={70} />
-            <TextBox>Piso tátil</TextBox>
-          </AccessibilityBox>
-        </BoxContainer>
+        <AccessibilityWrapper>
+          {userNeed.map((need) => (
+            <CardsWrapper key={need.name}>
+              <CardAccessDifficulty
+                accessibility={need.name}
+                onSelectDifficulty={handleToggleUserNeed}
+                toggleAccessDifficulty={need.isSelected}
+              />
+            </CardsWrapper>
+          ))}
 
-        <BoxContainer>
-          <AccessibilityBox>
-            <FloorUneven width={70} height={70} />
-            <TextBox>Sem desníveis</TextBox>
-          </AccessibilityBox>
-
-          <AccessibilityBox>
-            <BarsWithSupport width={70} height={70} />
-            <TextBox> Barras de suporte</TextBox>
-          </AccessibilityBox>
-        </BoxContainer>
-
-        <BoxContainer>
-          <AccessibilityBox>
-            <BrailleWithSupport width={70} height={70} />
-            <TextBox> Sinalização em braile</TextBox>
-          </AccessibilityBox>
-
-          <AccessibilityBox>
-            <DoorWide width={70} height={70} />
-            <TextBox>Dimensões diversas</TextBox>
-          </AccessibilityBox>
-        </BoxContainer>
-
-        <BoxContainer>
-          <AccessibilityBox>
-            <PoundWithSupport width={70} height={70} />
-            <TextBox> Atendimento em Libras</TextBox>
-          </AccessibilityBox>
-          <Button>
-            <TextButtons activeOpacity={0.7}>Confirmar</TextButtons>
+          <Button activeOpacity={0.7}>
+            <TextButton>Confirmar</TextButton>
           </Button>
-        </BoxContainer>
-      </AccessibilityWrapper>
-    </AccessibilityContainer>
+        </AccessibilityWrapper>
+      </AccessibilityContainer>
+    </SafeAreaView>
   )
 }

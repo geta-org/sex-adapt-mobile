@@ -1,5 +1,3 @@
-import { View } from 'react-native'
-
 import { ButtonBack } from 'src/components/Button/ButtonBack'
 import { InputForm } from 'src/components/Input/InputForm'
 
@@ -12,7 +10,6 @@ import {
   FormWrapper,
   Header,
 } from './styles'
-import { theme } from 'src/styles/theme'
 
 export function RecoverPassword() {
   return (
