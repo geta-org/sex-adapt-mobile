@@ -1,125 +1,93 @@
-import styled from 'styled-components/native';
+import styled from "styled-components/native";
 
-export const LoginContainer = styled.View`
+export const SignInContainer = styled.KeyboardAvoidingView`
   flex: 1;
   flex-direction: column;
   justify-content: flex-end;
-  background-color: #000;
+
+  background-color: ${({ theme }) => theme.colors.black};
 `;
-export const Background = styled.ImageBackground`
+
+export const SignInBackground = styled.ImageBackground`
   flex: 1;
-  height: 320px;
+  height: 120%;
 `;
 
-export const LoginWrapper = styled.View`
-  height: 60%;
-  width: 100%;
-  background-color: #cc3333;
-  border-top-left-radius: 40%;
-  border-top-right-radius: 40%;
-  border-bottom: 2px #fff solid;
+export const Header = styled.View`
+  flex: 1;
+  flex-direction: column;
   align-items: center;
-  padding: 80px 50px;
+  justify-content: center;
 `;
 
-export const TextSubmit = styled.Text`
-  color: #fff;
+export const Subtitle = styled.Text`
+  color: ${({ theme }) => theme.colors.white};
   width: 200px;
   text-align: center;
-  font-size: 12px;
-`;
-export const Header = styled.View`
-  display: flex;
-  flex: 1;
-  justify-content: flex-end;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 38px;
-`;
-export const Title = styled.Text`
-  color: #fff;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  border-bottom: 100px;
-  font-size: 20px;
+  font-size: ${({ theme }) => theme.font_size.xs};
 `;
 
-export const InputUser = styled.View`
-  border-bottom-width: 1px;
-  color: #fff;
-  height: 8%;
+export const SignInWrapper = styled.KeyboardAvoidingView`
+  align-items: center;
+  height: 60%;
   width: 100%;
-  border-color: #fff;
+
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  padding: 35px 32px;
+
+  background-color: ${({ theme }) => theme.colors.red_900};
 `;
 
-export const InputPassword = styled.View`
-  border-bottom-width: 1px;
-  border-color: #fff;
-  margin-top: 40px;
-  color: #fff;
-  font-size: 20px;
-  height: 8%;
+export const FormWrapper = styled.View`
+  justify-content: space-between;
+
   width: 100%;
-  font-size: 16px;
+  height: 120px;
 `;
-export const Button = styled.TouchableOpacity`
-  background-color: #fff;
-  border-radius: 90px;
-  width: 50%;
-  padding: 15px 20px;
+
+export const PasswordRecoverButton = styled.TouchableOpacity`
+  align-self: flex-end;
+
+  height: 15px;
+
+  border-bottom-width: 1px;
+  border-color: ${({ theme }) => theme.colors.white};
+  margin-top: ${({ theme }) => theme.margins.sm};
+`;
+
+export const Label = styled.Text`
+  font-size: ${({ theme }) => theme.font_size.xs};
+  color: ${({ theme }) => theme.colors.white};
+`;
+
+export const SignInButton = styled.TouchableOpacity`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20%;
-  box-shadow: 1px 1px 1px;
-`;
-export const PasswordText = styled.Text`
-  font-size: 13px;
-  display: flex;
-  justify-content: right;
-  color: #fff;
-  align-self: flex-end;
+
+  border-radius: 20px;
+  padding: 12px 40px;
+  margin-top: ${({ theme }) => theme.margins.lg};
+  box-shadow: 0px 3px 6px #00000029;
+
+  background-color: ${({ theme }) => theme.colors.white};
 `;
 
-export const PasswordButton = styled.TouchableOpacity`
-  margin: 1px;
-  border-bottom-width: 1px;
-  border-color: #fff;
-  align-self: flex-end;
-  height: 6%;
+export const SignInTextButton = styled.Text`
+  color: ${({ theme }) => theme.colors.red_900};
+  font-family: ${({ theme }) => theme.font_family.bold};
 `;
+export const SignUp = styled.Text`
+  color: ${({ theme }) => theme.colors.white};
 
-export const TextButton = styled.Text`
-  color: #cc3333;
-  font-weight: bold;
-`;
-export const SingUpText = styled.Text`
-  color: #fff;
+  position: absolute;
+  bottom: 24px;
+
   margin-top: 25px;
 `;
 
-export const SingUpButton = styled.TouchableOpacity`
-  color: white;
-  margin-top: 60px;
-`;
-
-export const TextAnother = styled.Text`
-  color: #fff;
-  font-weight: bold;
-  height: 86%;
-`;
-
-export const AnotherButton = styled.TouchableOpacity`
-  border-color: #bababa;
-`;
-
-export const Input = styled.View`
-  margin-bottom: 0px;
-  padding: 10px;
-  color: #fff;
-  font-size: 20px;
-  width: 90%;
-  border-bottom-width: 1px;
-  border-color: rgb(186, 186, 186);
+export const SignUpUnderline = styled.Text`
+  color: ${({ theme }) => theme.colors.white};
+  font-family: ${({ theme }) => theme.font_family.bold};
 `;

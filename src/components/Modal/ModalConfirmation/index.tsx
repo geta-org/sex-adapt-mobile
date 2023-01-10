@@ -8,7 +8,7 @@ import {
   Button,
 } from "./styles";
 
-interface ModalConfirmation {
+interface ModalConfirmationProps {
   isModalOpen: boolean;
   title: string;
   redirectTo: () => void;
@@ -20,7 +20,7 @@ export function ModalConfirmation({
   title,
   redirectTo,
   changeStateModal,
-}: ModalConfirmation) {
+}: ModalConfirmationProps) {
   return (
     <ModalContainer>
       <Modal

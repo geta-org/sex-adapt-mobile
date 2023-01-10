@@ -1,44 +1,55 @@
-import styled from 'styled-components/native';
+import styled from "styled-components/native";
 
-export const Title = styled.Text`
-  font-size: 30px;
-  font-weight: bold;
-  width: 220px;
-  align-items: center;
-`;
-
-export const RecoverPasswordWrapper = styled.SafeAreaView`
-  margin-top: 50px;
+export const RecoverPasswordWrapper = styled.View`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  margin-top: 50px;
+  padding: 0 62px;
+`;
+
+export const Header = styled.View`
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+
+  margin-bottom: 50px;
+`;
+
+export const Title = styled.Text`
+  align-items: center;
+  width: 220px;
+
+  font-size: ${({ theme }) => theme.font_size.xl};
+  font-family: ${({ theme }) => theme.font_family.bold};
 `;
 
 export const Subtitle = styled.Text`
-  font-size: 13px;
+  font-size: ${({ theme }) => theme.font_size.xs};
   margin-bottom: 50px;
 `;
-export const Input = styled.TextInput`
-  border-bottom-width: 1px;
-  border-color: #bababa;
-  height: 40px;
+
+export const FormWrapper = styled.View`
   width: 300px;
-  margin-bottom: 15px;
-  font-size: 16px;
-  padding-left: 15px;
+  margin-bottom: 23px;
 `;
 
 export const Button = styled.TouchableOpacity`
-  background-color: #cc3333;
-  border-radius: 90px;
-  width: 50%;
-  padding: 15px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 1px 1px 1px;
+
+  width: 50%;
+
+  border-radius: 23px;
+  padding: 12px 20px;
+  box-shadow: 0px 3px 6px #00000029;
+
+  background-color: ${({ theme }) => theme.colors.red_900};
 `;
+
 export const TextButton = styled.Text`
-  color: #fff;
-  font-weight: bold;
+  color: ${({ theme }) => theme.colors.white};
+  font-family: ${({ theme }) => theme.font_family.bold};
 `;

@@ -1,10 +1,10 @@
 import {
   TouchableWithoutFeedback,
   TouchableWithoutFeedbackProps,
-  View
-} from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-import { Rating } from 'react-native-ratings';
+  View,
+} from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { Rating } from "react-native-ratings";
 
 import {
   CardMotelContainer,
@@ -15,14 +15,14 @@ import {
   MotelTitle,
   MotelWrapper,
   MotelInfo,
-  ModelTextRed
-} from './styles';
+  ModelTextRed,
+} from "./styles";
 
-import { CardAccessibility } from '../CardAccessibility';
-import { PriceRating } from '../../PriceRating';
-import logo from '../../../../assets/icon.png';
+import { CardAccessibility } from "../CardAccessibility";
+import { PriceRating } from "../../PriceRating";
+import logo from "../../../../assets/icon.png";
 
-import { theme } from 'src/styles/theme';
+import { theme } from "src/styles/theme";
 
 // TODO: TYPE MOTEL DATA
 
@@ -38,19 +38,20 @@ export function CardMotel({ data, ...rest }: Props) {
   const navigation = useNavigation();
 
   function handleOpenMotel() {
-    navigation.navigate('MotelDetails');
+    navigation.navigate("MotelDetails", { name: data.name });
   }
 
   return (
     <TouchableWithoutFeedback
-      accessibilityLabel={'Card de nome do motel'}
-      accessibilityHint={'Navega para página do motel'}
-      accessibilityRole={'button'}
+      accessibilityLabel={"Card de nome do motel"}
+      accessibilityHint={"Navega para página do motel"}
+      accessibilityRole={"button"}
       onPress={handleOpenMotel}
-      {...rest}>
+      {...rest}
+    >
       <CardMotelContainer>
         <MotelWrapper>
-          <MotelLogo accessibilityLabel={'Logo do motel x '} source={logo} />
+          <MotelLogo accessibilityLabel={"Logo do motel x "} source={logo} />
           <MotelTextField>
             <MotelTitle>{data.name}</MotelTitle>
             <MotelText>Av. Pedro Álvares C. - Sacramenta</MotelText>
@@ -74,7 +75,7 @@ export function CardMotel({ data, ...rest }: Props) {
               startingValue={3.0}
               ratingColor={theme.colors.red_900}
               ratingBackgroundColor={theme.colors.gray_700}
-              style={{ alignSelf: 'flex-start', paddingVertical: 1.8 }}
+              style={{ alignSelf: "flex-start", paddingVertical: 1.8 }}
             />
           </MotelTextField>
         </MotelWrapper>

@@ -1,5 +1,5 @@
-import { StyleSheet } from 'react-native';
-import styled from 'styled-components/native';
+import { StyleSheet } from "react-native";
+import styled from "styled-components/native";
 
 export const HomeContainer = styled.SafeAreaView`
   flex: 1;
@@ -16,8 +16,8 @@ export const HomeWrapper = styled.FlatList`
 export const styles = StyleSheet.create({
   contentList: {
     paddingTop: 32,
-    paddingBottom: 64
-  }
+    paddingBottom: 64,
+  },
 });
 
 export const ModalContainer = styled.View`
