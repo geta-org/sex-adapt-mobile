@@ -1,5 +1,5 @@
-import { StyleSheet } from "react-native";
-import styled from "styled-components/native";
+import { StyleSheet } from 'react-native';
+import styled from 'styled-components/native';
 
 export const MotelName = styled.Text`
   font-family: ${({ theme }) => theme.font_family.bold};
@@ -36,11 +36,11 @@ export const ButtonText = styled.Text`
 
 export const styles = StyleSheet.create({
   marker: {
-    alignItems: "center",
+    alignItems: 'center'
   },
 
   markerCallout: {
     width: 235,
-    alignItems: "flex-end",
-  },
+    alignItems: 'flex-end'
+  }
 });
