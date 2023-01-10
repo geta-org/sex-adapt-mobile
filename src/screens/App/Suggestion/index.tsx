@@ -1,6 +1,6 @@
-import { ScrollView } from "react-native";
+import { ScrollView } from 'react-native'
 
-import { BackButton } from "src/components/BackButton";
+import { ButtonBack } from 'src/components/Button/ButtonBack'
 
 import {
   SuggestionContainer,
@@ -13,12 +13,12 @@ import {
   Header,
   Button,
   TextButton,
-} from "./styles";
+} from './styles'
 
 export function Suggestion() {
   return (
     <SuggestionContainer>
-      <BackButton />
+      <ButtonBack />
       <ScrollView>
         <Header>
           <Title>Sugerir Motel</Title>
@@ -113,5 +113,5 @@ export function Suggestion() {
         </SuggestionWrapper>
       </ScrollView>
     </SuggestionContainer>
-  );
+  )
 }
