@@ -1,5 +1,5 @@
-import { TouchableWithoutFeedback, View } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+import { TouchableWithoutFeedback, View, ScrollView } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 
 import {
   Buildings,
@@ -8,7 +8,7 @@ import {
   PencilSimpleLine,
   SignOut,
   Sliders,
-} from "phosphor-react-native";
+} from 'phosphor-react-native'
 
 import {
   CardContent,
@@ -22,17 +22,35 @@ import {
   UserStatistic,
   UserStatisticText,
   UserText,
-} from "./styles";
+  SuggestionContainer,
+  InputContainer,
+  Title,
+  Input,
+  Name,
+  Subtitle,
+  SuggestionWrapper,
+  Header,
+  Button,
+  TextButton,
+} from './styles'
 
-import { WomenA } from "@assets";
-import { StatusBar } from "expo-status-bar";
-import { theme } from "src/styles/theme";
+import { WomenA } from '@assets'
+import { StatusBar } from 'expo-status-bar'
+import { theme } from 'src/styles/theme'
+
+import React, { useState } from 'react'
+import { ModalConfirmation } from 'src/components/Modal/ModalConfirmation'
 
 export function Support() {
-  const navigation = useNavigation();
+  const navigation = useNavigation()
+  const [isModalDisconnectOpen, setIsModalDisconnectOpen] = useState(false)
 
   function handleOpenMotel() {
-    navigation.navigate("MotelSuggestion");
+    navigation.navigate('MotelSuggestion')
+  }
+
+  function changeIsModalDisconnectOpen() {
+    setIsModalDisconnectOpen((prev) => !prev)
   }
 
   return (
@@ -52,7 +70,7 @@ export function Support() {
             <UserStatisticText>13 Sugestões</UserStatisticText>
           </UserStatistic>
 
-          <TouchableWithoutFeedback onPress={() => console.log("abri modal")}>
+          <TouchableWithoutFeedback onPress={changeIsModalDisconnectOpen}>
             <DisconnectButton>
               <DisconnectText>Desconectar</DisconnectText>
               <SignOut color="white" weight="bold" size={16} />
@@ -76,21 +94,21 @@ export function Support() {
             </CardSupport>
           </TouchableWithoutFeedback>
 
-          <TouchableWithoutFeedback onPress={() => console.log("abrir")}>
+          <TouchableWithoutFeedback onPress={() => console.log('abrir')}>
             <CardSupport>
               <Sliders />
               <CardText>Preferências</CardText>
             </CardSupport>
           </TouchableWithoutFeedback>
 
-          <TouchableWithoutFeedback onPress={() => console.log("abrir")}>
+          <TouchableWithoutFeedback onPress={() => console.log('abrir')}>
             <CardSupport>
               <PencilSimpleLine />
               <CardText>Editar Perfil</CardText>
             </CardSupport>
           </TouchableWithoutFeedback>
 
-          <TouchableWithoutFeedback onPress={() => console.log("abrir")}>
+          <TouchableWithoutFeedback onPress={() => console.log('abrir')}>
             <CardSupport>
               <Headset />
               <CardText>Suporte</CardText>
@@ -101,28 +119,13 @@ export function Support() {
 
       <ModalConfirmation
         title="Você tem certeza que quer desconectar?"
-        isModalOpen={modalConfirmationOpen}
-        changeStateModal={changeStateModal}
-        redirectTo={disconnectUser}
+        isModalOpen={isModalDisconnectOpen}
+        changeStateModal={changeIsModalDisconnectOpen}
+        redirectTo={handleOpenMotel}
       />
     </SupportContainer>
-  );
+  )
 }
-
-import React from "react";
-import { ScrollView } from "react-native";
-import {
-  SuggestionContainer,
-  InputContainer,
-  Title,
-  Input,
-  Name,
-  Subtitle,
-  SuggestionWrapper,
-  Header,
-  Button,
-  TextButton,
-} from "./styles";
 export function Suggestion() {
   return (
     <SuggestionContainer>
@@ -220,5 +223,5 @@ export function Suggestion() {
         </SuggestionWrapper>
       </ScrollView>
     </SuggestionContainer>
-  );
+  )
 }

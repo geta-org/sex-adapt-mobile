@@ -1,4 +1,4 @@
-import { Modal, View } from "react-native";
+import { Modal, View } from 'react-native'
 
 import {
   ModalContainer,
@@ -6,13 +6,13 @@ import {
   Title,
   TextButton,
   Button,
-} from "./styles";
+} from './styles'
 
-interface ModalConfirmation {
-  isModalOpen: boolean;
-  title: string;
-  redirectTo: () => void;
-  changeStateModal: () => void;
+interface ModalConfirmationProps {
+  isModalOpen: boolean
+  title: string
+  redirectTo: () => void
+  changeStateModal: () => void
 }
 
 export function ModalConfirmation({
@@ -20,7 +20,7 @@ export function ModalConfirmation({
   title,
   redirectTo,
   changeStateModal,
-}: ModalConfirmation) {
+}: ModalConfirmationProps) {
   return (
     <ModalContainer>
       <Modal
@@ -44,5 +44,5 @@ export function ModalConfirmation({
         </ModalContainer>
       </Modal>
     </ModalContainer>
-  );
+  )
 }
