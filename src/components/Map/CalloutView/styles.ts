@@ -1,5 +1,5 @@
-import { StyleSheet } from "react-native";
-import styled from "styled-components/native";
+import { StyleSheet } from 'react-native';
+import styled from 'styled-components/native';
 
 export const CalloutViewContainer = styled.View`
   display: flex;
@@ -43,6 +43,6 @@ export const PriceWrapper = styled.View`
 export const styles = StyleSheet.create({
   rating: {
     paddingVertical: 1.8,
-    alignSelf: "flex-start",
-  },
+    alignSelf: 'flex-start'
+  }
 });

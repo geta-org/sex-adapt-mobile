@@ -1,4 +1,4 @@
-import styled from "styled-components/native";
+import styled from 'styled-components/native';
 
 export const SuggestionContainer = styled.View`
   margin-top: 60px;

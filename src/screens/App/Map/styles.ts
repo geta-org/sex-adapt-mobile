@@ -1,5 +1,5 @@
-import { StyleSheet } from "react-native";
-import styled from "styled-components/native";
+import { StyleSheet } from 'react-native';
+import styled from 'styled-components/native';
 
 export const MapContainer = styled.View`
   flex: 1;
@@ -13,112 +13,112 @@ export const MapContainer = styled.View`
 
 export const styles = StyleSheet.create({
   map: {
-    width: "100%",
-    height: "100%",
-  },
+    width: '100%',
+    height: '100%'
+  }
 });
 
 export const mapStyle = [
   {
-    featureType: "administrative",
-    elementType: "geometry.fill",
+    featureType: 'administrative',
+    elementType: 'geometry.fill',
     stylers: [
       {
-        color: "#f1f2d8",
-      },
-    ],
+        color: '#f1f2d8'
+      }
+    ]
   },
   {
-    featureType: "administrative",
-    elementType: "geometry.stroke",
+    featureType: 'administrative',
+    elementType: 'geometry.stroke',
     stylers: [
       {
-        color: "#f1f2d8",
-      },
-    ],
+        color: '#f1f2d8'
+      }
+    ]
   },
   {
-    featureType: "poi",
-    elementType: "labels.text",
+    featureType: 'poi',
+    elementType: 'labels.text',
     stylers: [
       {
-        visibility: "off",
-      },
-    ],
+        visibility: 'off'
+      }
+    ]
   },
   {
-    featureType: "poi.business",
+    featureType: 'poi.business',
     stylers: [
       {
-        visibility: "off",
-      },
-    ],
+        visibility: 'off'
+      }
+    ]
   },
   {
-    featureType: "poi.government",
+    featureType: 'poi.government',
     stylers: [
       {
-        visibility: "off",
-      },
-    ],
+        visibility: 'off'
+      }
+    ]
   },
   {
-    featureType: "poi.medical",
+    featureType: 'poi.medical',
     stylers: [
       {
-        visibility: "off",
-      },
-    ],
+        visibility: 'off'
+      }
+    ]
   },
   {
-    featureType: "poi.place_of_worship",
+    featureType: 'poi.place_of_worship',
     stylers: [
       {
-        visibility: "off",
-      },
-    ],
+        visibility: 'off'
+      }
+    ]
   },
   {
-    featureType: "poi.school",
+    featureType: 'poi.school',
     stylers: [
       {
-        visibility: "off",
-      },
-    ],
+        visibility: 'off'
+      }
+    ]
   },
   {
-    featureType: "poi.sports_complex",
+    featureType: 'poi.sports_complex',
     stylers: [
       {
-        visibility: "off",
-      },
-    ],
+        visibility: 'off'
+      }
+    ]
   },
   {
-    featureType: "road",
-    elementType: "geometry.fill",
+    featureType: 'road',
+    elementType: 'geometry.fill',
     stylers: [
       {
-        color: "#bababa",
-      },
-    ],
+        color: '#bababa'
+      }
+    ]
   },
   {
-    featureType: "road",
-    elementType: "geometry.stroke",
+    featureType: 'road',
+    elementType: 'geometry.stroke',
     stylers: [
       {
-        color: "#bababa",
-      },
-    ],
+        color: '#bababa'
+      }
+    ]
   },
   {
-    featureType: "road",
-    elementType: "labels.icon",
+    featureType: 'road',
+    elementType: 'labels.icon',
     stylers: [
       {
-        visibility: "off",
-      },
-    ],
-  },
+        visibility: 'off'
+      }
+    ]
+  }
 ];

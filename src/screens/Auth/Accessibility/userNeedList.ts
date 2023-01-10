@@ -1,30 +1,30 @@
 export const userNeedList = [
   {
     name: 'Elevator',
-    isSelected: false,
+    isSelected: false
   },
   {
     name: 'TactileFloor',
-    isSelected: false,
+    isSelected: false
   },
   {
     name: 'FloorUneven',
-    isSelected: false,
+    isSelected: false
   },
   {
     name: 'SupportBars',
-    isSelected: false,
+    isSelected: false
   },
   {
     name: 'BrailleSignage',
-    isSelected: false,
+    isSelected: false
   },
   {
     name: 'DifferentDimensions',
-    isSelected: false,
+    isSelected: false
   },
   {
     name: 'ServicePounds',
-    isSelected: false,
-  },
-]
+    isSelected: false
+  }
+];
