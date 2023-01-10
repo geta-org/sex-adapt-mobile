@@ -18,12 +18,16 @@ export const Header = styled.View`
 `
 
 export const Title = styled.Text`
+  align-items: center;
+  width: 220px;
+
   font-size: ${({ theme }) => theme.font_size.xl};
   font-family: ${({ theme }) => theme.font_family.bold};
 `
 
 export const Subtitle = styled.Text`
   font-size: ${({ theme }) => theme.font_size.xs};
+  margin-bottom: 50px;
 `
 
 export const FormWrapper = styled.View`
@@ -35,6 +39,8 @@ export const Button = styled.TouchableOpacity`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  width: 50%;
 
   border-radius: 23px;
   padding: 12px 20px;

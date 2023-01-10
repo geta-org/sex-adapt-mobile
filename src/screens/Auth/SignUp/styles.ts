@@ -1,64 +1,60 @@
-import styled from "styled-components/native";
+import styled from 'styled-components/native'
 
-export const SingUpContainer = styled.SafeAreaView`
-  margin-top: 60px;
-`;
-
-export const Subtitle = styled.Text``;
-
-export const Title = styled.Text`
-  font-weight: bold;
-  font-size: 30px;
-  margin-right: 50%;
-`;
-
-export const TextInput = styled.Text`
-  font-size: 13px;
-  margin-left: 100px;
-`;
-
-export const Container = styled.View`
+export const SingUpContainer = styled.View`
+  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-left: 50px;
-`;
+
+  margin-top: 50px;
+  padding: 0 62px;
+`
 
 export const Header = styled.View`
-  align-items: initial;
-  margin: 0 0 100px 70px;
-`;
+  display: flex;
+  flex-direction: column;
+`
 
-export const TitleInput = styled.Text`
-  font-weight: bold;
-  font-size: 15px;
-  margin: 10px 10px 0 0;
-`;
+export const Title = styled.Text`
+  font-size: ${({ theme }) => theme.font_size.xl};
+  font-family: ${({ theme }) => theme.font_family.bold};
+`
 
-export const Input = styled.TextInput`
-  border-bottom-width: 1px;
-  border-color: ${({ theme }) => theme.colors.gray_600};
-  height: 50px;
-  width: 300px;
-  font-size: 16px;
-`;
+export const Subtitle = styled.Text`
+  font-size: ${({ theme }) => theme.font_size.xs};
+`
+
+export const FormWrapper = styled.View`
+  display: flex;
+  flex-direction: column;
+
+  margin: 32px 0;
+`
+
+export const InputContainer = styled.View`
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 10px;
+`
+
+export const Label = styled.Text`
+  font-size: ${({ theme }) => theme.font_size.md};
+  font-family: ${({ theme }) => theme.font_family.bold};
+`
 
 export const Button = styled.TouchableOpacity`
-  background-color: ${({ theme }) => theme.colors.red_900};
-  border-radius: 90px;
-  width: 60%;
-  padding: 15px 20px;
   display: flex;
-  align-items: center;
-  box-shadow: 1px 1px 1px;
-  margin: 20px 0 0 45px;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
-`;
+
+  border-radius: 23px;
+  padding: 13px 18px;
+  box-shadow: 0px 3px 6px #00000029;
+
+  background-color: ${({ theme }) => theme.colors.red_900};
+`
+
 export const TextButton = styled.Text`
-  flex-direction: row;
-  align-items: center;
   color: ${({ theme }) => theme.colors.white};
-  font-weight: bold;
-  width: 70%;
-`;
+  font-family: ${({ theme }) => theme.font_family.bold};
+`
