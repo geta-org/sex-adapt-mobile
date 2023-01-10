@@ -22,10 +22,24 @@ interface userNeedProps {
 }
 
 export function Accessibility() {
-  // eslint-disable-next-line no-unused-vars
   const [userNeed, setUserNeed] = useState<userNeedProps[]>(userNeedList)
 
-  function handleToggleUserNeed() {}
+  function handleToggleUserNeed(accessibility: string) {
+    const updatedUserNeed = userNeed.map((item) => ({ ...item }))
+
+    const foundItem = updatedUserNeed.find(
+      (item) => item.name === accessibility,
+    )
+
+    if (!foundItem) {
+      throw new Error(
+        'Could not find the item. A string was passed which does not exist in the "userNeed" object',
+      )
+    }
+
+    foundItem.isSelected = !foundItem.isSelected
+    setUserNeed(updatedUserNeed)
+  }
 
   return (
     <SafeAreaView>
