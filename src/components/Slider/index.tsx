@@ -1,15 +1,15 @@
 import ReactSlider, {
   SliderProps as ReactSliderProps,
-} from '@react-native-community/slider'
+} from "@react-native-community/slider";
 
-import { theme } from 'src/styles/theme'
+import { theme } from "src/styles/theme";
 
 interface SliderProps extends ReactSliderProps {
-  width?: number | string
-  height?: number | string
+  width?: number | string;
+  height?: number | string;
 }
 
-export function Slider({ width = '100%', height = 19, ...rest }: SliderProps) {
+export function Slider({ width = "100%", height = 19, ...rest }: SliderProps) {
   return (
     <ReactSlider
       step={1}
@@ -19,5 +19,5 @@ export function Slider({ width = '100%', height = 19, ...rest }: SliderProps) {
       style={{ width, height }}
       {...rest}
     />
-  )
+  );
 }

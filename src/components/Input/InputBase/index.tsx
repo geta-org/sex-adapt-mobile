@@ -1,14 +1,14 @@
-import { Eye, EyeSlash } from 'phosphor-react-native'
-import { useState } from 'react'
-import { Text } from 'react-native'
-import { TextInput, HelperText, TextInputProps } from 'react-native-paper'
+import { Eye, EyeSlash } from "phosphor-react-native";
+import { useState } from "react";
+import { Text } from "react-native";
+import { TextInput, HelperText, TextInputProps } from "react-native-paper";
 
-import { theme } from 'src/styles/theme'
-import styles from './styles'
+import { theme } from "src/styles/theme";
+import styles from "./styles";
 
-interface InputBaseProps extends Omit<TextInputProps, 'theme'> {
-  messageError?: string
-  colorLabel?: string
+interface InputBaseProps extends Omit<TextInputProps, "theme"> {
+  messageError?: string;
+  colorLabel?: string;
 }
 
 export function InputBase({
@@ -21,11 +21,11 @@ export function InputBase({
   messageError,
   ...rest
 }: InputBaseProps) {
-  const [secureMode, setSecureMode] = useState(secureTextEntry)
+  const [secureMode, setSecureMode] = useState(secureTextEntry);
 
   const Label = (
     <Text style={{ color: colorLabel || theme.colors.gray_600 }}>{label}</Text>
-  )
+  );
 
   return (
     <>
@@ -64,5 +64,5 @@ export function InputBase({
         </HelperText>
       )}
     </>
-  )
+  );
 }

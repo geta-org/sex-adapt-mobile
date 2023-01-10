@@ -1,15 +1,15 @@
-import { useNavigation } from '@react-navigation/native'
-import { FunnelSimple } from 'phosphor-react-native'
-import { theme } from '../../styles/theme'
-import { ButtonRound } from '../Button/ButtonRound'
-import { InputProps, InputSearch } from '../Input/InputSearch'
-import { HeaderContainer } from './styles'
+import { useNavigation } from "@react-navigation/native";
+import { FunnelSimple } from "phosphor-react-native";
+import { theme } from "../../styles/theme";
+import { ButtonRound } from "../Button/ButtonRound";
+import { InputProps, InputSearch } from "../Input/InputSearch";
+import { HeaderContainer } from "./styles";
 
 export function HeaderMotel({ onChangeText }: InputProps) {
-  const navigation = useNavigation()
+  const navigation = useNavigation();
 
   function handleOpenFilter() {
-    navigation.navigate('Filter')
+    navigation.navigate("Filter");
   }
 
   return (
@@ -24,5 +24,5 @@ export function HeaderMotel({ onChangeText }: InputProps) {
         onPress={handleOpenFilter}
       />
     </HeaderContainer>
-  )
+  );
 }

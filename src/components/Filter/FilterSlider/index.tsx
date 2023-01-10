@@ -1,14 +1,14 @@
-import { View } from 'react-native'
-import { Slider } from 'src/components/Slider'
-import { HeadingSlider, LabelSlider } from './styles'
+import { View } from "react-native";
+import { Slider } from "src/components/Slider";
+import { HeadingSlider, LabelSlider } from "./styles";
 
 interface FilterSliderProps {
-  heading: string
-  text: string
-  textPosition: number
-  changeValue: (value: number) => void
-  minimumValue: number
-  maximumValue: number
+  heading: string;
+  text: string;
+  textPosition: number;
+  changeValue: (value: number) => void;
+  minimumValue: number;
+  maximumValue: number;
 }
 
 export function FilterSlider({
@@ -32,12 +32,12 @@ export function FilterSlider({
         onValueChange={(value) => changeValue(value)}
       />
       <LabelSlider
-        importantForAccessibility={'no-hide-descendants'}
+        importantForAccessibility={"no-hide-descendants"}
         accessibilityElementsHidden={false}
         style={{ left: textPosition }}
       >
         {text}
       </LabelSlider>
     </View>
-  )
+  );
 }

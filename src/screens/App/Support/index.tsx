@@ -1,5 +1,5 @@
-import { TouchableWithoutFeedback, View, ScrollView } from 'react-native'
-import { useNavigation } from '@react-navigation/native'
+import { TouchableWithoutFeedback, View, ScrollView } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 import {
   Buildings,
@@ -8,7 +8,7 @@ import {
   PencilSimpleLine,
   SignOut,
   Sliders,
-} from 'phosphor-react-native'
+} from "phosphor-react-native";
 
 import {
   CardContent,
@@ -32,25 +32,25 @@ import {
   Header,
   Button,
   TextButton,
-} from './styles'
+} from "./styles";
 
-import { WomenA } from '@assets'
-import { StatusBar } from 'expo-status-bar'
-import { theme } from 'src/styles/theme'
+import { WomenA } from "@assets";
+import { StatusBar } from "expo-status-bar";
+import { theme } from "src/styles/theme";
 
-import React, { useState } from 'react'
-import { ModalConfirmation } from 'src/components/Modal/ModalConfirmation'
+import React, { useState } from "react";
+import { ModalConfirmation } from "src/components/Modal/ModalConfirmation";
 
 export function Support() {
-  const navigation = useNavigation()
-  const [isModalDisconnectOpen, setIsModalDisconnectOpen] = useState(false)
+  const navigation = useNavigation();
+  const [isModalDisconnectOpen, setIsModalDisconnectOpen] = useState(false);
 
   function handleOpenMotel() {
-    navigation.navigate('MotelSuggestion')
+    navigation.navigate("MotelSuggestion");
   }
 
   function changeIsModalDisconnectOpen() {
-    setIsModalDisconnectOpen((prev) => !prev)
+    setIsModalDisconnectOpen((prev) => !prev);
   }
 
   return (
@@ -94,21 +94,21 @@ export function Support() {
             </CardSupport>
           </TouchableWithoutFeedback>
 
-          <TouchableWithoutFeedback onPress={() => console.log('abrir')}>
+          <TouchableWithoutFeedback onPress={() => console.log("abrir")}>
             <CardSupport>
               <Sliders />
               <CardText>Preferências</CardText>
             </CardSupport>
           </TouchableWithoutFeedback>
 
-          <TouchableWithoutFeedback onPress={() => console.log('abrir')}>
+          <TouchableWithoutFeedback onPress={() => console.log("abrir")}>
             <CardSupport>
               <PencilSimpleLine />
               <CardText>Editar Perfil</CardText>
             </CardSupport>
           </TouchableWithoutFeedback>
 
-          <TouchableWithoutFeedback onPress={() => console.log('abrir')}>
+          <TouchableWithoutFeedback onPress={() => console.log("abrir")}>
             <CardSupport>
               <Headset />
               <CardText>Suporte</CardText>
@@ -124,7 +124,7 @@ export function Support() {
         redirectTo={handleOpenMotel}
       />
     </SupportContainer>
-  )
+  );
 }
 export function Suggestion() {
   return (
@@ -223,5 +223,5 @@ export function Suggestion() {
         </SuggestionWrapper>
       </ScrollView>
     </SuggestionContainer>
-  )
+  );
 }

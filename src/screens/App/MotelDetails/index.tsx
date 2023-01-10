@@ -1,12 +1,12 @@
-import { useState } from 'react'
-import { useRoute } from '@react-navigation/native'
-import { Heart } from 'phosphor-react-native'
-import { ScrollView, TouchableWithoutFeedback, View } from 'react-native'
-import { Rating } from 'react-native-ratings'
+import { useState } from "react";
+import { useRoute } from "@react-navigation/native";
+import { Heart } from "phosphor-react-native";
+import { ScrollView, TouchableWithoutFeedback, View } from "react-native";
+import { Rating } from "react-native-ratings";
 
-import { CardAccessibility } from 'src/components/Card/CardAccessibility'
-import { PriceRating } from 'src/components/PriceRating'
-import { theme } from 'src/styles/theme'
+import { CardAccessibility } from "src/components/Card/CardAccessibility";
+import { PriceRating } from "src/components/PriceRating";
+import { theme } from "src/styles/theme";
 
 import {
   MotelDetailsContainer,
@@ -26,24 +26,24 @@ import {
   Title,
   ReviewContent,
   ModelTextRed,
-} from './styles'
+} from "./styles";
 
 // TODO: configure route parameters
 // TODO: create a section comment
 
 export function MotelDetails() {
-  const route = useRoute()
+  const route = useRoute();
 
-  const [favoriteMotel, setFavoriteMotel] = useState(false)
+  const [favoriteMotel, setFavoriteMotel] = useState(false);
 
   // eslint-disable-next-line no-undef
-  const motel = route.params as establishment
+  const motel = route.params as establishment;
 
   return (
     <MotelDetailsContainer>
       <MotelImage
         source={{
-          uri: 'https://cdn.guiademoteis.com.br/imagens/suites/big/1130_big_9188_1.jpg',
+          uri: "https://cdn.guiademoteis.com.br/imagens/suites/big/1130_big_9188_1.jpg",
         }}
       />
 
@@ -105,7 +105,7 @@ export function MotelDetails() {
               startingValue={3.0}
               ratingColor={theme.colors.red_900}
               ratingBackgroundColor={theme.colors.gray_700}
-              style={{ marginLeft: 12, borderColor: '#000000' }}
+              style={{ marginLeft: 12, borderColor: "#000000" }}
             />
           </ReviewWrapper>
           <CommentText>Comente</CommentText>
@@ -118,5 +118,5 @@ export function MotelDetails() {
         </TouchableWithoutFeedback>
       </ScrollView>
     </MotelDetailsContainer>
-  )
+  );
 }

@@ -1,10 +1,10 @@
-import { useNavigation } from '@react-navigation/native'
-import { CaretDoubleRight } from 'phosphor-react-native'
+import { useNavigation } from "@react-navigation/native";
+import { CaretDoubleRight } from "phosphor-react-native";
 
-import { DismissKeyboard } from 'src/utils/DismissKeyBoard'
+import { DismissKeyboard } from "src/utils/DismissKeyBoard";
 
-import { InputForm } from 'src/components/Input/InputForm'
-import { ButtonBack } from 'src/components/Button/ButtonBack'
+import { InputForm } from "src/components/Input/InputForm";
+import { ButtonBack } from "src/components/Button/ButtonBack";
 
 import {
   SingUpContainer,
@@ -16,13 +16,13 @@ import {
   InputContainer,
   Label,
   Subtitle,
-} from './styles'
+} from "./styles";
 
 export function SignUp() {
-  const navigation = useNavigation()
+  const navigation = useNavigation();
 
   function handleAccessibility() {
-    navigation.navigate('Accessibility')
+    navigation.navigate("Accessibility");
   }
 
   return (
@@ -88,5 +88,5 @@ export function SignUp() {
         </Button>
       </SingUpContainer>
     </DismissKeyboard>
-  )
+  );
 }

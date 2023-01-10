@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useState } from "react";
 
 import {
   BarsWithSupport,
@@ -8,21 +8,21 @@ import {
   FloorUneven,
   PoundWithSupport,
   TactileFloorWith,
-} from '@assets'
-import { CardAccessDifficultyContainer, Label } from './styles'
+} from "@assets";
+import { CardAccessDifficultyContainer, Label } from "./styles";
 
 interface CardAccessDifficultyProps {
   accessibility:
-    | 'Elevator'
-    | 'TactileFloor'
-    | 'FloorUneven'
-    | 'SupportBars'
-    | 'BrailleSignage'
-    | 'DifferentDimensions'
-    | 'ServicePounds'
-    | string
-  onSelectDifficulty: (Accessibility: string) => void
-  toggleAccessDifficulty: boolean
+    | "Elevator"
+    | "TactileFloor"
+    | "FloorUneven"
+    | "SupportBars"
+    | "BrailleSignage"
+    | "DifferentDimensions"
+    | "ServicePounds"
+    | string;
+  onSelectDifficulty: (Accessibility: string) => void;
+  toggleAccessDifficulty: boolean;
 }
 
 export function CardAccessDifficulty({
@@ -31,68 +31,68 @@ export function CardAccessDifficulty({
   toggleAccessDifficulty,
 }: CardAccessDifficultyProps) {
   const [accessibilityRender, setAccessibilityRender] = useState({
-    name: 'Elevador',
+    name: "Elevador",
     icon: <ElevatorWith width={75} height={75} />,
-  })
+  });
 
   function handleDifficulty(difficulty: string) {
-    onSelectDifficulty(difficulty)
+    onSelectDifficulty(difficulty);
   }
 
-  const iconSize = 90
+  const iconSize = 90;
 
   useMemo(() => {
     function renderAccessibility() {
       switch (accessibility) {
-        case 'Elevator':
+        case "Elevator":
           setAccessibilityRender({
-            name: 'Elevador',
+            name: "Elevador",
             icon: <ElevatorWith width={iconSize} height={iconSize} />,
-          })
-          break
-        case 'TactileFloor':
+          });
+          break;
+        case "TactileFloor":
           setAccessibilityRender({
-            name: 'Piso tátil',
+            name: "Piso tátil",
             icon: <TactileFloorWith width={iconSize} height={iconSize} />,
-          })
-          break
-        case 'FloorUneven':
+          });
+          break;
+        case "FloorUneven":
           setAccessibilityRender({
-            name: 'Sem desníveis',
+            name: "Sem desníveis",
             icon: <FloorUneven width={iconSize} height={iconSize} />,
-          })
-          break
-        case 'SupportBars':
+          });
+          break;
+        case "SupportBars":
           setAccessibilityRender({
-            name: 'Barras de suporte',
+            name: "Barras de suporte",
             icon: <BarsWithSupport width={iconSize} height={iconSize} />,
-          })
-          break
-        case 'BrailleSignage':
+          });
+          break;
+        case "BrailleSignage":
           setAccessibilityRender({
-            name: 'Sinalização em braile',
+            name: "Sinalização em braile",
             icon: <BrailleWithSupport width={iconSize} height={iconSize} />,
-          })
-          break
-        case 'DifferentDimensions':
+          });
+          break;
+        case "DifferentDimensions":
           setAccessibilityRender({
-            name: 'Dimensões diversas',
+            name: "Dimensões diversas",
             icon: <DoorWide width={iconSize} height={iconSize} />,
-          })
-          break
-        case 'ServicePounds':
+          });
+          break;
+        case "ServicePounds":
           setAccessibilityRender({
-            name: 'Atendimento em Libras',
+            name: "Atendimento em Libras",
             icon: <PoundWithSupport width={iconSize} height={iconSize} />,
-          })
-          break
+          });
+          break;
         default:
-          break
+          break;
       }
     }
 
-    renderAccessibility()
-  }, [accessibility])
+    renderAccessibility();
+  }, [accessibility]);
 
   return (
     <CardAccessDifficultyContainer
@@ -102,5 +102,5 @@ export function CardAccessDifficulty({
       {accessibilityRender.icon}
       <Label>{accessibilityRender.name}</Label>
     </CardAccessDifficultyContainer>
-  )
+  );
 }

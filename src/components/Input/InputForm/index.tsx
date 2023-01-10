@@ -1,30 +1,30 @@
-import { InputBase } from '../InputBase'
+import { InputBase } from "../InputBase";
 
-import { theme } from 'src/styles/theme'
-import { TextInput, TextInputProps } from 'react-native-paper'
-import { EnvelopeSimple, Lock, User } from 'phosphor-react-native'
+import { theme } from "src/styles/theme";
+import { TextInput, TextInputProps } from "react-native-paper";
+import { EnvelopeSimple, Lock, User } from "phosphor-react-native";
 
-interface InputFormProps extends Omit<TextInputProps, 'theme'> {
-  icon: 'mail' | 'user' | 'password'
+interface InputFormProps extends Omit<TextInputProps, "theme"> {
+  icon: "mail" | "user" | "password";
 }
 
 export function InputForm({ icon, ...rest }: InputFormProps) {
   function renderIcon() {
     switch (icon) {
-      case 'mail':
+      case "mail":
         return (
           <EnvelopeSimple
             color={theme.colors.red_900}
             size={18}
             weight="bold"
           />
-        )
-      case 'user':
-        return <User color={theme.colors.red_900} size={18} weight="bold" />
-      case 'password':
-        return <Lock color={theme.colors.red_900} size={18} weight="bold" />
+        );
+      case "user":
+        return <User color={theme.colors.red_900} size={18} weight="bold" />;
+      case "password":
+        return <Lock color={theme.colors.red_900} size={18} weight="bold" />;
       default:
-        return <User color={theme.colors.red_900} size={18} weight="bold" />
+        return <User color={theme.colors.red_900} size={18} weight="bold" />;
     }
   }
 
@@ -39,5 +39,5 @@ export function InputForm({ icon, ...rest }: InputFormProps) {
       {...rest}
       left={<TextInput.Icon icon={() => renderIcon()} />}
     />
-  )
+  );
 }

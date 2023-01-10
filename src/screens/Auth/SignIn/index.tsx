@@ -1,13 +1,13 @@
 /* eslint-disable jsx-a11y/alt-text */
-import { useState } from 'react'
-import { Image, Platform } from 'react-native'
-import { useNavigation } from '@react-navigation/native'
-import { Lock, User } from 'phosphor-react-native'
-import { TextInput } from 'react-native-paper'
+import { useState } from "react";
+import { Image, Platform } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { Lock, User } from "phosphor-react-native";
+import { TextInput } from "react-native-paper";
 
-import { DismissKeyboard } from 'src/utils/DismissKeyBoard'
+import { DismissKeyboard } from "src/utils/DismissKeyBoard";
 
-import { InputBase } from 'src/components/Input/InputBase'
+import { InputBase } from "src/components/Input/InputBase";
 
 import {
   SignInContainer,
@@ -22,26 +22,26 @@ import {
   SignUp,
   SignUpUnderline,
   FormWrapper,
-} from './styles'
-import { theme } from 'src/styles/theme'
-import { BackgroundSignIn, LogoWithText } from '@assets'
+} from "./styles";
+import { theme } from "src/styles/theme";
+import { BackgroundSignIn, LogoWithText } from "@assets";
 
 export function SignIn() {
-  const navigation = useNavigation()
+  const navigation = useNavigation();
   const [userInfo, setUserInfo] = useState({
-    email: '',
-    password: '',
-  })
+    email: "",
+    password: "",
+  });
 
   function handleGoPasswordRecover() {
-    navigation.navigate('RecoverPassword')
+    navigation.navigate("RecoverPassword");
   }
 
   function handleGoSignUp() {
-    navigation.navigate('SignUp')
+    navigation.navigate("SignUp");
   }
 
-  const behavior = Platform.OS === 'ios' ? 'padding' : 'height'
+  const behavior = Platform.OS === "ios" ? "padding" : "height";
 
   return (
     <DismissKeyboard>
@@ -111,5 +111,5 @@ export function SignIn() {
         </SignInWrapper>
       </SignInContainer>
     </DismissKeyboard>
-  )
+  );
 }

@@ -2,9 +2,9 @@ import {
   TouchableWithoutFeedback,
   TouchableWithoutFeedbackProps,
   View,
-} from 'react-native'
-import { useNavigation } from '@react-navigation/native'
-import { Rating } from 'react-native-ratings'
+} from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { Rating } from "react-native-ratings";
 
 import {
   CardMotelContainer,
@@ -16,42 +16,42 @@ import {
   MotelWrapper,
   MotelInfo,
   ModelTextRed,
-} from './styles'
+} from "./styles";
 
-import { CardAccessibility } from '../CardAccessibility'
-import { PriceRating } from '../../PriceRating'
-import logo from '../../../../assets/icon.png'
+import { CardAccessibility } from "../CardAccessibility";
+import { PriceRating } from "../../PriceRating";
+import logo from "../../../../assets/icon.png";
 
-import { theme } from 'src/styles/theme'
+import { theme } from "src/styles/theme";
 
 // TODO: TYPE MOTEL DATA
 
 interface CardMotelProps {
-  name: string
+  name: string;
 }
 
 interface Props extends TouchableWithoutFeedbackProps {
-  data: CardMotelProps
+  data: CardMotelProps;
 }
 
 export function CardMotel({ data, ...rest }: Props) {
-  const navigation = useNavigation()
+  const navigation = useNavigation();
 
   function handleOpenMotel() {
-    navigation.navigate('MotelDetails', { name: data.name })
+    navigation.navigate("MotelDetails", { name: data.name });
   }
 
   return (
     <TouchableWithoutFeedback
-      accessibilityLabel={'Card de nome do motel'}
-      accessibilityHint={'Navega para página do motel'}
-      accessibilityRole={'button'}
+      accessibilityLabel={"Card de nome do motel"}
+      accessibilityHint={"Navega para página do motel"}
+      accessibilityRole={"button"}
       onPress={handleOpenMotel}
       {...rest}
     >
       <CardMotelContainer>
         <MotelWrapper>
-          <MotelLogo accessibilityLabel={'Logo do motel x '} source={logo} />
+          <MotelLogo accessibilityLabel={"Logo do motel x "} source={logo} />
           <MotelTextField>
             <MotelTitle>{data.name}</MotelTitle>
             <MotelText>Av. Pedro Álvares C. - Sacramenta</MotelText>
@@ -75,7 +75,7 @@ export function CardMotel({ data, ...rest }: Props) {
               startingValue={3.0}
               ratingColor={theme.colors.red_900}
               ratingBackgroundColor={theme.colors.gray_700}
-              style={{ alignSelf: 'flex-start', paddingVertical: 1.8 }}
+              style={{ alignSelf: "flex-start", paddingVertical: 1.8 }}
             />
           </MotelTextField>
         </MotelWrapper>
@@ -92,5 +92,5 @@ export function CardMotel({ data, ...rest }: Props) {
         </MotelAccessibility>
       </CardMotelContainer>
     </TouchableWithoutFeedback>
-  )
+  );
 }

@@ -1,5 +1,5 @@
-import { ButtonBack } from 'src/components/Button/ButtonBack'
-import { InputForm } from 'src/components/Input/InputForm'
+import { ButtonBack } from "src/components/Button/ButtonBack";
+import { InputForm } from "src/components/Input/InputForm";
 
 import {
   RecoverPasswordWrapper,
@@ -9,7 +9,7 @@ import {
   TextButton,
   FormWrapper,
   Header,
-} from './styles'
+} from "./styles";
 
 export function RecoverPassword() {
   return (
@@ -35,5 +35,5 @@ export function RecoverPassword() {
         <TextButton>Recuperar senha</TextButton>
       </Button>
     </RecoverPasswordWrapper>
-  )
+  );
 }

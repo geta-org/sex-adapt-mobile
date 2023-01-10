@@ -1,4 +1,4 @@
-import styled from 'styled-components/native'
+import styled from "styled-components/native";
 
 export const SignInContainer = styled.KeyboardAvoidingView`
   flex: 1;
@@ -6,26 +6,26 @@ export const SignInContainer = styled.KeyboardAvoidingView`
   justify-content: flex-end;
 
   background-color: ${({ theme }) => theme.colors.black};
-`
+`;
 
 export const SignInBackground = styled.ImageBackground`
   flex: 1;
   height: 120%;
-`
+`;
 
 export const Header = styled.View`
   flex: 1;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-`
+`;
 
 export const Subtitle = styled.Text`
   color: ${({ theme }) => theme.colors.white};
   width: 200px;
   text-align: center;
   font-size: ${({ theme }) => theme.font_size.xs};
-`
+`;
 
 export const SignInWrapper = styled.KeyboardAvoidingView`
   align-items: center;
@@ -37,14 +37,14 @@ export const SignInWrapper = styled.KeyboardAvoidingView`
   padding: 35px 32px;
 
   background-color: ${({ theme }) => theme.colors.red_900};
-`
+`;
 
 export const FormWrapper = styled.View`
   justify-content: space-between;
 
   width: 100%;
   height: 120px;
-`
+`;
 
 export const PasswordRecoverButton = styled.TouchableOpacity`
   align-self: flex-end;
@@ -54,12 +54,12 @@ export const PasswordRecoverButton = styled.TouchableOpacity`
   border-bottom-width: 1px;
   border-color: ${({ theme }) => theme.colors.white};
   margin-top: ${({ theme }) => theme.margins.sm};
-`
+`;
 
 export const Label = styled.Text`
   font-size: ${({ theme }) => theme.font_size.xs};
   color: ${({ theme }) => theme.colors.white};
-`
+`;
 
 export const SignInButton = styled.TouchableOpacity`
   display: flex;
@@ -72,12 +72,12 @@ export const SignInButton = styled.TouchableOpacity`
   box-shadow: 0px 3px 6px #00000029;
 
   background-color: ${({ theme }) => theme.colors.white};
-`
+`;
 
 export const SignInTextButton = styled.Text`
   color: ${({ theme }) => theme.colors.red_900};
   font-family: ${({ theme }) => theme.font_family.bold};
-`
+`;
 export const SignUp = styled.Text`
   color: ${({ theme }) => theme.colors.white};
 
@@ -85,9 +85,9 @@ export const SignUp = styled.Text`
   bottom: 24px;
 
   margin-top: 25px;
-`
+`;
 
 export const SignUpUnderline = styled.Text`
   color: ${({ theme }) => theme.colors.white};
   font-family: ${({ theme }) => theme.font_family.bold};
-`
+`;
