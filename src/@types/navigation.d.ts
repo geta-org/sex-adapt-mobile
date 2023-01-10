@@ -10,6 +10,7 @@ export declare global {
       Home: undefined
       MotelDetails: establishment
       MotelSuggestion: undefined
+      Filter: undefined
     }
   }
 }

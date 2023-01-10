@@ -1,14 +1,9 @@
-import { TouchableOpacity } from "react-native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { useNavigation } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { TouchableOpacity } from 'react-native'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { useNavigation } from '@react-navigation/native'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
-import {
-  CaretLeft,
-  Gear,
-  HouseSimple,
-  MapTrifold,
-} from "phosphor-react-native";
+import { CaretLeft, Gear, HouseSimple, MapTrifold } from 'phosphor-react-native'
 
 import {
   Home,
@@ -16,14 +11,15 @@ import {
   MotelDetails,
   Suggestion,
   Support,
-} from "../screens/App/index";
-import { theme } from "src/styles/theme";
+  Filter,
+} from '../screens/App/index'
+import { theme } from 'src/styles/theme'
 
-const { Navigator, Screen } = createNativeStackNavigator();
-const Tab = createBottomTabNavigator();
+const { Navigator, Screen } = createNativeStackNavigator()
+const Tab = createBottomTabNavigator()
 
 export function AppRoutes() {
-  const navigation = useNavigation();
+  const navigation = useNavigation()
 
   return (
     <Navigator>
@@ -36,7 +32,24 @@ export function AppRoutes() {
         name="MotelDetails"
         component={MotelDetails}
         options={{
-          title: "Perfil",
+          title: 'Perfil',
+          headerLeft: () => (
+            <TouchableOpacity onPress={() => navigation.goBack()}>
+              <CaretLeft size={28} color="#333" weight="bold" />
+            </TouchableOpacity>
+          ),
+          contentStyle: {
+            height: 63,
+            borderBottomWidth: 0,
+            elevation: 0,
+          },
+        }}
+      />
+      <Screen
+        name="Filter"
+        component={Filter}
+        options={{
+          title: 'Filtro',
           headerLeft: () => (
             <TouchableOpacity onPress={() => navigation.goBack()}>
               <CaretLeft size={28} color="#333" weight="bold" />
@@ -55,7 +68,7 @@ export function AppRoutes() {
         options={{ headerShown: false }}
       />
     </Navigator>
-  );
+  )
 }
 
 function HomeTabs() {
@@ -65,16 +78,16 @@ function HomeTabs() {
       screenOptions={({ route }) => ({
         headerShown: false,
         tabBarIcon: ({ color, size }) => {
-          if (route.name === "HomeTab") {
-            return <HouseSimple color={color} size={size} />;
-          } else if (route.name === "MapTab") {
-            return <MapTrifold color={color} size={size} />;
-          } else if (route.name === "SupportTab") {
-            return <Gear color={color} size={size} />;
+          if (route.name === 'HomeTab') {
+            return <HouseSimple color={color} size={size} />
+          } else if (route.name === 'MapTab') {
+            return <MapTrifold color={color} size={size} />
+          } else if (route.name === 'SupportTab') {
+            return <Gear color={color} size={size} />
           }
         },
         tabBarActiveTintColor: theme.colors.white,
-        tabBarInactiveTintColor: "#990033",
+        tabBarInactiveTintColor: '#990033',
         tabBarStyle: {
           backgroundColor: theme.colors.red_900,
           borderTopLeftRadius: 40,
@@ -88,5 +101,5 @@ function HomeTabs() {
       <Tab.Screen name="HomeTab" component={Home} />
       <Tab.Screen name="SupportTab" component={Support} />
     </Tab.Navigator>
-  );
+  )
 }
